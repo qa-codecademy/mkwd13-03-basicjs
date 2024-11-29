@@ -1,5 +1,5 @@
 # Group 4
 
 ## Contact
-- Trainer: [TRAINER NAME]: [TRAINER EMAIL]
-- Assistant: [ASSISTANT NAME]: [ASSISTANT EMAIL]
+- Trainer: Kliment Sidorov : sidorov_kliment@live.com
+- Trainer: Zanko Mitreski : zankoohrid@gmail.com
