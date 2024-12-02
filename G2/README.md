@@ -1,5 +1,5 @@
 # Group 2
 
 ## Contact
-- Trainer: [TRAINER NAME]: [TRAINER EMAIL]
-- Assistant: [ASSISTANT NAME]: [ASSISTANT EMAIL]
+- Trainer: [Martin Panovski]: [TRAINER EMAIL]
+- Assistant: [Frosina Stamenkovska]: [stamenkovskaf@gmail.com]
