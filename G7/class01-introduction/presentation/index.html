@@ -1,0 +1,492 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>JavaScript</title>
+
+	<link rel="stylesheet" href="assets/css/reveal.css">
+	<link rel="stylesheet" href="assets/css/theme/white.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="assets/lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<!-- Slide 1 START -->
+			<section style="text-align: center;">
+				<h1>JavaScript</h1>
+				<img src="assets/img/js.png" alt="js" style="border:none; box-shadow:none; width:300px; height:300px;">
+				<div>
+					<div style="background-color: #3F4A5C; display: inline-flex; justify-content: center; padding: 10px; width: 300px;">
+						<img src="./assets/img/lg.png" alt="logo" style="border:none; box-shadow:none; padding: 0; margin: 0; display: inline; background-color: transparent;" />
+					</div>
+					<br />
+					<br />
+					<small>Lecture by <a href="#" target="_blank">Borche Borisovski</a> & <a href="#"
+							target="_blank">Daniel Ivtimov</a> </small>
+					<br />
+				</div>
+				<p style="font-size: 15px;">© 2024 Qinshift Academy</p>
+			</section>
+
+
+			<!-- Slide 2 -->
+			<section style="text-align: left;">
+				<h2>Course overview</h2>
+				<ul>
+					<li><b>Introduction to JavaScript</b></li>
+					<li>Basics</li>
+					<li>Variables and Values</li>
+					<li>Control and Looping </li>
+					<li>Objects and Properties </li>
+					<li>Functions</li>
+					<li>Events</li>
+					<li>Ajax</li>
+					<li>Jquery</li>
+					<li>OOP - Object Oriented Programing</li>
+				</ul>
+			</section>
+
+
+			<!-- Slide 3 -->
+			<section style="text-align: left;">
+				<h2>What is JavaScript?</h2>
+				<ul>
+					<li>JavaScript was originally developed by Brendan Eich in 1995, first known as LiveScript</li>
+					<li>A <b>lightweight</b> programming language that runs in a Web browser </li>
+					<li>Interpreted, not compiled </li>
+					<li>JavaScript is <b> NOT </b> JAVA</li>
+				</ul>
+			</section>
+
+			<section style="text-align:center;">
+				<h2>What is JavaScript?</h2>
+				<ul>
+					<img src="assets/img/javascriptExpl.png" height="250"alt="">
+				</ul>
+			</section>
+
+			<section style="text-align: left;">
+				<h2>All together!</h2>
+				<img height="550" src="assets/img/rsz_1example.png" alt="">
+			</section>
+
+			<section style="text-align: left">
+				<h2>Javascript History</h2>
+				<img src="assets/img/history.jpg" alt="" style="border: none;">
+			</section>
+
+
+			<!-- Slide 4 -->
+
+			<section style="text-align: left;">
+				<h2>What Can JavaScript Do?</h2>
+				<ul>
+					<li>With JavaScript web pages are dynamic and interactive</li>
+					<li>JavaScript can put dynamic text into an HTML page</li>
+					<li>JavaScript can react to events</li>
+					<li>JavaScript can be used to validate input data</li>
+					<li>This allows you to make parts of your web pages appear or disappear or move around on the page
+					</li>
+				</ul>
+			</section>
+
+			<section style="text-align:center;">
+				<h2>How It works?</h2>
+				<ul>
+					<img src="assets/img/howitsworks.png" alt="">
+				</ul>
+			</section>
+			<!-- Slide 5 -->
+			<section style="text-align: left;">
+				<h2>Writing a JavaScript Program?</h2>
+				<ul>
+					<li>The Web browser runs a JavaScript program when the Web page is first loaded, or in response to
+						an event.</li>
+					<li>JavaScript programs can either be placed directly into the HTML file or they can be saved in
+						external files</li>
+					<li>Placing a program in an external file allows you to hide the program code from the user</li>
+					<li>Source code placed directly in the HTML file can be viewed by anyone</li>
+				</ul>
+			</section>
+			<section style="text-align: center;" data-transition="slide" data-background="#007ac9"
+				data-background-transition="slide">
+				<h1>Exercise 1</h1>
+				<!--<h3><span style="color:#111;">H</span>yper<span style="color:#111;"> T</span>ext <span style="color:#111;">M</span>arkup <span style="color:#111;">L</span>anguage</h3>-->
+			</section>
+			<!-- Slide 15 -->
+			<section>
+				<h2></h2>
+				<ul>
+					<li>Open a Web Browser ex. Google Chrome and press F12 </li>
+					<li>Find the tab CONSOLE and navigate to it</li>
+					<li>Use an alert box to display some greeting message like: <br><b>alert("Hello SEDC!");</b></li>
+					<br>
+					<small>Time to accomplish: 10 Minutes</small>
+				</ul>
+			</section>
+			<!-- Slide 6 -->
+			<section>
+				<h5>Bad solution</h5>
+				<img src="assets/img/script tags bad.png" alt="badjs">
+			</section>
+			<!-- Slide 7 -->
+			<section>
+				<h2>Implementing JavaScript</h2>
+				<small>TIP: In an external file before closing the BODY tags</small>
+				<img src="assets/img/external_file js.png" alt="goodjs">
+			</section>
+			<section style="text-align: center;" data-transition="slide" data-background="#007ac9"
+				data-background-transition="slide">
+				<h1>Exercise 2</h1>
+				<!--<h3><span style="color:#111;">H</span>yper<span style="color:#111;"> T</span>ext <span style="color:#111;">M</span>arkup <span style="color:#111;">L</span>anguage</h3>-->
+			</section>
+			<section>
+				<h2></h2>
+				<ul>
+					<li>Open your code editor ex. Visual Studio Code</li>
+					<li>Create a new document "index" with the extension .html</li>
+					<li>Create a new document "script" or "app" with the extension .js (external JavaScript)</li>
+					<li>Include an external .js file into HTML page</li>
+					<li>Write your JavaScript program to display a message in the console <b>console.log("Hello from
+							JavaScript!")</b></li>
+					<br>
+					<small>Time to accomplish: 15 Minutes</small>
+				</ul>
+			</section>
+			<section>
+				<h3>VARIABLES</h3>
+				<ul>
+					<li>Variables are used to store data in memory <br />
+						<small> ex. It's much easier to write <b>pi</b> instead of 3.141592653589793</small>
+					</li>
+					<li>Two steps required in order to use a variables. You need to: <br>
+						<small> <b> Declare </b> the variable</small> <br>
+						<small> <b> Initialize </b> it, that is, give it a value</small> <br>
+						<small>PRO TIP: Always prefer first declare, then use variables.</small>
+					</li>
+				</ul>
+				<pre>
+					<code class="hljs js" data-trim contenteditable>
+	let number; // Declaration <br>
+	number = 5; // Initialization <br>
+	let number = 5; // Declaration and Initialization
+					</code>
+				</pre>
+			</section>
+			<section>
+				<h3>Variables</h3>
+				<img src="assets/img/variableInmemory.png" style="width:800px; height:600px;" alt="variable">
+			</section>
+			<!-- Slide 11 -->
+			<section>
+				<h2>VARIABLES</h2>
+				<ul>
+					<li>Variables names must begin with a letter or underscore</li>
+					<dd>ex. letters, numbers, _, $ (cannot start with number)</dd>
+					<li>Variable names are case-sensitive </li>
+					<dd>ex. firstName , start_date , workDays...</dd>
+					<li>Variables are untyped (VALUE IS THE TYPE!)</li>
+					<li>Variables declared within a function are <b>LOCAL</b> to that function (accessible only within
+						that function)</li>
+					<li>Variables declared outside a function are <b>GLOBAL</b> (accessible from anywhere on the page)
+					</li>
+					<li>Try validating some names yourself:</li>
+					<dd>https://mothereff.in/js-variables</dd>
+				</ul>
+			</section>
+			<!-- Slide 8-->
+			<!-- BLUE BACKGROUND  -->
+			<section style="text-align: left;" data-transition="slide" data-background="#007ac9"
+				data-background-transition="slide">
+				<h1>Primitive Data Types</h1>
+				<!--<h3><span style="color:#111;">H</span>yper<span style="color:#111;"> T</span>ext <span style="color:#111;">M</span>arkup <span style="color:#111;">L</span>anguage</h3>-->
+				<ul>
+					<li>The primitive data types in JavaScript, such as :</li>
+					<li>Strings</li>
+					<li>Numbers</li>
+					<li>Undefined</li>
+					<li>Boolean</li>
+					<li>NULL</li>
+				</ul>
+			</section>
+			<section>
+				<h3>Undefined vs Null</h3>
+				<p style="font-size:26px">In JavaScript, <b>UNDEFINED</b> means a variable has been declared but has not
+					yet been assigned a value, such as:</p>
+				<code class="hljs js" data-trim contenteditable style="font-size:26px">
+					let testVariable<br>
+					alert(testVariable); //shows undefined <br>
+					alert(typeof testVariable); //shows undefined
+					</code>
+
+				<p style="font-size:26px"><b>null</b> is an assignment value. It can be assigned to a variable as a
+					representation of no value:</p>
+
+				<code class="hljs js" data-trim contenteditable style="font-size:26px">
+					let testVariable = null; <br>
+					alert(testVariable); //shows null <br>
+					alert(typeof testVariable); //shows object
+				   </code>
+
+				<p style="font-size:26px">
+					From the preceding examples, it is clear that undefined and null are two distinct types: undefined
+					is a type itself (undefined)
+					while null is an object.
+				</p>
+
+				<code class="hljs js" data-trim contenteditable style="font-size:23px">
+					null === undefined // false <br>
+					null == undefined // true <br>
+					null === null // true
+				   </code>
+
+			</section>
+			<!-- Slide 9 -->
+			<section>
+				<h3>JavaScript “primitive” types: number, string, and boolean</h3><br />
+				<ul>
+					<li>Numbers are always stored as <b>floating-point</b> values <br></li>
+					<li>Strings may be enclosed in single quotes or double quotes <br> ex. var name =
+						<b>"John";</b><br /> var name = <b>'Doe'</b>;
+						<br> Strings can contains <b>\n</b> (newline) <br>
+					</li>
+					<li>Boolean are either <b>true</b> or <b>false</b> <br>
+					</li>
+				</ul>
+			</section>
+			<!-- Slide 10 -->
+
+			<!-- Slide 12 -->
+			<section>
+				<h2>Comments</h2>
+				<ul>
+					<li>Single Line Comment
+						<dd><b> //code goes here.... </b></li>
+					</dd>
+					<li>Multi line Comment
+						<dd><b>/*…code goes here......*/</b></dd>
+					</li>
+				</ul>
+			</section>
+			<!-- Slide 9 -->
+			<section>
+				<h3>Keywords in Javascript</h3><br />
+				<img src="assets/img/keywords.png" alt="">
+			</section>
+			<!-- Slide 13 -->
+			<section>
+				<h3>Operators in JavaScript </h3>
+				<h2>Arithmetic Operators</h2>
+				<table>
+					<tr>
+						<th>Operator</th>
+						<th>Name</th>
+						<th>Example</th>
+					</tr>
+					<tr>
+						<td>+</td>
+						<td>Addition</td>
+						<td>a + b</td>
+					</tr>
+					<tr>
+						<td>-</td>
+						<td>Subtraction</td>
+						<td>a - b</td>
+					</tr>
+					<tr>
+						<td>*</td>
+						<td>Multiplication</td>
+						<td>a * b</td>
+					</tr>
+					<tr>
+						<td>/</td>
+						<td>Division</td>
+						<td>a / b</td>
+					</tr>
+					<tr>
+						<td>%</td>
+						<td>Modulus</td>
+						<td>a % b</td>
+					</tr>
+					<tr>
+						<td>++</td>
+						<td>Increment</td>
+						<td>a++ (a = a + 1)</td>
+					</tr>
+					<tr>
+						<td>--</td>
+						<td>Decrement</td>
+						<td>a-- (a = a - 1)</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Comparison Operators</h2>
+				<table>
+					<tr>
+						<th>Operator</th>
+						<th>Use</th>
+						<th>Equivalent To</th>
+					</tr>
+					<tr>
+						<td>
+							<</td> <td>a < b</td> <td>a is less than b
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<=</td> <td>a <= b</td> <td>a is less than or equal to b
+						</td>
+					</tr>
+					<tr>
+						<td>></td>
+						<td>a > b</td>
+						<td>a is greater than b</td>
+					</tr>
+					<tr>
+						<td>>=</td>
+						<td>a >= b</td>
+						<td>a is greater than or equal to b</td>
+					</tr>
+					<tr>
+						<td>==</td>
+						<td>a == b</td>
+						<td>is a equal to b?</td>
+					</tr>
+					<tr>
+						<td>!=</td>
+						<td>a != b</td>
+						<td>is a NOT equal to b?</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Assignment Operators</h2>
+				<table>
+					<tr>
+						<th>Operator</th>
+						<th>Use</th>
+						<th>Equivalent To</th>
+					</tr>
+					<tr>
+						<td>+=</td>
+						<td>a += b</td>
+						<td>a = a + b</td>
+					</tr>
+					<tr>
+						<td>-=</td>
+						<td>a -= b</td>
+						<td>a = a - b</td>
+					</tr>
+					<tr>
+						<td>*=</td>
+						<td>a *= b</td>
+						<td>a = a * b</td>
+					</tr>
+					<tr>
+						<td>/=</td>
+						<td>a /= b</td>
+						<td>a = a / b</td>
+					</tr>
+					<tr>
+						<td>%=</td>
+						<td>a %= b</td>
+						<td>a = a % b</td>
+					</tr>
+				</table>
+			</section>
+			<!-- Slide 14 -->
+			<section style="text-align: center;" data-transition="slide" data-background="#007ac9"
+				data-background-transition="slide">
+				<h1>Exercise 3</h1>
+				<!--<h3><span style="color:#111;">H</span>yper<span style="color:#111;"> T</span>ext <span style="color:#111;">M</span>arkup <span style="color:#111;">L</span>anguage</h3>-->
+			</section>
+			<!-- Slide 15 -->
+
+			<section>
+				<h2></h2>
+				<ul>
+					<li>Write a JavaScript program to convert a length given in feet to meters. </li>
+					<li>TIP: 1 feet = 0.3048 meters</li>
+					<br>
+					<small>Time to accomplish: 15 Minutes</small>
+				</ul>
+			</section>
+
+			<section>
+				<h2></h2>
+				<ul>
+					<li>Write a JavaScript program that will read the two sides of a rectangle and calculate its area
+					</li>
+					<li>TIP: area = a * b</li>
+					<br>
+					<small>Time to accomplish: 15 Minutes</small>
+				</ul>
+			</section>
+
+			<section>
+				<h2></h2>
+				<ul>
+					<li>Write a JavaScript program that will calculate area of Circle</li>
+					<li>TIP: area = π * r2</li>
+					<br>
+					<small>Time to accomplish: 15 Minutes</small>
+				</ul>
+			</section>
+
+			<section style="text-align: center;" data-transition="slide" data-background="#007ac9"
+				data-background-transition="slide">
+				<h2>HOMEWORK</h2>
+				<p>Write a JavaScript program that will calculate the price of 30 Phones, where the price of one phone
+					is $119.95 and the tax rate
+					is 5%.</p>
+				<br>
+				<p>E-mail: <br></p>
+				<p>borisovski.borce@gmail.com</p>
+				<p>danieliftimov3@gmail.com</p>
+
+			</section>
+			<!-- THE END -->
+			<section>
+				<h1>THANK YOU</h1>
+				<h2> <span style="color:#007ac9"> QUESTIONS? </span></h2>
+			</section>
+
+		</div>
+	</div>
+
+	<script src="assets/lib/js/head.min.js"></script>
+	<script src="assets/js/reveal.js"></script>
+
+	<script>
+		// More info https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			history: true,
+
+			// More info https://github.com/hakimel/reveal.js#dependencies
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+			]
+		});
+	</script>
+</body>
+
+</html>
