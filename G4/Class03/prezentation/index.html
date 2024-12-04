@@ -1,0 +1,889 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>JavaScript</title>
+
+	<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+	<meta name="author" content="Hakim El Hattab">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<link rel="stylesheet" href="assets/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/css/reveal.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/theme/white.css" id="theme">
+
+	<!-- Code syntax highlighting -->
+	<link rel="stylesheet" href="assets/lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		let link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'assets/text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'assets/css/print/pdf.css' : 'assets/css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+
+	<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+</head>
+
+<body>
+
+	<div class="reveal">
+
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+
+			<!-- Slide 1 -->
+			<section style="text-align: center;">
+				<h1>Java Script</h1>
+				<div>
+					<div
+						style="background-color: #3F4A5C; display: inline-flex; justify-content: center; padding: 10px; width: 300px;">
+						<img src="./assets/img/lg.png" alt="logo"
+							style="border:none; box-shadow:none; padding: 0; margin: 0; display: inline; background-color: transparent;" />
+					</div>
+					<br />
+					<br />
+					<small>Lecture by <a href="#" target="_blank"> Kliment Sidorov </a> & <a href="#"
+							target="_blank">Zanko Mitreski</a> </small>
+					<br />
+				</div>
+				<p style="font-size: 15px;">© 2024 Qinshift Academy</p>
+			</section>
+
+			<!-- Slide 2 -->
+			<section style="text-align: left;">
+				<h2>Lesson Overview</h2>
+				<ul>
+					<li>Switch statements</li>
+					<li>Introduction to Functions</li>
+					<li>How they work</li>
+					<li>Inputs and Parsing</li>
+					<li>Function concepts</li>
+				</ul>
+			</section>
+
+			<!-- Slide 3 -->
+			<section style="text-align: left;" data-transition="slide" data-background="#007ac9"
+				data-background-transition="slide">
+				<h1>Looking Back...</h1>
+				<ul>
+					<li>Strings can be combined ( concatanation )</li>
+					<li>Operators in JavaScript
+						<ul>
+							<li>Mathematical</li>
+							<li>Comparison</li>
+							<li>Equality</li>
+							<li>Logical</li>
+						</ul>
+					</li>
+					<li>We could control our code flow with if/else</li>
+					<li>We can nest if statements with else if</li>
+					<li>We can write if statements inside of other if statements</li>
+					<li>Prompt() function can be used to get input from users (always returns a string)</li>
+					<li>parseInt() is used to parse all sorts of values in to whole numbers (integers)</li>
+				</ul>
+			</section>
+
+			<!-- Slide 4 -->
+			<section style="text-align: left;">
+				<h2>Switch statements</h2>
+				<ul>
+					<li>Starts with a variable called <b>switch value</b></li>
+					<li>Each case indicates a possible value for that variable</li>
+					<li>Have a default option if no match is found</li>
+				</ul>
+			</section>
+
+			<!-- Slide 5 -->
+			<section style="text-align: left;">
+				<h2>Structure</h2>
+				<p>
+				<pre><code class="hljs" data-trim contenteditable>
+	switch(someVal) {
+		case 'value1':
+			//do something;
+			break;
+		case 'value2':
+			//do something else;
+			break;
+		default:
+			//no value match found, do default option
+			break; //this is optional
+	}
+						</code></pre>
+				</p>
+			</section>
+
+			<!-- Slide 6 -->
+			<section style="text-align: left;">
+				<h2>"fall through" scenario</h2>
+				<ul>
+					<li> If you omit <i>break</i> from a <i>case</i>, and that <i>case</i> matches or runs, execution
+						will continue with the next <i>case</i>'s statements regardless of that case matching</li>
+				</ul>
+				<p>
+				<pre><code class="hljs" data-trim contenteditable>
+	switch(someVal) {
+		case 'value1':
+		case 'value2':
+			//do something;
+			break;
+		case 'value3':
+			//do something else;
+			break;
+		default:
+			//no value match found, do default option
+			break;
+	}
+						</code></pre>
+				</p>
+			</section>
+			<!-- Slide 7 -->
+			<section style="text-align: left;" data-transition="slide" data-background="#007ac9"
+				data-background-transition="slide">
+				<h1>Functions</h1>
+			</section>
+
+			<!-- Slide 8 -->
+			<section>
+				<section data-state="startTyping" style="text-align: left;">
+					<div class="stretch" id="statements">
+					</div>
+				</section>
+
+				<section data-state="typeEverything" style="text-align: left;">
+					<div class="stretch">
+						<div id="left" class="left">
+							<div>calculateArea</div>
+							<div>createMessage</div>
+							<div>animateImage</div>
+						</div>
+						<div class="right">
+							<div id="calculateArea">
+							</div>
+							<div id="createMessage">
+							</div>
+							<div id="animateImage">
+							</div>
+						</div>
+					</div>
+				</section>
+			</section>
+
+			<!-- Slide 9 -->
+			<section style="text-align: left;">
+				<h2>What is a function?</h2>
+				<ul>
+					<li>Break up the code's tasks into reusable pieces</li>
+					<li>Generally a named section of code that can be "called" by name, and the code inside it will be
+						run each time</li>
+				</ul>
+			</section>
+
+
+			<!-- Slide 10 -->
+			<section>
+				<section style="text-align: left;">
+					<h2>Function declaration</h2>
+					<ul>
+						<li>Put the keyword <code>function</code>, give it a name and then write the statements needed
+							to achieve its task inside curly braces (yes, a code block indeed)</li>
+					</ul>
+					<p>
+					<pre><code class="js">function(){
+	//... some code that does something
+}</code></pre>
+					</p>
+				</section>
+			</section>
+
+			<!-- Slide 11 -->
+			<section style="text-align: left;">
+				<h2>Function execution</h2>
+				<ul>
+					<li>Or <b>calling</b> the function</li>
+					<li>Execute all statements between function's curly braces with just one line of code</li>
+					<li>...as many time as you want...</li>
+				</ul>
+			</section>
+
+			<!-- Slide 12 -->
+			<section style="text-align: left;">
+				<p>
+				<pre><code class="hljs" data-trim contenteditable>
+							function myFunction() {
+	//loops, ifs, statements, anything;
+	//...
+}
+
+
+
+myFunction();
+myFunction();
+myFunction();
+
+						</code></pre>
+				</p>
+			</section>
+
+			<!-- Slide 13 -->
+			<section class="center-back" style="text-align: left;"
+				data-background="assets/img/simpleFunctionCreate.png">
+				<!-- Here the image is showing in the background of the slide -->
+			</section>
+
+			<!-- Slide 14 -->
+			<section style="text-align: left;">
+
+				<ul>
+					<li>Code in function won't run, unless <strong>explicitelly</strong> called</li>
+					<li>Doesn't matter where are defined
+						<ul>
+							<li>Best practice: define your functions <strong>before</strong> you call them</li>
+						</ul>
+					</li>
+				</ul>
+
+			</section>
+
+			<!-- Slide 15 -->
+			<section style="text-align: left;">
+				<h2>Functions with arguments</h2>
+				<ul>
+					<li>Pieces of data to work with in your function</li>
+					<li>In the parenthesis:
+						<ul>
+							<li>Define how many pieces of data</li>
+							<li>How am I going to call them</li>
+						</ul>
+					</li>
+					<li>Do <b>not need</b> the words <code>let</code>/<code>let</code>/<code>const</code></li>
+				</ul>
+				<p>
+				<pre><code class="hljs" data-trim contenteditable>
+//creating function with arguments
+
+		    //arguments
+function myFunction(x, y) {
+	let myVar = x * y;
+	console.log(myVar);
+}
+
+
+myFunction(1,3);
+myFunction(2,5);
+myFunction(100,232131);
+						</code></pre>
+				</p>
+
+			</section>
+
+			<!-- Slide 16 -->
+			<section class="center-back" style="text-align: left;" data-background="assets/img/FunctionExecution.png">
+				<!-- Here the image is showing in the background of the slide -->
+			</section>
+
+			<!-- Slide 17 -->
+			<section style="text-align: left;">
+				<h2>Returning values</h2>
+				<p>
+				<pre><code class="hljs" data-trim contenteditable>
+function myFunction(x, y) {
+	let myVar = x * y;
+	console.log(myVar);
+	return myVar;
+}
+
+
+myFunction(1,3);
+myFunction(2,5);
+myFunction(100,232131);
+let myresult = myFunction(7,8);
+					</code></pre>
+				</p>
+			</section>
+
+			<!-- Slide 18 -->
+			<section style="text-align: center;">
+				<h2>How Functions Work</h2>
+				<div style="text-align: center;">
+					<img src="assets/img/func.png" alt="" width="800" height="300">
+				</div>
+			</section>
+
+			<!-- Slide 19 -->
+			<section style="text-align: center;" data-transition="slide" data-background="#007ac9"
+				data-background-transition="slide">
+				<h1>Exercise 1</h1>
+			</section>
+
+			<!-- Slide 20 -->
+			<section>
+				<h2></h2>
+				<ul>
+					<li><b>Write 4 functions</b></li>
+					<li>All functions take 2 parameters and output a result</li>
+					<ul>
+						<li>Function that sums 2 numbers</li>
+						<li>Function that subtracts 2 numbers</li>
+						<li>Function that multiplies 2 numbers</li>
+						<li>Function that divides 2 numbers</li>
+					</ul>
+					<br>
+					<small>Time to accomplish: 15 Minutes</small>
+				</ul>
+			</section>
+
+			<!-- Slide 21 -->
+			<section style="text-align: left;">
+				<h2>Exercise 1 Solution</h2>
+				<p>
+				<pre><code class="hljs" data-trim contenteditable>
+	// Function declarations
+	function sumNumbers(num1, num2){
+		let result = num1 + num2;
+		return result;
+	}
+
+	function subtractNumbers(num1, num2){
+		let result = num1 - num2;
+		return result;
+	}
+
+	function multiplyNumbers(num1, num2){
+		let result = num1 * num2;
+		return result;
+	}
+
+	function divideNumbers(num1, num2){
+		let result = num1 / num2;
+		return result;
+	}
+
+	//Function calling
+	console.log(sumNumbers(2,5));
+	console.log(subtractNumbers(7,4));
+	console.log(multiplyNumbers(2,4));
+	console.log(divideNumbers(8,2));
+						</code></pre>
+				</p>
+			</section>
+
+			<!-- Slide 22 -->
+			<section style="text-align: left;">
+				<h2>Parameter mismatch</h2>
+				<ul>
+					<li>Any number of parameters can be passed, regardless of the number of arguments declared in the
+						function definition</li>
+				</ul>
+				<p>
+				<pre><code class="hljs" data-trim contenteditable>
+function calculateLoan   ( amount, months,interest,name ) {
+	//lots and lots of code
+}
+
+
+calculateLoan(1000, 12, 7, "John Doe");	 //correct
+calculateLoan(1000, 12, 7, "John Doe", "Something Extra");	//extras are ignored
+calculateLoan(1000, 12);   //missing are passed as "undefined"
+					</code></pre>
+				</p>
+			</section>
+
+			<!-- Slide 23 -->
+			<section style="text-align: left;">
+				<h2>Functions with Default Parameter Values</h2>
+				<ul>
+					<li>Available from ES6</li>
+				</ul>
+				<p>
+				<pre><code class="hljs" data-trim contenteditable>
+//This function only expects the first parameter to always be passed
+function makeRequest(url, timeout = 2000, callback = function() {}) {
+	// the rest of the function
+}
+					</code></pre>
+				</p>
+			</section>
+
+			<!-- Slide 24 -->
+			<section style="text-align: left;">
+				<h2>Functions with Default Parameter Values</h2>
+				<ul>
+					<li>Sending 'nothing' as value is different than sending no value</li>
+				</ul>
+				<p>
+				<pre><code class="hljs" data-trim contenteditable>
+function makeRequest(url, timeout = 2000, callback = function() {}) {
+	// the rest of the function
+}
+					</code></pre>
+				</p>
+			</section>
+
+			<!-- Slide 25 -->
+			<section style="text-align:center">
+				<h2>Built in functions in JavaScript</h2>
+				<ul>
+					<li>Number() - input parameter is "String" and return Number as value</li>
+					<li>String() - input parameter is Number and return String as value</li>
+					<li>List of Built-in Functions</li>
+					<li>https://www.tutorialspoint.com/javascript/javascript_builtin_functions.html</li>
+				</ul>
+			</section>
+
+			<!-- Slide 26 -->
+			<section style="text-align: left;">
+				<br>
+				<h2>Scope</h2>
+				<ul>
+					<li>Scope determines the accessibility (visibility) of these variables.</li>
+					<li>Variables defined inside a function are not accessible (visible) from outside the function.</li>
+					<li>A collection of variables as well as the rules for how those variables are accessed by name.
+					</li>
+					<li>JavaScript has function scope: Each function creates a new scope.</li>
+					<li>No matter <em>where</em> a function is invoked from, or even <em>how</em> it is invoked, its
+						scope is only defined by where the function was declared</li>
+				</ul>
+			</section>
+
+			<!-- Slide 27 -->
+			<section style="text-align: center;">
+				<h2>Function Scope....</h2>
+				<img src="assets/img/scope.png.png" alt="">
+			</section>
+
+			<!-- Slide 28 -->
+			<section style="text-align: left;">
+				<h2>Variable scope</h2>
+				<p>
+				<pre><code class="hljs" data-trim contenteditable>
+function simpleFunction   ( ) {
+	//lots of code
+	let foo = 500;		//local varable
+	//lots of code
+	console.log(foo);	//500
+}
+
+
+simpleFunction();
+console.log(foo);		//undefined
+					</code></pre>
+				</p>
+
+			</section>
+
+			<!-- Slide 29 -->
+			<section style="text-align: left;">
+				<h2>Variable scope</h2>
+				<p>
+				<pre><code class="hljs" data-trim contenteditable>
+let foo = 500;		//global varable
+function simpleFunction   ( ) {
+	//lots of code
+	let foo = 600;		//local varable
+	//lots of code
+	console.log(foo);	//600
+}
+
+
+simpleFunction();
+console.log(foo);		//500
+				</code></pre>
+				</p>
+			</section>
+
+			<!-- Slide 30 -->
+			<section style="text-align: left;">
+				<br>
+				<h2>Variable scope</h2>
+				<ul>
+					<li>When you declare a variable, it is available anywhere in that scope, as well as any lower/inner
+						scopes.</li>
+				</ul>
+				<p>
+				<pre><code class="hljs" data-trim contenteditable>
+let foo = 500;		//global varable
+function simpleFunction   ( ) {
+//lots of code
+foo = 600;		//the global varable
+//lots of code
+console.log(foo);	//600
+}
+
+
+simpleFunction();
+console.log(foo);		//600
+					</code></pre>
+				</p>
+			</section>
+
+			<!-- Slide 31 -->
+			<section class="center-back" style="text-align: left;" data-background="assets/img/scopes.png">
+				<!-- Here the image is showing in the background of the slide -->
+			</section>
+
+			<!-- Slide 32 -->
+			<section style="text-align: left;">
+				<h2>Variable scope</h2>
+				<ul>
+					<li>If you try to access a variable's value in a scope where it's not available, you'll get a
+						ReferenceError thrown </li>
+					<li>If you try to set a variable that hasn't been declared, you'll end up creating a variable in the
+						top-level global scope (bad!) </li>
+				</ul>
+			</section>
+
+			<!-- Slide 33 -->
+			<section style="text-align: left;">
+				<h2>Variable scope</h2>
+				<p>
+				<pre><code class="hljs" data-trim contenteditable>
+function foo() {
+	a = 1;	// `a` not formally declared
+}
+
+foo();
+console.log(a);	// 1 -- oops, auto global variable :(
+					</code></pre>
+				</p>
+			</section>
+
+			<!-- Slide 34 -->
+			<section style="text-align: left;">
+				<h2 style="color:#e8643b;">What the result would be?</h2>
+				<p>
+				<pre><code class="hljs" data-trim contenteditable>
+let message = "Outside the function";
+function warning(message){
+	console.log(message);
+}
+
+
+warning("Inside the function");
+console.log(message);
+				</code></pre>
+				</p>
+			</section>
+
+			<!-- Slide 35 -->
+			<section style="text-align: left;">
+				<h2 style="color:#e8643b;">Student Exercise - #2</h2>
+				<ul>
+					<li><b>Decription: </b>Celsius to Fahrenheit formula: X°C x 1.8 + 32 </li>
+					<li><b>Action: </b> Write a function that will be able to convert Celsius to Fahrenheit and display
+						the result </li>
+					<li><b>Bonus: </b> Write another function that will be able to convert Fahrenheit to Celsius and
+						display the result. Formula: (5/9) * (Fahrenheit-32); </li>
+					<li><strong>Time to accomplish:</strong> 15 minutes.</li>
+				</ul>
+			</section>
+
+			<!-- Slide 36 -->
+			<section style="text-align: left;">
+				<h2>Exercise 2 Solution</h2>
+				<p>
+				<pre><code class="hljs" data-trim contenteditable>
+//Declaration of both functions
+function farToCel(celsius){
+	let result = celsius * 1.8 + 32;
+	return result;
+}
+function celToFar(farenheits){
+	let result = (5/9) * (farenheits-32);
+	return result;
+}
+
+//The person chooses what to calculate
+let personChoice = prompt("Enter F for farenheit and C for celsius");
+let personInput = parseInt(prompt("Please enter value:"));
+if(personChoice === "F"){
+	console.log(`${celToFar(personInput)}C`);
+} else if(personChoice === "C"){
+	console.log(`${farToCel(personInput)}F`);
+} else {
+	console.log("ERROR!");
+}
+				</code></pre>
+				</p>
+			</section>
+
+			<!-- Slide 37 -->
+			<section style="text-align: left;">
+				<h2 style="color:#e8643b;">Student Exercise - #3</h2>
+				<h6>The Age Calculator</h6>
+				<p>Forgot how old you are? Calculate it!</p>
+				<ul>
+					<li>Write a function named calculateAge that:</li>
+					<li>takes 2 arguments: birth year, current year.</li>
+					<li>calculates the age based on those years.</li>
+					<li>outputs the result to the screen like so: "You are NN years old"</li>
+					<li>Call the function three times with different sets of values.</li>
+					<li><b>Bonus:</b> Figure out how to get the current year in JavaScript instead of passing it in.
+					</li>
+					<li><strong>Time to accomplish:</strong> 15 minutes.</li>
+				</ul>
+			</section>
+
+			<!-- Slide 38 -->
+			<section style="text-align: center;" data-transition="slide" data-background="#007ac9"
+				data-background-transition="slide">
+				<h2>HOMEWORK Part 1</h2>
+				<p>
+					Write a JavaScript function which accepts a parameter and returns its type and prints it in the
+					console.
+					Try to call the functions 5 times for 5 different types:
+				<ul>
+					<li>object</li>
+					<li>boolean</li>
+					<li>number</li>
+					<li>string</li>
+					<li>undefined</li>
+				</ul>
+				</p>
+			</section>
+
+			<!-- Slide 39 -->
+			<section style="text-align: center;" data-transition="slide" data-background="#007ac9"
+				data-background-transition="slide">
+				<h2>HOMEWORK Part 2</h2>
+				<p>Write a JavaScript <b>function</b> that will <b>return</b>:</p>
+				<ul>
+					<li>Calculates your dog's age based on the conversion rate of 1 human year to 7 dog years</li>
+					<li><b>Note: </b>Call the function in console to see answer</li>
+					<li><b>Bonus: </b>Make the same function work for converting dog to human years as well</li>
+				</ul>
+			</section>
+
+			<!-- Slide 40 -->
+			<section style="text-align: center;" data-transition="slide" data-background="#007ac9"
+				data-background-transition="slide">
+				<h2>HOMEWORK Part 3</h2>
+				<p style="float: left;">Write a javascript <b>function</b> for an ATM:</p>
+				<ul>
+					<li>The ATM should give cash</li>
+					<li>Should return "Not enough money" if you request more money</li>
+					<li>Should return the ammount withdrawn and money left on the account if you have enough</li>
+					<li><b>Note: </b> Hardcode your account money in the program</li>
+					<li><b>Bonus: </b> Make it work with prompt()!</li>
+				</ul>
+				<br>
+				<p>sidorov_kliment@live.com</p>
+				<p>zankoohrid@gmail.com</p>
+			</section>
+
+			<!-- Slide 41 -->
+			<section style="text-align: left;">
+				<h1>Thank you!</h1>
+				<p>
+					<a href="#">Questions?</a> <br>
+				</p>
+			</section>
+		</div>
+	</div>
+
+	<script src="assets/lib/js/head.min.js"></script>
+	<script src="assets/js/reveal.js"></script>
+
+	<script>
+
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			history: true,
+			center: true,
+
+			transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+			// Transition speed
+			transitionSpeed: 'default', // default/fast/slow
+
+			// Enable slide navigation via mouse wheel
+			mouseWheel: true,
+
+			// Optional reveal.js plugins
+			dependencies: [
+				{ src: 'assets/lib/js/classList.js', condition: function () { return !document.body.classList; } },
+				{ src: 'assets/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+				{ src: 'assets/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+				{ src: 'assets/plugin/highlight/highlight.js', async: true, condition: function () { return !!document.querySelector('pre code'); }, callback: function () { hljs.initHighlightingOnLoad(); } },
+				{ src: 'assets/plugin/zoom-js/zoom.js', async: true },
+				{ src: 'assets/plugin/notes/notes.js', async: true }
+			]
+		});
+
+		let text = "content of text here";
+		let delay = 50;
+		let currentChar = 1;
+		let destination = "[not defined]";
+		let texts = [
+			'get window height',
+			'get window width',
+			'calculate area',
+			'store area',
+			'do calculation',
+			'check value',
+			'output message',
+			'get image position',
+			'calculate new value',
+			'set image position',
+			'change text color',
+			'if position correct output message'
+		];
+		let currentElement = 0;
+
+		function type() {
+			if (document.getElementById) {
+				let dest = document.getElementById(destination);
+				if (dest) {
+					dest.innerHTML = text.substr(0, currentChar);
+					currentChar++
+					if (currentChar > text.length) {
+						currentElement++;
+						currentChar = 1;
+						if (texts.length != currentElement)
+							code();
+						// setTimeout("type()", 5000);
+					}
+					else {
+						setTimeout("type()", delay);
+					}
+				}
+			}
+		}
+		function startTyping(textParam, delayParam, destinationParam, elementId) {
+			let dest = document.getElementById(destinationParam);
+			let newElement = document.createElement("div");
+			newElement.setAttribute('id', elementId);
+			dest.appendChild(newElement);
+
+			text = textParam;
+			delay = delayParam;
+			currentChar = 1;
+			destination = elementId;
+			type();
+		}
+
+		function code() {
+			console.log(currentElement);
+			// for(let i = 0; i < 10; i++)
+			startTyping(texts[currentElement], 50, "statements", currentElement);
+		}
+
+		function typeEverything() {
+			let calculateArea = document.getElementById('calculateArea');
+			let createMessage = document.getElementById('createMessage');
+			let animateImage = document.getElementById('animateImage');
+
+			if (calculateArea.innerHTML.trim() != '')
+				return;
+
+			for (let i = 0; i < texts.length; i++) {
+
+				let newElement = document.createElement("div");
+				newElement.setAttribute('id', 'startTyping' + i);
+				newElement.innerHTML = texts[i];
+				if (i < 4)
+					calculateArea.appendChild(newElement);
+				else if (i >= 4 && i < 7)
+					createMessage.appendChild(newElement);
+				else
+					animateImage.appendChild(newElement);
+			}
+
+			setTimeout(function () {
+				calculateArea.className += ' borders';
+
+				setTimeout(function () {
+
+					createMessage.className += ' borders';
+					setTimeout(function () {
+						animateImage.className += ' borders';
+
+						setTimeout(function () {
+							document.getElementById('left').style.display = 'block';
+						}, 500);
+
+					}, 500);
+
+				}, 500);
+
+			}, 500);
+
+		}
+
+		function startFuncNameAnimation() {
+			document.getElementById("functionName").style.animation = "fromRight 3s ease-out";
+		}
+
+		function startFuncCodeAnimation() {
+			document.getElementById("functionCode").style.animation = "fromLeft 3s ease-out";
+		}
+
+		function startFuncEndAnimation() {
+			document.getElementById("functionEnd").style.animation = "fromRight 3s ease-out";
+		}
+
+		Reveal.addEventListener('startTyping', function () {
+			// Called each time the slide with the "canvases" state is made visible
+			code();
+		}, false);
+
+		Reveal.addEventListener('typeEverything', function () {
+			// Called each time the slide with the "canvases" state is made visible
+			typeEverything();
+		}, false);
+
+
+		Reveal.addEventListener('ready', function (event) {
+			// event.previousSlide, event.currentSlide, event.indexh, event.indexv
+			if (event.indexh == 3) {
+				if (event.indexv == 0)
+					code();
+				if (event.indexv == 1)
+					typeEverything();
+			}
+
+			if (event.indexh == 5) {
+				if (event.indexv == 1) {
+					startFuncNameAnimation();
+				} else if (event.indexv == 2) {
+					startFuncCodeAnimation();
+				} else if (event.indexv == 3) {
+					startFuncEndAnimation();
+				}
+			}
+		});
+
+		Reveal.addEventListener('slidechanged', function (event) {
+			// event.previousSlide, event.currentSlide, event.indexh, event.indexv
+			if (event.indexh == 5) {
+				if (event.indexv == 1) {
+					startFuncNameAnimation();
+				} else if (event.indexv == 2) {
+					startFuncCodeAnimation();
+				} else if (event.indexv == 3) {
+					startFuncEndAnimation();
+				}
+			}
+		});
+
+	</script>
+
+</body>
+
+</html>
