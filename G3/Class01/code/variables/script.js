@@ -34,3 +34,13 @@ console.log(movie);
 This is a multi line comment.
 This is a comment too
 */
+
+//undefined
+let n; //declaration
+console.log(n);
+console.log(typeof n);
+
+//null
+let nullableVar = null;
+console.log(nullableVar);
+console.log(typeof nullableVar);
