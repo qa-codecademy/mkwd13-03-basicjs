@@ -114,19 +114,37 @@ if ("Borche") {
 }
 
 //Getting user input with prompt
-let userInput = prompt("Please enter your age");
+// let userInput = prompt("Please enter your age");
 
 //Everthing written below a prompt will only be executed once the user submits the prompt window
 
-let parsedIntResult = parseInt(userInput);
+// let parsedIntResult = parseInt(userInput);
 
-let numberResult = Number(userInput);
+// let numberResult = Number(userInput);
 
-console.log("This is the parse int result:", parsedIntResult);
-console.log("This is the Number result:", numberResult);
+// console.log("This is the parse int result:", parsedIntResult);
+// console.log("This is the Number result:", numberResult);
 
-if (Number.isNaN(parsedIntResult)) {
-  console.log("Invalid input, please enter a valid number");
+// if (Number.isNaN(parsedIntResult)) {
+//   console.log("Invalid input, please enter a valid number");
+// }
+
+// console.log("This is the user input:", userInput);
+
+//Exercise solution
+
+let userInput = prompt("How much money do you have?");
+
+let userMoney = Number(userInput);
+
+if (Number.isNaN(userMoney)) {
+  console.log("Invalid input, dont act smart!");
+} else if (userMoney >= 50) {
+  console.log("Go out and drink!");
+} else if (userMoney >= 35) {
+  console.log("Go out to a nice restaurant!");
+} else if (userMoney >= 12) {
+  console.log("Grab a bus and go to City Mall!");
+} else {
+  console.log("Piracy is your friend!");
 }
-
-console.log("This is the user input:", userInput);
