@@ -1,0 +1,809 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Java Script</title>
+
+	<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+	<meta name="author" content="Hakim El Hattab">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+	<link rel="stylesheet" href="assets/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/css/reveal.css">
+	<link rel="stylesheet" href="assets/css/theme/white.css" id="theme">
+
+	<!-- Code syntax highlighting -->
+	<link rel="stylesheet" href="assets/lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'assets/text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'assets/css/print/pdf.css' : 'assets/css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+	<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+</head>
+
+<body>
+
+	<div class="reveal">
+
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+
+			<!-- Slide 1 -->
+			<section style="text-align: center;">
+				<h1>Java Script</h1>
+				<div>
+					<div style="background-color: #3F4A5C; display: inline-flex; justify-content: center; padding: 10px; width: 300px;">
+						<img src="./assets/img/lg.png" alt="logo" style="border:none; box-shadow:none; padding: 0; margin: 0; display: inline; background-color: transparent;" />
+					</div>
+					<br />
+					<br />
+					<small>Lecture by <a href="#" target="_blank"> Borche Borisovski </a> & <a href="#"
+																						  target="_blank">Daniel Evtimov</a> </small>
+					<br />
+				</div>
+				<p style="font-size: 15px;">© 2024 Qinshift Academy</p>
+			</section>
+
+			<!-- Slide 2 -->
+			<section style="text-align: left;">
+				<h2>Lesson Overview</h2>
+				<ul>
+					<li>Strings</li>
+					<li>Logical Operators</li>
+					<li>Control structures</li>
+				</ul>
+			</section>
+
+			<!-- Slide 3 -->
+			<section style="text-align: left;" data-transition="slide" data-background="#007ac9" data-background-transition="slide">
+				<h1>Looking Back...</h1>
+				<ul>
+					<li>JavaScript is a dynamic programming language</li>
+					<li>JavaScript program should always be placed in an external file</li>
+					<li>Data types in JavaScript
+						<ul>
+							<li>NULL</li>
+							<li>UNDEFINED</li>
+							<li>BOOLEAN</li>
+							<li>NUMBER</li>
+							<li>STRING</li>
+						</ul>
+					</li>
+					<li>VARIABLES are used to store data in memory </li>
+					<li>Variables are untyped (THE VALUE DETERMINES THE TYPE!)</li>
+				</ul>
+			</section>
+
+			<!-- Slide 4 -->
+			<section style="text-align: left;" data-transition="slide" data-background="#007ac9" data-background-transition="slide">
+				<h1>Strings</h1>
+				<h3><i>String represents an array or characters.</i></h3>
+			</section>
+
+
+			<!-- Slide 5 -->
+			<section>
+				<section style="text-align: left;">
+					<h2>Combining strings</h2>
+					<ul>
+						<li>Known as <b>concatenation</b></li>
+						<li>Using the '+' operator</li>
+						<li>Ex. <code>"Qinshift" + " " + "Academy"</code></li>
+						<li>Works with string and number as well
+							<ul>
+								<li>Known as <i>automatic type conversion</i></li>
+								<li>Ex. <code>"Qinshift" + " " + 2024</code></li>
+								<li>Ex. <code>"2" + 4 = ?</code></li>
+							</ul>
+						</li>
+						<li>Also variables
+							<ul>
+								<li>
+									<p>Ex. <code>let qa = "Qinshift Academy";</code></p>
+									<p><code>qa + " " + 2024</code></p>
+								</li>
+								<li>Ex. <code>`Hello ${qa} 2024`</code></li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+			</section>
+
+			<!-- Slide 6 -->
+			<section>
+				<section style="text-align: left;">
+					<h2>Quotes within strings</h2>
+					<ul>
+						<li><code>"It's really nice to be a programmer"</code><img src="assets/img/tick.jpg" alt="tick" style="border:none; box-shadow:none;" /></li>
+						<li><code>'It's really nice to be a programmer'</code><img src="assets/img/cancel.jpg" alt="cancel" style="border:none; box-shadow:none;" /></li>
+					</ul>
+				</section>
+
+				<section style="text-align: left;">
+					<h2>Quotes within strings</h2>
+					<ul style="width: 900px;">
+						<li><code>"It's really nice to be a programmer"</code><img src="assets/img/tick.jpg" alt="tick" style="border:none; box-shadow:none;" /></li>
+						<li><code>'It<span class="curcle">&#92;'</span>s really nice to be a programmer'</code><img src="assets/img/tick.jpg" alt="tick" style="border:none; box-shadow:none;" /></li>
+
+					</ul>
+				</section>
+
+				<section style="text-align: left;">
+					<h2>String Conversions</h2>
+					<ul>
+						<li><code>
+								"It's really nice to be a programmer"
+							</code>
+							<img src="assets/img/tick.jpg" alt="tick" style="border:none; box-shadow:none;" />
+						</li>
+					</ul>
+				</section>
+			</section>
+
+			<!-- Slide 7 -->
+			<section style="text-align: left;" data-transition="slide" data-background="#007ac9" data-background-transition="slide">
+				<h1>Few more types</h1>
+			</section>
+
+			<!-- Slide 8 -->
+			<section style="text-align: left;">
+				<h2>The Non-value Values</h2>
+				<ul>
+					<li><code>undefined</code> - the variable hasn't had a value yet</li>
+					<li><code>null</code> - the variable had a value and doesn't anymore</li>
+				</ul>
+			</section>
+
+			<!-- Slide 9 -->
+			<section style="text-align: left;">
+				<h2>Special Numbers</h2>
+				<ul>
+					<li>Any mathematic operation you perform without both operands being <code>number</code>s (or values that can be
+						interpreted as regular <code>number</code>s) will result in producing "not a number" or <code>NaN</code></li>
+					<li> The type of not-a-number is 'number'! Hooray for confusing names and semantics!</li>
+				</ul>
+			</section>
+
+			<!-- Slide 10 -->
+			<section style="text-align: left;">
+				<h2>Special Numbers</h2>
+				<p>
+					<pre><code class="hljs" data-trim contenteditable>
+let a = 2 / "foo";        // NaN
+
+typeof a === "number";    // true
+
+//Beware
+a == NaN;    // false
+a === NaN;    // false
+isNaN( a ); // true
+
+//but
+let b = "foo";
+isNaN( b ); // true -- ouch!
+
+//ES6 to the rescue
+//finally
+Number.isNaN(..) // typeof n === "number" &amp;&amp; window.isNaN( n )
+					</code></pre>
+				</p>
+			</section>
+
+			<!-- Slide 11 -->
+			<section style="text-align: left;">
+				<h2>Infinities</h2>
+				<p>
+					<pre><code class="hljs" data-trim contenteditable>
+var a = 1 / 0;    // Infinity
+var b = Infinity; // Infinity
+var c = -1 / 0;    // -Infinity
+var d = -Infinity; // -Infinity
+					</code></pre>
+				</p>
+			</section>
+
+			<!-- Slide 12 -->
+			<section class="font70" style="text-align: left;">
+				<h2>Logical Operators</h2>
+				<ul style="font-size:28px;">
+					<li>Logical operators are typically used with <code>Boolean</code> (logical) values
+						<ul>
+							<li>When they are, they return a <code>Boolean</code> value</li>
+						</ul>
+					</li>
+					<li>When used with non-Boolean values, they may return a non-Boolean value</li>
+				</ul>
+				<table style="font-size:28px;">
+					<tr>
+						<th>Operator</th>
+						<th>Name</th>
+						<th>Example</th>
+						<th>Explanation</th>
+					</tr>
+					<tr>
+						<td>&amp;&amp;</td>
+						<td>Logical AND</td>
+						<td>expr1 &amp;&amp; expr2</td>
+						<td>Returns <code>expr1</code> if it can be converted to false, otherwise, returns <code>expr2</code>. Thus, when
+							used with Boolean values, &amp;&amp; returns true if both operands are true; otherwise, returns false.</td>
+					</tr>
+					<tr>
+						<td>||</td>
+						<td>Logical OR</td>
+						<td>expr1 || expr2</td>
+						<td>Returns <code>expr1</code> if it can be converted to true, otherwise, returns <code>expr2</code>. Thus, when
+							used with Boolean values, || returns true if either operand is true.</td>
+					</tr>
+					<tr>
+						<td>!</td>
+						<td>Logical NOT</td>
+						<td>!expr</td>
+						<td>Returns false if its single operand can be converted to true; otherwise, returns true</td>
+					</tr>
+				</table>
+			</section>
+
+			<!-- Slide 13 -->
+			<section class="center-back" style="text-align: left;" data-background="assets/img/comparison.jpg">
+				<!-- Here the image is showing in the background of the slide -->
+			</section>
+
+			<!-- Slide 14 -->
+			<section>
+				<section style="text-align: left;">
+					<h2>Structure</h2>
+					<ul>
+						<li>[operand] [operator] [operand]</li>
+					</ul>
+
+					<p>
+						<pre><code class="hljs" data-trim contenteditable>
+let pass = 50;	//pass mark
+let score = 90; //score
+let hasPassed = score >= pass; //what is the value in hasPassed?
+							</code></pre>
+					</p>
+				</section>
+
+				<section style="text-align: left;">
+					<h2>Structure</h2>
+					<ul>
+						<li>[operand] [operator] [operand]</li>
+					</ul>
+
+					<p>
+						<pre><code class="hljs" data-trim contenteditable>
+let pass = 50;	//pass mark
+let score = 90; //score
+let hasPassed = score >= pass; //true
+							</code></pre>
+					</p>
+					<p>Comparison and logical operators return boolen values</p>
+				</section>
+			</section>
+
+			<!-- Slide 15 -->
+			<section style="text-align: left;">
+				                    <p>
+					<pre><code class="hljs" data-trim contenteditable>
+//An operand can be expression
+( (score1 + score2) > (hightScore1 + heightScore2) )
+//operand   //operator  //operand
+                    </code></pre>
+				</p>
+			</section>
+
+			<!-- Slide 16 -->
+			<section style="text-align: left;">
+				                    <p>
+					<pre><code class="hljs" data-trim contenteditable>
+//An operand can be expression
+( (5 < 2) &amp;&amp; (2 >= 3) ) // result: false
+//expression1   //expression2
+     //operator
+                    </code></pre>
+				</p>
+			</section>
+
+			<!-- Slide 17 -->
+			<section class="center-back" style="text-align: left;" data-background="assets/img/comparison_operands.png">
+				<!-- Here the image is showing in the background of the slide -->
+			</section>
+
+            <!-- Slide 18 -->
+			<section class="center-back" style="text-align: left;" data-background="assets/img/logical_operands.png">
+				<!-- Here the image is showing in the background of the slide -->
+			</section>
+
+			<!-- Slide 19 -->
+			<section style="text-align: left;">
+				<h2>False/True - not as you know it</h2>
+				<div class="row agenda">
+					<div class="col-lg-6 col-md-6 col-sm-6">
+						<h3>Falsy values:</h3>
+						<ul>
+							<li>false</li>
+							<li>0, -0</li>
+							<li>"" (empty string)</li>
+							<li>null</li>
+							<li>undefined</li>
+							<li>NaN (invalid number)</li>
+						</ul>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6">
+						<h3>Truthy values:</h3>
+						<ul>
+							<li>true</li>
+							<li>"hello", "0"</li>
+							<li>25</li>
+							<li>[ ], [ 1, "2", 3 ] (arrays)</li>
+							<li>{ }, { a: 42 } (objects)</li>
+							<li>function foo() { .. } (functions)</li>
+							<li>everything else :)</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<!-- Slide 20 -->
+			<section style="text-align: left;">
+				<h2>Logical AND (&amp;&amp;)</h2>
+				                    <p>
+					<pre><code class="hljs" data-trim contenteditable>
+a1 = true  &amp;&amp; true       // t &amp;&amp; t returns true
+a2 = true  &amp;&amp; false      // t &amp;&amp; f returns false
+a3 = false &amp;&amp; true       // f &amp;&amp; t returns false
+a4 = false &amp;&amp; (3 == 4)   // f &amp;&amp; f returns false
+a5 = 'Cat' &amp;&amp; 'Dog'      // t &amp;&amp; t returns "Dog"
+a6 = false &amp;&amp; 'Cat'      // f &amp;&amp; t returns false
+a7 = 'Cat' &amp;&amp; false      // t &amp;&amp; f returns false
+a8 = ''    &amp;&amp; false      // f &amp;&amp; f returns ""
+a9 = false &amp;&amp; ''         // f &amp;&amp; f returns false
+                    </code></pre>
+				</p>            
+			</section>
+
+			<!-- Slide 21 -->
+			<section style="text-align: left;">
+				<h2>Logical OR (||)</h2>
+				                    <p>
+					<pre><code class="hljs" data-trim contenteditable>
+o1 = true  || true       // t || t returns true
+o2 = false || true       // f || t returns true
+o3 = true  || false      // t || f returns true
+o4 = false || (3 == 4)   // f || f returns false
+o5 = 'Cat' || 'Dog'      // t || t returns "Cat"
+o6 = false || 'Cat'      // f || t returns "Cat"
+o7 = 'Cat' || false      // t || f returns "Cat"
+o8 = ''    || false      // f || f returns false
+o9 = false || ''         // f || f returns ""
+                    </code></pre>
+				</p>
+				                
+			</section>
+
+			<!-- Slide 22 -->
+			<section style="text-align: left;">
+				<h2>Logical NOT (!)</h2>
+				                    <p>
+					<pre><code class="hljs" data-trim contenteditable>
+n1 = !true               // !t returns false
+n2 = !false              // !f returns true
+n3 = !'Cat'              // !t returns false
+                    </code></pre>
+				</p>
+				                
+			</section>
+
+			<!-- Slide 23 -->
+			<section style="text-align: left;">
+				<h2><code>==</code> or <code>===</code> dilema</h2>
+				<ul>
+					<li>If either value (aka side) in a comparison could be the <code>true</code> or <code>false</code> value, avoid
+						<code>==</code> and use <code>===</code></li>
+					<li>If either value in a comparison could be of these specific values (<code>0</code>, <code>""</code>, or <code>[]</code>
+						-- empty array), avoid <code>==</code> and use <code>===</code></li>
+					<li>In <em>all</em> other cases, you're safe to use <code>==</code>. Not only is it safe, but in many cases it
+						simplifies your code in a way that improves readability.</li>
+				</ul>
+			</section>
+
+			<!-- Slide 24 -->
+			<section style="text-align: left;">
+				<h2>Inequality</h2>
+				<p>
+					<pre><code class="hljs" data-trim contenteditable>
+var a = 41;
+var b = "42";
+var c = "43";
+
+a &lt; b;		// true
+b &lt; c;		// true
+					</code></pre>
+				</p>
+			</section>
+
+			<!-- Slide 25 -->
+			<section style="text-align: left;">
+				<h2>Inequality</h2>
+				<p>
+					<pre><code class="hljs" data-trim contenteditable>
+var a = 42;
+var b = "foo";
+
+a &lt; b;		// false
+a &gt; b;		// false
+a == b;			// false
+...wtf?...
+					</code></pre>
+				</p>
+			</section>
+
+			<!-- Slide 26 -->
+			<section style="text-align: left;">
+				<h2>Inequality</h2>
+				<p>
+					<pre><code class="hljs" data-trim contenteditable>
+var a = 42;
+var b = "foo";
+
+//Because the b value is being coerced to the "invalid number value" NaN in the &lt; and &gt; comparisons,
+//and the specification says that NaN is neither greater-than nor less-than any other value.
+a &lt; b;
+a &gt; b;
+a == b;			// interpreted 42 == NaN
+					</code></pre>
+				</p>
+			</section>
+
+			<!-- Slide 27 -->
+			<section class="enlarge_p" style="text-align: left;">
+				<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= assignment</p>
+				<p> &nbsp;&nbsp;&nbsp;== equality</p>
+				<p> === strict equality</p>
+			</section>
+
+			<!-- Slide 28 -->
+			<section style="text-align: left;" data-transition="slide" data-background="#007ac9" data-background-transition="slide">
+				<h1>Control Structures</h1>
+			</section>
+
+			<!-- Slide 29 -->
+			<section style="text-align: left;">
+				<h2>Control Structures</h2>
+				<ul>
+					<li>Are the structures within a language that allow us to control the flow of execution through a program or
+						script.</li>
+					<li>Grouped into conditional (branching) structures (e.g. if/else, switch) and repetition structures</li>
+				</ul>
+				<p>
+					<pre><code class="hljs" data-trim contenteditable>
+							if(condition) {
+	statement;
+}
+						</code></pre>
+				</p>
+			</section>
+
+			<!-- Slide 30 -->
+			<section class="center-back" style="text-align: left;" data-background="assets/img/flowchart.png">
+				<!-- Here the image is showing in the background of the slide -->
+			</section>
+
+			<!-- Slide 31 -->
+			<section style="text-align: left;">
+				<p><code class="hljs" data-trim contenteditable>
+						if(score > 100) <span class="curcle">{</span>
+						<br>
+						<span style="margin-left:2%;">alert('You won!');</span> <span>//Code Block</span>
+						<br>
+						<span class="curcle">}</span>
+					</code></p>
+			</section>
+
+			<!-- Slide 32 -->
+			<section style="text-align: left;">
+				<h2>Adding a backup plan</h2>
+				<p>
+					<pre><code class="hljs" data-trim contenteditable>
+							if(score > 100) {
+  //code goes here
+}  else {
+  //otherwise, different code
+}
+						</code></pre>
+				</p>
+
+			<!-- Slide 33 -->
+			</section>
+
+			<section class="center-back" style="text-align: left;" data-background="assets/img/flowchart1.png">
+				<!-- Here the image is showing in the background of the slide -->
+			</section>
+
+			<!-- Slide 32 -->
+			<section style="text-align: left;">
+				<h2>Adding multiple options</h2>
+				<p>
+					<pre><code class="hljs" data-trim contenteditable>
+							if(condition) {
+  //code goes here
+} else if(condition){
+  //different code
+} else {
+  //otherwise, third code
+}
+						</code></pre>
+				</p>
+			</section>
+
+			<!-- Slide 33 -->
+			<section class="center-back" style="text-align: left;" data-background="assets/img/flowchart2.png">
+				<!-- Here the image is showing in the background of the slide -->
+			</section>
+
+			<!-- Slide 34 -->
+			<section style="text-align: left;">
+				<h2>Getting an input</h2>
+				<ul>
+					<li>The prompt() function can be used to ask the user for input</li>
+					<li>Prompt will return anything written in the input as a <b>STRING</b></li>
+					<li>The parseInt() function can be used to convert something in to a number</li>
+				</ul>
+				<p>
+					<pre><code class="js" data-trim contenteditable>
+// We ask for an input from the user
+let input = prompt("Enter a number:");
+// We transform the input string in to a number
+let numberInput = parseInt(input);
+// We can now use the input as a number
+console.log(numberInput + 10);
+						</code></pre>
+				</p>
+			</section>
+
+			<!-- Slide 35 -->
+			<section style="text-align: left;">
+				<h2 style="color:#e8643b;"> Exercise - #1</h2>
+				<ul>
+					<li><b>Decription: </b><b>Using prompt()</b> display a dialog box
+						that prompts the visitor for input. Will return null on 'Cancel' or the value provided on 'Ok' </span>
+					</li>
+					<li><b>Action: </b> Ask the user how much money he has, and depending on the value, suggest to him what he should
+						do</li>
+					<li><strong>Time to accomplish:</strong> 15 minutes.</li>
+				</ul>
+			</section>
+
+			<!-- Slide 36 -->
+			<section style="text-align: center;" data-transition="slide" data-background="#007ac9" data-background-transition="slide">
+				<h2>HOMEWORK</h2>
+				<p>Write javascript code that will get an input from the user and calculate which Chinese Zodiac a given year is in</p>
+				<p>Formula for Chinese Zodiac caluclation: (year - 4) % 12. Possible values:
+					<ul class="split">
+						<li>0 - Rat</li>
+						<li>1 - Ox</li>
+						<li>2 - Tiger</li>
+						<li>3 - Rabbit</li>
+						<li>4 - Dragon</li>
+						<li>5 - Snake</li>
+						<li>6 - Horse</li>
+						<li>7 - Goat</li>
+						<li>8 - Monkey</li>
+						<li>9 - Rooster</li>
+						<li>10 - Dog</li>
+						<li>11 - Pig</li>
+					</ul>
+				<br>
+				<p>E-mail: <br></p>
+				<p>borisovski.borce@gmail.com</p>
+				<p>danieliftimov3@gmail.com</p>
+			</section>
+
+			<!-- THE END -->
+			<section>
+				<h1>THANK YOU<h1>
+				<h2> <span style="color:#007ac9"> QUESTIONS? </span></h2>
+			</section>
+		</div>
+
+	</div>
+
+	<script src="assets/lib/js/head.min.js"></script>
+	<script src="assets/js/reveal.js"></script>
+
+	<script>
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			history: true,
+			center: true,
+
+			transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+			// Transition speed
+			transitionSpeed: 'default', // default/fast/slow
+
+			// Enable slide navigation via mouse wheel
+			mouseWheel: true,
+
+			// Optional reveal.js plugins
+			dependencies: [{
+					src: 'assets/lib/js/classList.js',
+					condition: function () {
+						return !document.body.classList;
+					}
+				},
+				{
+					src: 'assets/plugin/markdown/marked.js',
+					condition: function () {
+						return !!document.querySelector('[data-markdown]');
+					}
+				},
+				{
+					src: 'assets/plugin/markdown/markdown.js',
+					condition: function () {
+						return !!document.querySelector('[data-markdown]');
+					}
+				},
+				{
+					src: 'assets/plugin/highlight/highlight.js',
+					async: true,
+					condition: function () {
+						return !!document.querySelector('pre code');
+					},
+					callback: function () {
+						hljs.initHighlightingOnLoad();
+					}
+				},
+				{
+					src: 'assets/plugin/zoom-js/zoom.js',
+					async: true
+				},
+				{
+					src: 'assets/plugin/notes/notes.js',
+					async: true
+				}
+			]
+		});
+
+		var text = "content of text here";
+		var delay = 50;
+		var currentChar = 1;
+		var destination = "[not defined]";
+		var texts = [
+			'get window height',
+			'get window width',
+			'calculate area',
+			'store area',
+			'do calculation',
+			'check value',
+			'output message',
+			'get image position',
+			'calculate new value',
+			'set image position',
+			'change text color',
+			'if position correct output message'
+		];
+		var currentElement = 0;
+
+		function type() {
+			if (document.getElementById) {
+				var dest = document.getElementById(destination);
+				if (dest) {
+					dest.innerHTML = text.substr(0, currentChar);
+					currentChar++
+					if (currentChar > text.length) {
+						currentElement++;
+						currentChar = 1;
+						if (texts.length != currentElement)
+							code();
+						// setTimeout("type()", 5000);
+					} else {
+						setTimeout("type()", delay);
+					}
+				}
+			}
+		}
+
+		function startTyping(textParam, delayParam, destinationParam, elementId) {
+			var dest = document.getElementById(destinationParam);
+			var newElement = document.createElement("div");
+			newElement.setAttribute('id', elementId);
+			dest.appendChild(newElement);
+
+			text = textParam;
+			delay = delayParam;
+			currentChar = 1;
+			destination = elementId;
+			type();
+		}
+
+		function code() {
+			console.log(currentElement);
+			// for(var i = 0; i < 10; i++)
+			startTyping(texts[currentElement], 50, "statements", currentElement);
+		}
+
+		function typeEverything() {
+			var calculateArea = document.getElementById('calculateArea');
+			var createMessage = document.getElementById('createMessage');
+			var animateImage = document.getElementById('animateImage');
+
+			if (calculateArea.innerHTML.trim() != '')
+				return;
+
+			for (var i = 0; i < texts.length; i++) {
+
+				var newElement = document.createElement("div");
+				newElement.setAttribute('id', 'startTyping' + i);
+				newElement.innerHTML = texts[i];
+				if (i < 4)
+					calculateArea.appendChild(newElement);
+				else if (i >= 4 && i < 7)
+					createMessage.appendChild(newElement);
+				else
+					animateImage.appendChild(newElement);
+			}
+
+			setTimeout(function () {
+				calculateArea.className += ' borders';
+
+				setTimeout(function () {
+
+					createMessage.className += ' borders';
+					setTimeout(function () {
+						animateImage.className += ' borders';
+
+						setTimeout(function () {
+							document.getElementById('left').style.display = 'block';
+						}, 500);
+
+					}, 500);
+
+				}, 500);
+
+			}, 500);
+
+		}
+
+
+		Reveal.addEventListener('startTyping', function () {
+			// Called each time the slide with the "canvases" state is made visible
+			code();
+		}, false);
+
+		Reveal.addEventListener('typeEverything', function () {
+			// Called each time the slide with the "canvases" state is made visible
+			typeEverything();
+		}, false);
+
+
+		Reveal.addEventListener('ready', function (event) {
+			// event.previousSlide, event.currentSlide, event.indexh, event.indexv
+			if (event.indexh == 6) {
+				if (event.indexv == 0)
+					code();
+				if (event.indexv == 1)
+					typeEverything();
+			}
+		});
+	</script>
+
+</body>
+
+</html>
