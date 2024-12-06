@@ -46,7 +46,7 @@ console.log();
 console.log("================= NON-VALUE VALUES =================");
 
 // undefined
-// Typically occures unintentionally *   !!!!!!!! BEZ NASA NAMERA NAJCESTO, NE GO ASSIGNIRAME NIE
+// Typically occures unintentionally *  
 // It's the default value of uninitialized variables in JavaScript.let undefinedVariable;
 console.log(undefinedVariable);
 
