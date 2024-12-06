@@ -49,11 +49,23 @@ function addTwoNumbers(numOne, numTwo) {
 
   let result = numOne + numTwo;
 
-  console.log("And the result is:", result);
+  //!IMPORTANT
+  //Functions that don't have a return statement always return undefined, be extremely careful when calling functions and befores saving a value from a function call, always check if the funtion has a return
+
+  return result;
 }
 
 let numberOne = 130;
 let numberTwo = 540;
 
-addTwoNumbers(10, 20);
-addTwoNumbers(numberOne, numberTwo);
+let resultOne = addTwoNumbers(10, 20);
+let resultTwo = addTwoNumbers(numberOne, numberTwo);
+let resultThree = addTwoNumbers(650, 350);
+
+console.log("result one", resultOne);
+console.log("result two", resultTwo);
+console.log("result three", resultThree);
+
+console.log(addTwoNumbers(50, 150));
+
+console.log(addTwoNumbers(150, 440));
