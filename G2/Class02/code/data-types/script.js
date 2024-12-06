@@ -47,7 +47,8 @@ console.log("================= NON-VALUE VALUES =================");
 
 // undefined
 // Typically occures unintentionally *  
-// It's the default value of uninitialized variables in JavaScript.let undefinedVariable;
+// It's the default value of uninitialized variables in JavaScript.
+let undefinedVariable;
 console.log(undefinedVariable);
 
 // null
