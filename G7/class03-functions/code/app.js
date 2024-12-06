@@ -99,3 +99,64 @@ function printPersonInfo(firstName, lastName, country = "Macedonia") {
 
 printPersonInfo("John", "Doe", "USA");
 printPersonInfo("Jane", "Doe", "Germany");
+
+//Scope
+
+let firstName = "John";
+
+function sayMyName() {
+  let firstName = "Jane";
+  console.log(firstName);
+}
+
+console.log(firstName);
+
+sayMyName();
+console.log(firstName);
+
+let playerHealth = 1000;
+
+function boostPlayerHealth() {
+  playerHealth = playerHealth + 500;
+  console.log("Inside function", playerHealth);
+}
+
+console.log("Outside Function", playerHealth);
+boostPlayerHealth();
+
+function generateEnergy() {
+  //!AVOID DECLARING VARIABLES LIKE THIS AS THIS IS GOING TO CREATE AN UNINTENTED GLOBAL VARIABLE AND THAT CAN BE VERY NASTY TO DEBUG
+  energy = 1000;
+}
+
+generateEnergy();
+console.log(energy);
+
+let message = "Outside the function";
+//Parameters only belong to their function and they are function scoped
+function warning(message) {
+  console.log(message);
+}
+
+warning("Inside the function"); //Inside the function
+console.log(message); //Outside the function
+
+//Exercise 2 solution
+
+// Celsius to Fahrenheit formula: X°C x 1.8 + 32
+// Fahrenheit to Celsius formula: (5/9) * (Fahrenheit-32);
+
+function celsiusToFahrenheit(tempInCelsius) {
+  let result = tempInCelsius * 1.8 + 32;
+
+  return result;
+}
+
+function fahrenheitToCelsius(tempInFahrenheit) {
+  let result = (5 / 9) * (tempInFahrenheit - 32);
+
+  return result;
+}
+
+console.log(celsiusToFahrenheit(32));
+console.log(fahrenheitToCelsius(89.6));

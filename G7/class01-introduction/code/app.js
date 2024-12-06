@@ -125,3 +125,46 @@ addNumOne += 10;
 addNumOne *= 2;
 
 console.log(addNumOne);
+
+//Exercise solutions
+
+//Exercise One
+// Write a JavaScript program to convert a length given in feet to meters.
+// TIP: 1 feet = 0.3048 meters
+
+let oneFootInMeters = 0.3408;
+
+let lengthInFeet = 1200;
+
+let lengthInMeters = 150;
+
+let resultInMeters = lengthInFeet * oneFootInMeters;
+
+let resultInFeet = lengthInMeters / oneFootInMeters;
+
+console.log("Result in meters:", resultInMeters);
+console.log("Result in feet:", resultInFeet);
+
+//Exercise Two
+// Write a JavaScript program that will read the two sides of a rectangle and calculate its area
+// TIP: area = a * b
+
+let rectangleLength = 32;
+let rectangleHeight = 20;
+
+let rectangleArea = rectangleLength * rectangleHeight;
+
+console.log("Rectangle Area:", rectangleArea);
+
+//Exercise Three
+// Write a JavaScript program that will calculate area of a Circle
+// TIP: area = π * r2
+
+//Math.PI is an inblint variable that exists in javacript that will give us a much more precise value of PI
+let pi = Math.PI;
+
+let circleRadius = 25;
+
+let circleArea = pi * circleRadius * circleRadius;
+
+console.log("Circle Area", circleArea);
