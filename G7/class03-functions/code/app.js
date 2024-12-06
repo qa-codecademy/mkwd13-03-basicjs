@@ -69,3 +69,33 @@ console.log("result three", resultThree);
 console.log(addTwoNumbers(50, 150));
 
 console.log(addTwoNumbers(150, 440));
+
+//Exercise One Solution
+let exerciseNumOne = 560;
+let exerciseNumTwo = 120;
+
+// Function that subtracts 2 numbers
+function subtractTwoNumbers(numOne, numTwo) {
+  return numOne - numTwo;
+}
+// Function that multiplies 2 numbers
+function multiplyTwoNumbers(numOne, numTwo) {
+  return numOne * numTwo;
+}
+// Function that divides 2 numbers
+function divideTwoNumbers(numOne, numTwo) {
+  return numOne / numTwo;
+}
+
+console.log(addTwoNumbers(exerciseNumOne, exerciseNumTwo));
+console.log(subtractTwoNumbers(exerciseNumOne, exerciseNumTwo));
+console.log(multiplyTwoNumbers(exerciseNumOne, exerciseNumTwo));
+console.log(divideTwoNumbers(exerciseNumOne, exerciseNumTwo));
+
+//Default params should always be at the end of the paramater list in the definition of the function
+function printPersonInfo(firstName, lastName, country = "Macedonia") {
+  console.log(`Hello to ${firstName} ${lastName} from ${country}`);
+}
+
+printPersonInfo("John", "Doe", "USA");
+printPersonInfo("Jane", "Doe", "Germany");
