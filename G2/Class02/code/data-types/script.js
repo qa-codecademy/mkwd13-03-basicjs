@@ -46,8 +46,9 @@ console.log();
 console.log("================= NON-VALUE VALUES =================");
 
 // undefined
-// Typically occures unintentionally *   !!!!!!!! BEZ NASA NAMERA NAJCESTO, NE GO ASSIGNIRAME NIE
-// It's the default value of uninitialized variables in JavaScript.let undefinedVariable;
+// Typically occures unintentionally *  
+// It's the default value of uninitialized variables in JavaScript.
+let undefinedVariable;
 console.log(undefinedVariable);
 
 // null
@@ -82,6 +83,3 @@ console.log(typeof infinity);
 console.log(1 / 0); // Infinity
 console.log(-1 / 0); // -Infinity
 // Don't divide by zero please...
-
-
-
