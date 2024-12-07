@@ -30,7 +30,7 @@ let whatIsThis = "John" * 320;
 
 console.log(whatIsThis);
 
-console.log(typeof whatIsThis);
+console.log(typeof whatIsThis); //number
 
 // console.log(isNaN(whatIsThis));
 
@@ -67,7 +67,7 @@ let andExampleTwo = false && "Edmond";
 
 console.log(andExampleOne, andExampleTwo);
 
-let orExampleOne = false || "Borche";
+let orExampleOne = false || "Borche" || 100 || "Test" || null;
 
 console.log(orExampleOne);
 
