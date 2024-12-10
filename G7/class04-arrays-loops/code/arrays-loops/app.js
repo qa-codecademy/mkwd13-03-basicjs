@@ -105,3 +105,84 @@ console.log(sum);
 //1. Try to count with a while loop from 101-150, log each number to the console
 //2. Use a sum variable to add all numbers from 101-150
 //3. Use the Math.pow to add the squares of all numbers in a sum
+
+//Exercise one solution
+
+function sumSquares(start, end) {
+  if (start >= end) return 0;
+
+  let sum = 0;
+  let num = start;
+
+  while (num <= end) {
+    // console.log(num);
+
+    sum += Math.pow(num, 2);
+
+    num++;
+  }
+
+  return sum;
+}
+
+console.log("The result is:", sumSquares(101, 150));
+console.log("The result is:", sumSquares(100, 50));
+
+// Action: Write a JavaScript program to read ten array values, determine the largest value, and print it
+
+let randomNumbers = [1, 23, 544, 243, 43, 190, 78, 2000, 240000, 15];
+
+function calculateMax(numArray) {
+  let i = 0;
+
+  let max = randomNumbers[0];
+
+  while (i < numArray.length) {
+    let currentNumber = numArray[i];
+
+    if (currentNumber > max) max = currentNumber;
+
+    console.log(currentNumber);
+
+    i++;
+  }
+
+  return max;
+}
+
+let maxResult = console.log("Max result", calculateMax(randomNumbers));
+
+//For loop
+
+function countToTwenty() {
+  //   let counter = 0;
+
+  //   while (counter <= 20) {
+  //     console.log(counter);
+  //     counter++;
+  //   }
+
+  for (let i = 0; i <= 20; i++) {
+    console.log(i);
+  }
+}
+
+countToTwenty();
+
+let randomNums = [1, 2, 42, 3, 2, 4, 33, 2, 2];
+
+function multiplyNumArray(numArray, num) {
+  console.log(numArray);
+
+  let resultArr = [];
+
+  for (let i = 0; i < numArray.length; i++) {
+    console.log(numArray[i]);
+    resultArr.push(numArray[i] * num);
+  }
+
+  return resultArr;
+}
+
+console.log(multiplyNumArray(randomNums, 10));
+console.log(multiplyNumArray(randomNums, 2));
