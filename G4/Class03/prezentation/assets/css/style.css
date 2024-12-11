@@ -1,0 +1,274 @@
+@font-face {
+    font-family: Economica;
+    src: url('../fonts/economica/Economica-Regular-OTF.otf') format("opentype");
+}
+
+section h2, section h1 {
+  font-family: Economica !important;
+}
+
+.masitLogo {
+  height: 70px;
+}
+
+.right{
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
+.center-back {
+  background-size: contain !important;
+}
+
+.web-trinity {
+    left: -450px;
+    position: absolute;
+    width: 1900px;
+    height: 1000px;
+}
+
+#trinity {
+    width: 1683px;
+    height: 470px;
+    max-width: none;
+    max-height: none;
+    left: -500px;
+    position: absolute;
+    border: none;
+}
+
+.green-color {
+  background-color: #AACF88;
+  left: 8%;
+}
+.blue-color {
+  background-color: #74C6D4;
+  left: 36%;
+}
+.yellow-color {
+  background-color: #E5BA72;
+  left: 64%;
+}
+
+
+.green {
+  /*background-color: #AACF88;*/
+  left: 8%;
+}
+.blue {
+  /*background-color: #74C6D4;*/
+  left: 36%;
+}
+.yellow {
+  /*background-color: #E5BA72;*/
+  left: 64%;
+}
+.sphere {
+  height: 400px;
+  width: 22%;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 500%;
+  position: relative;
+  /*box-shadow: inset -10px -10px 100px #000, 10px 10px 20px black, inset 0px 0px 10px black;*/
+  display: inline-block;
+  margin: 3%  !important;
+  color: #fff;
+  font-weight: bold !important;
+}
+
+.sphere label{
+    line-height: 385px;
+    font-size: 75px;
+}
+
+.spherea {
+  height: 400px;
+  width: 22%;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 500%;
+  position: relative;
+  /*box-shadow: inset -10px -10px 100px #000, 10px 10px 20px black, inset 0px 0px 10px black;*/
+  display: inline-block;
+  margin: 3%  !important;
+  color: #fff;
+  font-weight: bold !important;
+  position: absolute;
+  z-index: 10;
+}
+
+.spheret {
+  height: 400px;
+  width: 22%;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 500%;
+  position: relative;
+  /*box-shadow: inset -10px -10px 100px #000, 10px 10px 20px black, inset 0px 0px 10px black;*/
+  display: inline-block;
+  margin: 3%  !important;
+  color: #BCBCBC;
+  font-weight: bold !important;
+  position: absolute;
+  z-index: 10;
+  top: 32%;
+  display: none;
+}
+
+
+.gray-circle {
+  width: 5%;
+  height: 5%;
+  border-radius: 50%;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 500%;
+  /*box-shadow: inset -10px -10px 100px #000, 10px 10px 20px black, inset 0px 0px 10px black;*/
+  display: block;
+  margin: 3%  !important;
+  background-color: #BCBCBC;
+  font-weight: bold !important;
+  left: 45%;
+}
+
+.spherea label{
+    line-height: 385px;
+    font-size: 75px;
+}
+
+#head-body {
+  position: absolute;
+  left: 45%;
+  top: 38%;
+}
+
+
+.left-align{
+  float: left;
+}
+
+.text-justify{
+  text-align: justify;
+}
+
+section footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100px; /* choose any height */   
+}
+
+.thumb-container{
+  padding: 5px !important;
+}
+
+.thumb{
+  padding: 30px 50px !important;
+  border: 15px solid !important;
+  font-weight: bolder;
+  color: white;
+}
+
+.htmlThumb{
+  border-color: darkseagreen !important;
+  background-color: seagreen;
+}
+
+.cssThumb{
+  border-color: lightskyblue !important;
+  background-color: cornflowerblue;
+}
+
+.jsThumb{
+  border-color: mediumpurple !important;
+  background-color: rebeccapurple;
+}
+
+.full-slide-image{
+  margin-left: 0 !important;
+  width: 100%;
+  height: 100%;
+}
+
+.red-text{
+  color: darkred;
+}
+
+.blue-text{
+  color: dodgerblue;
+}
+
+.agenda h3 {
+  font-family: Economica !important;
+}
+
+.reveal pre code.hljs {
+  padding: 20px;
+}
+
+div.card {
+  border: 1px solid rgba(0,0,0,.125);
+}
+
+.font80 {
+  font-size: 80% !important;
+}
+
+.slide-in-text-left {
+  position: absolute;
+  /* width: 100%;
+  height: 100%; */
+  margin: 0;
+  line-height: 50px;
+  text-align: left;
+}
+
+#function {
+  /* Apply animation to this element */	
+  animation: fromLeft 3s ease-out;
+}
+
+#functionCode {
+  left:15%;
+}
+
+.slide-in-text-right {
+  position: absolute;
+  /* width: 100%;
+  height: 100%; */
+  margin: 0;
+  line-height: 50px;
+  text-align: left;
+  right:40%;
+
+  /* Apply animation to this element */	
+  /* animation: funcName 3s ease-out; */
+}
+
+/* Move it (define the animation) */
+@keyframes fromLeft {
+  0%   { 
+    transform: translateX(-1000%); 		
+  }
+  100% { 
+    transform: translateX(0%); 
+  }
+}
+
+/* Move it (define the animation) */
+@keyframes fromRight {
+  0%   { 
+    transform: translateX(1000%); 		
+  }
+  100% { 
+    transform: translateX(0%); 
+  }
+}
