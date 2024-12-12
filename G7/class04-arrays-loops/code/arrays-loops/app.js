@@ -300,3 +300,66 @@ deleteItemFromGroceryList("Cake");
 console.log(groceries);
 
 showGroceryList();
+
+//Exercise One
+let numArrayTest = [1, 6, 6, 6, 2, 3, 3, 3, 3, 4, 5, 6, 7];
+/*
+Write a function named findNumber that:
+Takes 2 arguments: number, array
+Calculates how many times the number is contained in an array with numbers
+Outputs the result to the screen like so: "There is 4 occurrences of number 5 in the array"
+Call the function three times with different arrays.
+*/
+function countNumberInArray(number, array) {
+  let count = 0;
+
+  for (let num of array) {
+    if (num === number) count++;
+  }
+
+  return `The number ${number} appears ${count} times in the array`;
+}
+
+console.log(countNumberInArray(3, numArrayTest));
+console.log(countNumberInArray(33, [1, 2, 22, 33, 33, 33]));
+console.log(countNumberInArray(2, [1, 1, 1, 1, 1, 1, 1, 1, 2]));
+
+/*
+Write a function named findNumber that:
+Takes 2 arguments: array, type
+The person that calls the function should provide an array of numbers and string odd / even
+If the type is even the function should find all the even numbers and return them as result
+If the type is odd the function should find all the odd numbers and return them as result
+*/
+
+function findNumber(numArray, type) {
+  let resultArr = [];
+
+  if (type !== "even" && type !== "odd")
+    return "Invalid type, accepted values are: odd,even";
+
+  for (let num of numArray) {
+    if (type === "even" && num % 2 === 0) resultArr.push(num);
+    if (type === "odd" && num % 2 !== 0) resultArr.push(num);
+  }
+
+  return resultArr;
+
+  // let resultArr = [];
+  // if (type === "even") {
+  //   for (let num of numArray) {
+  //     if (num % 2 === 0) resultArr.push(num);
+  //   }
+  // } else if (type === "odd") {
+  //   for (let num of numArray) {
+  //     if (num % 2 === 1) resultArr.push(num);
+  //   }
+  // } else {
+  //   return "Invalid type, accepted values are: odd,even";
+  // }
+  // return resultArr;
+}
+
+console.log("Even numbers", findNumber(numArrayTest, "even"));
+console.log("Odd numbers", findNumber(numArrayTest, "odd"));
+console.log(findNumber(numArrayTest, "random"));
