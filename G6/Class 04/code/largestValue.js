@@ -1,5 +1,6 @@
 let numbers = [35, 1, 15, 34, 22, 11, 7, 6, 45, 11];
 let anotherArray = [36, 1, 12, 34, 22, 11, 7, 6, 45, 11, 12, 67];
+let negativeArray = [-1, -22, -35, -65, -78];
 
 function findLargestValue(inputArray){
     let index = 0;
