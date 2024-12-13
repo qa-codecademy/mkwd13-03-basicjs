@@ -78,7 +78,7 @@ Create a function that will create and return an new array of all numbers betwee
 * if the number is dividable by 7 **AND** 3. 
 * If a number is **ONLY** dividable by 7 it should **NOT** be part from that array. 
 * If a number is **ONLY** dividable by 3 it should **NOT** be part from that array. 
-** Bonus: make the function work to any number instead of only to 100.
+* Bonus: make the function work to any number instead of only to 100.
 
 
 ### Task 17
