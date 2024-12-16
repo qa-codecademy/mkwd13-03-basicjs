@@ -167,3 +167,16 @@ console.log(citroen);
 
 const fuelWasted = citroen.calculateFuelForDistance(50);
 console.log(fuelWasted);
+
+let person = {
+  firstName: "Bob",
+  lastNme: "Bobsky",
+  hobbies: ["running", "playin ps5"],
+  address: {
+    street: "Partizanski Odredi",
+    number: 100,
+    zipCode: 1000,
+  },
+};
+
+console.log(person.address.street);
