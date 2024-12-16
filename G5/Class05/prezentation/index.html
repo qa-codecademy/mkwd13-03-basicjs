@@ -1,0 +1,718 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>JavaScript</title>
+
+	<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+	<meta name="author" content="Hakim El Hattab">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<link rel="stylesheet" href="assets/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/css/reveal.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/theme/white.css" id="theme">
+
+	<!-- Code syntax highlighting -->
+	<link rel="stylesheet" href="assets/lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'assets/text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'assets/css/print/pdf.css' : 'assets/css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+
+	<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+</head>
+
+<body>
+
+	<div class="reveal">
+
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+
+			<!-- Slide 1 -->
+			<section style="text-align: center;">
+				<h1>JavaScript</h1>
+				<div>
+					<div style="background-color: #3F4A5C; display: inline-flex; justify-content: center; padding: 10px; width: 300px;">
+						<img src="./assets/img/lg.png" alt="logo" style="border:none; box-shadow:none; padding: 0; margin: 0; display: inline; background-color: transparent;" />
+					</div>
+					<br />
+					<br />
+					<small>Lecture by <a href="#" target="_blank"> Dimitrov Gjorge </a> & <a href="#"
+						target="_blank">Danilo Borozan</a> </small>
+					<br />
+				</div>
+				<p style="font-size: 15px;">© 2024 Qinshift Academy</p>
+			</section>
+
+			<!-- Slide 2 -->
+			<section style="text-align: left;">
+				<h2>Lesson Overview</h2>
+				<ul>
+					<li>Objects</li>
+					<li>Everything is an object</li>
+					<li>No really, everything is an object</li>
+					<li>What do we do with all these objects</li>
+				</ul>
+			</section>
+			<section style="text-align: left;" data-transition="slide" data-background="#007ac9" data-background-transition="slide">
+				<h1>Looking Back...</h1>
+				<ul>
+				<li>Events are captured interactions</li>
+				<li>We must wait for an event for an event to be raised</li>
+				<li>Events are captured by event handlers</li>
+				<li>Event handlers call some function after the event is captured</li>
+				<li>Types of events:</li>
+				<ul>
+					<li>HTML event handler</li>
+					<li>Standard event handler</li>
+					<li>Event Listener</li>
+				</ul>
+				</ul>
+			</section>
+
+			<!-- Slide 3 -->
+			<section style="text-align: left;" data-transition="slide" data-background="#007ac9" data-background-transition="slide">
+				<h1>Objects</h1>
+			</section>
+
+			<section>
+				<section style="text-align: left;">
+					<div class="center">
+						<h3>Everything is an object.</h3>
+						<p>(Well, almost everything)</p>
+					</div>
+				</section>
+				<section data-state="scrollToTop" style="text-align: left;">
+					<div id="scrollToTop" class="center">
+						<ul class=" half_split">
+							<li><b>Primitives</b>
+								<ul>
+									<li>Numbers</li>
+									<li>Strings</li>
+									<li>Booleans</li>
+									<li>Null</li>
+									<li>Undefined</li>
+									<li class="hidden"></li>
+									<li class="hidden"></li>
+									<li class="hidden"></li>
+								</ul>
+							</li>
+							<li><b>Everything else...</b>
+								<ul>
+									<li>Arrays</li>
+									<li>Functions</li>
+									<li>Objects</li>
+									<li>Dates</li>
+									<li>Wrappers for Numbers, Strings, Booleans</li>
+								</ul>
+								<b style="float:right">...is an object</b>
+								<div class="clear"></div>
+							</li>
+						</ul>
+
+					</div>
+				</section>
+			</section>
+
+			<section style="text-align: left;">
+				<h2>Introduction</h2>
+				<ul>
+					<li><em>Objects</em> group together a set of variables and functions to create a model of a something you would
+						recognize from the real world</li>
+					<li>In an object:
+						<ul>
+							<li>Variables become know as <strong>properties</strong> (Tell us more about the object)</li>
+							<li>Functions become know as <strong>methods</strong> (Tasks that are associated with the object or what the
+								object can do)</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+
+			<section style="text-align: left;">
+				<h2>Introduction (2)</h2>
+				<ul>
+					<li>Like variables and named functions, properties and methods have a name and a value. In an object, that name is
+						called a <strong>key</strong></li>
+					<li>An object <em>cannot have</em> two keys with the same name</li>
+					<li>The value of a property can be a string, number, Boolean, array, or <em>even another object</em>. The value of
+						a method is always a function</li>
+				</ul>
+			</section>
+
+			<section>
+				<div class="sl-block" data-block-type="image" style="width: 100%; height: 100%;" data-block-id="">
+					<div class="sl-block-content"><img src="assets/img/object_variables.png"></div>
+				</div>
+			</section>
+
+
+			<section>
+				<div class="sl-block" data-block-type="image" style="width: 100%; height: 100%;" data-block-id="">
+					<div class="sl-block-content"><img src="assets/img/hotel_object.png"></div>
+				</div>
+			</section>
+
+
+			<section style="text-align: left;" data-transition="slide" data-background="#007ac9" data-background-transition="slide">
+				<h1>The Object Oriented Paradigm</h1>
+				<h3>Note: This section is only introductory</h3>
+				<h3>Don't panic</h3>
+			</section>
+
+			<section style="text-align: left;">
+				<h2>Object-Oriented Programming</h2>
+				<ul>
+					<li>Objects interacting with one another through methods and properties</li>
+					<li>Used to store data, structure applications into modules and keeping code clean</li>
+					<li>A widely accepted definition to classify a programming language such as Object Oriented is based on two
+						requirements: its capability to model a problem through objects and its support of some principles that grant
+						modularity and code reuse.
+
+					</li>
+				</ul>
+			</section>
+			<section style="text-align: left;" class="font90">
+				<h2>JavaScript OOP versus classical OOP </h2>
+				<ul>
+					<li>Classical Object-Oriented programming has two types of abstractions: classes and objects.
+						<ul>
+							<li>An object is an abstraction of a real-world entity, can only be created by instantiating classes</li>
+							<li>A class is an abstraction of an object or another class (in other words, it is a generalization)</li>
+						</ul>
+					</li>
+					<li>JavaScript has a different approach to object management, has just one type of abstraction - the objects. An
+						object can be created directly as <b>an abstraction of a real-world entity</b> or as <b>an abstraction of another
+							object (prototype)</b>.</li>
+					<li>As opposed to the classical OOP approach, the JavaScript approach is sometimes called <i>Prototypal
+							Object-Oriented Programming</i></li>
+				</ul>
+			</section>
+
+			<section style="text-align: left;" class="font90">
+				<h2>JavaScript OOP versus classical OOP (2)</h2>
+				<ul>
+					<li>In classical OOP inheritance is an operation allowed on classes, in prototypal OOP inheritance is an operation
+						on objects</li>
+					<li>That does not mean that classical OOP is better than prototypal OOP or vice versa. They are simply different
+						approaches.</li>
+					<li>In classical OOP classes are immutable, that is we cannot add, change, or remove properties or methods at
+						runtime, in prototypal OOP objects and prototypes are extremely flexible</li>
+					<li>Classical OOP adds an extra level of abstraction with classes, leading to a more verbose code, while
+						prototypal OOP is more immediate and requires a more compact code</li>
+				</ul>
+			</section>
+
+			<section style="text-align: left;" data-transition="slide" data-background="#007ac9" data-background-transition="slide">
+				<h1>Creating Objects</h1>
+			</section>
+
+			<section style="text-align: left;">
+				<h2>Literal Notation</h2>
+				<ul>
+					<li>Easiest and most popular method for creating objects</li>
+					<li>The obect is the curly braces and their content</li>
+					<li>Separate each key from its values by using a colon</li>
+					<li>Separate each property and methos with comma (not after the last value)</li>
+				</ul>
+			</section>
+
+
+			<section style="text-align: left;">
+				<p>
+					<pre><code class="hljs" data-trim contenteditable>
+let hotel = {
+  name : "Quay",
+  rooms: 40,
+  booked: 25,
+  gym: true,
+  roomTypes: ['twin', 'double', 'suite'],
+
+  checkAvailability: function(){
+    return this.rooms - this.booked;
+  }
+};
+
+					</code></pre>
+				</p>
+			</section>
+
+			<section style="text-align: left;">
+				<h2>Accessing an Object</h2>
+				<ul>
+					<li>Properties and methods of an object can be accessed using the <em>dot notation</em></li>
+					<li>You can also access properties using the <em>square brackets</em></li>
+					<li><strong>Dot Notation:</strong> Name of the object, followed by a period, then the name of the property or
+						method you want to access</li>
+					<li>The period is know as <strong>member operator</strong></li>
+				</ul>
+			</section>
+
+			<section>
+				<div class="sl-block" data-block-type="image" style="width: 100%; height: 100%;" data-block-id="">
+					<div class="sl-block-content"><img src="assets/img/object_dot_notation.png"></div>
+				</div>
+			</section>
+
+			<section style="text-align: left;">
+				<h1>Exercise 1</h1>
+				<p>
+
+					Create a JavaScript object that will describe you.<br>
+					Include at least 5 properties, including a string, a number and a boolean
+				</p>
+			</section>
+			<section style="text-align: left;">
+				<h3>Exercise 1 Solution</h3>
+				<p>
+					<pre><code class="hljs" data-trim contenteditable>
+let bob = {
+  firstName:"Bob",
+  lastName:"Bobsky",
+  age: 26,
+  company:"SEDC",
+  canSing:false
+}
+					</code></pre>
+				</p>
+			</section>
+			<section style="text-align: left;">
+				<h2>Constructor Notation</h2>
+				<ul>
+					<li>The <strong>new</strong> keyword and the <strong>Object()</strong> constructor create a blank object. You can
+						then add properties and methods to the object using the <strong>dot notation</strong></li>
+					<li>Each statement that adds a property or a method should end in semicolon</li>
+				</ul>
+			</section>
+
+			<section>
+				<div class="sl-block" data-block-type="image" style="width: 100%; height: 100%;" data-block-id="">
+					<div class="sl-block-content"><img src="assets/img/object_with_contructor.png"></div>
+				</div>
+			</section>
+
+			<section style="text-align: left;">
+				<h2>Note</h2>
+				<ul>
+					<li>You can use the dot syntax to add properties and methods to any object you have created (no matter which
+						notation you used to create it)</li>
+					<li>To create an empty object using the literal notation use: <strong>let hotel = {}</strong></li>
+				</ul>
+			</section>
+
+			<section style="text-align: left;">
+				<h2>Updating Objects</h2>
+				<ul>
+					<li>To update the value of <em>properties</em>, use <strong>dot notation</strong> or <strong>square brackets</strong>
+						(no matter which notation you used to create the object)</li>
+					<li>If property does not exist, it will be added to the object</li>
+					<li>To delete a property, use the <strong>delete</strong> followed by the object name and the property name:
+						<p>
+							<pre><code class="hljs" data-trim contenteditable>
+							delete hotel.name;
+							</code></pre>
+						</p>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<div class="sl-block" data-block-type="image" style="width: 100%; height: 100%;" data-block-id="">
+					<div class="sl-block-content"><img src="assets/img/object_update_property.png"></div>
+					<div class="sl-block-content"><img src="assets/img/object_update_property_square.png"></div>
+				</div>
+			</section>
+
+			<section style="text-align: left;">
+				<h1>Exercise 2</h1>
+				<p>
+					Update the values of the object you've created to represent one of your class mates<br>
+				</p>
+			</section>
+			<section style="text-align: left;">
+				<h3>Exercise 2 Solution</h3>
+				<p>
+					<pre><code class="hljs" data-trim contenteditable>
+bob.firstName = "Petko";
+bob.lastName = "Petkovski";
+bob.age = 29;
+bob.company = "it-company";
+bob.canSing = true;
+					</code></pre>
+				</p>
+			</section>
+			<section style="text-align: left;">
+				<h1>Exercise 3</h1>
+				<p>
+					Write a JavaScript program to delete the <b>lecture</b> property from the following object. Add a property <b>age</b> to the
+					object. Add a method <b>getFullName</b> that returns the full name ( First Name and Last name )<br>
+					Sample object: <br>
+					<pre>
+let trainer = {
+	name :  "Stefan",
+	lastName: "Stefanovski",
+	academy: "SEDC",
+	lecture: "Objects"
+}
+</pre>
+				</p>
+			</section>
+			<section style="text-align: left;">
+				<h3>Exercise 3 Solution</h3>
+				<p>
+					<pre><code class="hljs" data-trim contenteditable>
+delete(trainer.lecture);
+trainer.age = 25;
+trainer.getFullName = function(){
+  return `${trainer.name} ${trainer.lastName}`;
+}
+					</code></pre>
+				</p>
+			</section>
+			<section style="text-align: left;">
+				<h2>Constructor Notation (1)</h2>
+				<ul>
+					<li>When you want several objects to represent similar things you can use a function as a <strong>template</strong>
+						for creating objects</li>
+					<li>Like all functions, it contains statements which are used for adding properties or methods to the object
+						(which end in semicolon)</li>
+					<li>The <strong>this</strong> keyword is used instead of the object name to indicate that the property or method
+						belongs to the object that <strong><em>this</em></strong> function creates</li>
+					<li>Constructor function usually begins with a capital letter </li>
+				</ul>
+			</section>
+
+			<section>
+				<section>
+					<div class="sl-block" data-block-type="image" style="width: 100%; height: 100%;" data-block-id="">
+						<div class="sl-block-content"><img src="assets/img/constructor.png"></div>
+					</div>
+				</section>
+				<section>
+					<div class="sl-block" data-block-type="image" style="width: 100%; height: 100%;" data-block-id="">
+						<div class="sl-block-content"><img src="assets/img/constructor_instances.png"></div>
+					</div>
+				</section>
+			</section>
+
+			<section>
+				<div class="sl-block" data-block-type="image" style="width: 100%; height: 100%;" data-block-id="">
+					<div class="sl-block-content"><img src="assets/img/objects_with_contructor.png"></div>
+				</div>
+			</section>
+
+			<section style="text-align: left;">
+				<h2>Constructor Notation (2)</h2>
+				<ul>
+					<li>You can create <strong>instances</strong> of the object using the <strong>constructor</strong> function</li>
+					<li>The <strong>new</strong> keyword followed by a call to the function creates a new object</li>
+					<li>The properties of the objects are given as arguments to the function</li>
+				</ul>
+			</section>
+
+			<section>
+				<div class="sl-block" data-block-type="image" style="width: 100%; height: 100%;" data-block-id="">
+					<div class="sl-block-content"><img src="assets/img/object_constructor_call.png"></div>
+				</div>
+			</section>
+
+
+			<section style="text-align: left;">
+				<h2>The 'This' keyword</h2>
+				<ul>
+					<li>Each execution context gets it
+						<ul>
+							<li><b>Regular function call: </b> the <i>this</i> keyword points at the global object (which is the window
+								object in the browser)</li>
+							<li><b>Method call: </b> the <i>this</i> keyword points at the object that is calling the method</li>
+						</ul>
+					</li>
+					<li><strong>The <em>this</em> keyword is not assigned a value until a function where it is defined is actually
+							called</strong></li>
+					<!-- <li>The keyword <strong>this</strong> is commonly used inside functions and objects</li>
+						<li>Where the function is declared alters what this means. It always refers to one object, usually the object in which the function operates</li> -->
+				</ul>
+			</section>
+
+
+			<section style="text-align: left;">
+				<h2>A FUNCTION IN GLOBAL SCOPE (1)</h2>
+				<ul>
+					<li>When a function is created at the top level of a script (that is, not inside another object or function), then
+						it is in the <strong>global scope</strong> or<strong>global context</strong></li>
+					<li>The default object in this context is the window object. So when <strong>this</strong> is used inside a
+						function in the global context it refers to the <em>window object</em></li>
+				</ul>
+				<p>
+					<pre><code class="hljs" data-trim contenteditable>
+function windowSize() {
+	let width= this.innerWidth;
+	let height = this.innerHeight;
+	return [height, width];
+}
+					</code></pre>
+				</p>
+
+			</section>
+			<section style="text-align: left;">
+				<h2>A METHOD OF AN OBJECT </h2>
+				<ul>
+					<li>When a function is defined inside an object, it becomes a method. In a method, this refers to the containing
+						object</li>
+				</ul>
+				<p>
+					<pre><code class="hljs" data-trim contenteditable>
+
+let shape = {
+	width: 600,
+	height: 400,
+	getArea: function(){
+		return this.width * this.height;
+	}
+};
+					</code></pre>
+				</p>
+
+			</section>
+
+			<section style="text-align: left;">
+				<h2>FUNCTION EXPRESSION AS METHOD </h2>
+				<ul>
+					<li>If a named function has been defined in global scope, and it is then used as a method of an object, this
+						refers to the object it is contained within</li>
+				</ul>
+				<p>
+					<pre><code class="hljs" data-trim contenteditable>
+let width = 600;
+let shape= {width: 300};
+
+function showWidth() {
+	console.log(this.width);
+}
+shape.showWidth = showWidth;
+shape.showWidth(); // 300
+
+showWidth(); //600
+					</code></pre>
+				</p>
+
+			</section>
+			<section style="text-align: left;">
+				<h1>Exercise 4</h1>
+				<p>
+					Create a car object with some properties<br>
+					model, color, year, fuel, fuelConsumption and a method that calculate how much fuel you will need to pass some
+					distance.
+
+				</p>
+			</section>
+			<section style="text-align: left;">
+				<h3>Exercise 4 Solution</h3>
+				<p>
+					<pre><code class="hljs" data-trim contenteditable>
+let car = {
+  model: "Lada Kalina",
+  color: "Red",
+  year: 2013,
+  fuel: 50,
+  fuelConsumption: 6.6,
+  calculateFuelForDistance: function(distance){
+    return distance * (this.fuelConsumption/100);
+  }
+}
+					</code></pre>
+				</p>
+			</section>
+			<section style="text-align: left;">
+				<h1>Exercise 5</h1>
+				<p>
+					Create a student registry form. The form should have:
+					<ul>
+						<li>First Name</li>
+						<li>Last Name</li>
+						<li>Age</li>
+					</ul><br>
+					The form should have a save button which will create a student object and add it to an array (students).
+					Log the array after every save to see the results in the console.<br>
+					<b>Bonus:</b> Make the students appear in an unordered list in the page.
+				</p>
+			</section>
+			<section style="text-align: left;">
+				<h3>Exercise 5 Solution(1)</h3>
+				<p>
+					<pre><code class="hljs" data-trim contenteditable>
+&lt;div style="text-align: center;">
+  &lt;h1>Student Form&lt;/h1>
+  &lt;div id="studentForm">
+    First Name: &lt;input type="text">
+    Last Name: &lt;input type="text">
+    Age: &lt;input type="text">
+    &lt;button>Add&lt;/button>
+  &lt;/div>
+  &lt;div id="result1">
+    &lt;h3>Students:&lt;/h3>
+    &lt;ul style="list-style-position: inside">&lt;/ul>
+  &lt;/div>
+&lt;/div>
+					</code></pre>
+				</p>
+			</section>
+			<section style="text-align: left;">
+				<h3>Exercise 5 Solution(2)</h3>
+				<p>
+					<pre><code class="js" data-trim contenteditable>
+let students = [];
+function Student(first, last, age){
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+}
+
+function showStudents(studentsArr, element){
+  element.innerHTML = "";
+  for (let student of studentsArr) {
+    element.innerHTML += `<li><b>Name:</b> ${student.firstName} ${student.lastName},
+    <b>Age:</b> ${student.age}</li>`;
+  }
+}
+					</code></pre>
+				</p>
+			</section>
+			<section style="text-align: left;">
+				<h3>Exercise 5 Solution(3)</h3>
+				<p>
+					<pre><code class="js" data-trim contenteditable>
+let studentForm = document.getElementById("studentForm");
+let result = document.getElementById("result1");
+
+studentForm.getElementsByTagName("button")[0].addEventListener("click", function(){
+  let first = studentForm.children[0].value;
+  let last = studentForm.children[1].value;
+  let age = studentForm.children[2].value;
+  let newStudent = new Student(first, last, age);
+  students.push(newStudent);
+  showStudents(students, result.getElementsByTagName("ul")[0]);
+  studentForm.children[0].value = "";
+  studentForm.children[1].value = "";
+  studentForm.children[2].value = "";
+});
+					</code></pre>
+				</p>
+			</section>
+			<section style="text-align: center;" data-transition="slide" data-background="#007ac9" data-background-transition="slide">
+				<h2>HOMEWORK Part 1</h2>
+				<p>
+					<h4>Create OBJECT animal with 2 properties and 1 method:</h4>
+					<ul>
+						<li> name </li>
+						<li> kind </li>
+						<li> speak (method) </li>
+					</ul>
+					<p>this method will take one parameter and will print in the console a message: e.g. dog.speak(“hey bro!!!”) will log in the console “Dog says: ‘Hey bro!!!’”</p>
+
+					<strong>Bonus: enter the values from prompt or from HTML inputs</strong>
+			</section>
+			<section style="text-align: center;" data-transition="slide" data-background="#007ac9" data-background-transition="slide">
+				<h2>HOMEWORK Part 2</h2>
+				<p>Write a JavaScript program to display the reading status of some book.
+				The object should have the next properties: title, author, readingStatus
+				and a method that will return info depending on the readingStatus e.g. </p>
+				<ul>
+					<li>Already read 'The Robots of dawn' by Isaac Asimov. (if true)</li>
+					<li>You still need to read 'Mockingjay: The Final Book of The Hunger Games' by Suzanne Collins. (if false).</li>
+				</ul>
+				<h6>Bonus: enter the values from prompt() or read them from HTML</h6>
+			</section>
+			<!-- Slide 19 -->
+			<section style="text-align: left;">
+				<h1>Thank you!</h1>
+				<p>
+					<a href="#">Questions?</a> <br>
+				</p>
+				<p>E-mail: <br></p>
+				<p>dimitrov.gjorge@protonmail.com</p>
+				<p>daniloborozan07@gmail.com</p>
+			</section>
+		</div>
+
+	</div>
+
+	<script src="assets/lib/js/head.min.js"></script>
+	<script src="assets/js/reveal.js"></script>
+
+	<script>
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			history: true,
+			center: true,
+
+			transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+			// Transition speed
+			transitionSpeed: 'default', // default/fast/slow
+
+			// Enable slide navigation via mouse wheel
+			mouseWheel: true,
+
+			// Optional reveal.js plugins
+			dependencies: [{
+					src: 'assets/lib/js/classList.js',
+					condition: function () {
+						return !document.body.classList;
+					}
+				},
+				{
+					src: 'assets/plugin/markdown/marked.js',
+					condition: function () {
+						return !!document.querySelector('[data-markdown]');
+					}
+				},
+				{
+					src: 'assets/plugin/markdown/markdown.js',
+					condition: function () {
+						return !!document.querySelector('[data-markdown]');
+					}
+				},
+				{
+					src: 'assets/plugin/highlight/highlight.js',
+					async: true,
+					condition: function () {
+						return !!document.querySelector('pre code');
+					},
+					callback: function () {
+						hljs.initHighlightingOnLoad();
+					}
+				},
+				{
+					src: 'assets/plugin/zoom-js/zoom.js',
+					async: true
+				},
+				{
+					src: 'assets/plugin/notes/notes.js',
+					async: true
+				}
+			]
+		});
+	</script>
+
+</body>
+
+</html>
