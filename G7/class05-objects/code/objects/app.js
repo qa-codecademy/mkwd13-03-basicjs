@@ -122,3 +122,65 @@ let jane = new Person("Jane Doe", 1993, "Nurse");
 let bob = new Person("Bob Bobsky", 1979, "Bartender");
 
 console.log(john, jane, bob);
+
+//this used outside of a method in an object is the window object
+function checkThis() {
+  console.log(this);
+}
+
+//Avoid adding methods after object creation
+let randomObj = {
+  heigth: 500,
+  width: 500,
+};
+
+randomObj.checkThis = checkThis;
+
+console.log(randomObj);
+
+randomObj.checkThis();
+
+//Exercise 4 Solution
+/*
+Create a car object with some properties
+model, color, year, fuel, fuelConsumption and a method that calculate how much fuel you will need to pass some distance. 
+*/
+
+function Car(model, color, year, fuel, fuelConsumption) {
+  this.model = model;
+  this.color = color;
+  this.year = year;
+  this.fuel = fuel;
+  this.fuelConsumption = fuelConsumption;
+
+  this.calculateFuelConsumption = function (distance) {
+    return (this.fuelConsumption / 100) * distance;
+  };
+}
+
+let yugo = new Car("Zastava Yugo 55", "white", 1988, 50, 25);
+let audi = new Car("Audi R7", "golden", 2024, 120, 4.5);
+
+console.log(yugo);
+
+console.log(yugo.calculateFuelConsumption(300));
+
+//Research Homework, look into classes and try creating some
+class Vehicle {
+  engineNumber = "M47-B";
+
+  constructor(numberOfWheels, currentFuel, fuelConsumption, horsePower) {
+    this.numberOfWheels = numberOfWheels;
+    this.currentFuel = currentFuel;
+    this.fuelConsumption = fuelConsumption;
+    this.horsePower = horsePower;
+  }
+
+  calculateFuelConsumption(distance) {
+    return (this.fuelConsumption / 100) * distance;
+  }
+}
+
+let bmw = new Vehicle(4, 120, 8.9, 325);
+
+console.log(bmw);
