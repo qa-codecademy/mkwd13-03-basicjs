@@ -1,15 +1,21 @@
 console.log("===================== DOCUMENT OBJECT MODEL (DOM) =====================");
-console.log(window);
+console.log(window); // represents the browser window containing the web page (global object)
+console.log(this); // global 'this' => window object
+// alert("Hello from alert");
 // window.alert("Hello from alert");
-console.log(this);
 
+// Part of the window object is the *document* object which represents our HTML file (our web page)
 console.log(window.document);
+// window.document or just document
 console.log(document);
 
+// Using document to find the title of the page
 console.log(document.title);
 
+// Using document to find the current URL
 console.log(document.URL);
 
+// Using document to force reload on the page from JavaScript
 // document.location.reload();
 
 
@@ -40,6 +46,7 @@ console.log(paragraphs);
 
 console.log("");
 console.log("=========== Selecting using querySelector/querySelectorAll ===========");
+// selecting elements using CSS-like syntax
 
 // 1) for selecting only one element
 let subTitle = document.querySelector(".subtitle");
@@ -57,13 +64,15 @@ console.log("");
 console.log("=========== Traversing through the DOM tree ===========");
 let featureList = document.querySelector(".feature-list");
 console.log(featureList);
+// Child elements selection
 console.log("The children of feature list: ", featureList.children);
+// Parent element selection
 console.log("The parent of feature list: ", featureList.parentElement);
 console.log("The grandparent of feature list: ", featureList.parentElement.parentElement);
 
+// Sibling elements selection
 let previousSibling = featureList.previousElementSibling;
 let nextSibling = featureList.nextElementSibling;
-
 console.log(previousSibling);
 console.log(nextSibling); // null
 

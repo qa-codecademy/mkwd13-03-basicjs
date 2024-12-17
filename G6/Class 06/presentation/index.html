@@ -665,22 +665,6 @@ element.style.backgroundColor = "blue"; // Changes background color to blue
 				</ul>
 			</section>
 			<section style="text-align: left;">
-				<h2>Exercise #1 Solution</h2>
-				<p>
-				<pre><code class="hljs" data-trim contenteditable>
-let firstDiv = document.querySelector("div");
-let allParagraphs = document.getElementsByTagName("p");
-let lastDiv = document.getElementsByTagName("body")[0].lastElementChild;
-let header3last = lastDiv.getElementsByTagName("h3")[0];
-let header1last = header3last.previousElementSibling;
-let paragraphSecondText = document.getElementsByClassName("second")[0].innerText;;
-document.querySelector("text").innerText += " text!";
-header3last.innerText = "Text added from JS";
-header1last.innerText = "Text added from JS also";
-						</code></pre>
-				</p>
-			</section>
-			<section style="text-align: left;">
 				<h2 style="color:#e8643b;">Student Exercise - #2</h2>
 				<h6>Weight calculator in chickens</h6>
 				<p>Want to know how you wiegh in chikens? No problem!</p>
@@ -695,33 +679,6 @@ header1last.innerText = "Text added from JS also";
 				</ul>
 			</section>
 			<section style="text-align: left;">
-				<h2>Exercise #2 Solution HTML</h2>
-				<p>
-				<pre><code class="js" data-trim contenteditable>
-<h1 align="center">BE AMAZED! SEE HOW MUCH YOU WEIGHT IN CHICKENS</h1>
-<div align="center" id="result"></div>
-					</code></pre>
-				</p>
-			</section>
-			<section style="text-align: left;">
-				<h2>Exercise #2 Solution JS</h2>
-				<p>
-				<pre><code class="js" data-trim contenteditable>
-function weightInChickens(weight){
-  return weight / 0.5;
-}
-
-let resultDiv = document.getElementById("result");
-let input = parseInt(prompt("Please enter how much you weigh:"));
-if(!isNaN(input)){
-  resultDiv.innerHTML = `<h3> ${input}KG is ${weightInChickens(input)} <img src="chicken.png" style="height:2vh"></h3>`
-} else {
-  resultDiv.innerHTML = `<h3> Sorry! Wrong input! Refresh the page again! </h3>`
-}
-					</code></pre>
-				</p>
-			</section>
-			<section style="text-align: left;">
 				<h1>Exercise 3</h1>
 				<p>
 					Create a student registry form. The form should have:
@@ -733,68 +690,6 @@ if(!isNaN(input)){
 				The form should have a save button which will create a student object and add it to an array (students).
 				Log the array after every save to see the results in the console.<br>
 				<b>Bonus:</b> Make the students appear in an unordered list in the page.
-				</p>
-			</section>
-			<section style="text-align: left;">
-				<h3>Exercise 3 Solution(1)</h3>
-				<p>
-				<pre><code class="hljs" data-trim contenteditable>
-&lt;div style="text-align: center;">
-  &lt;h1>Student Form&lt;/h1>
-  &lt;div id="studentForm">
-    First Name: &lt;input type="text">
-    Last Name: &lt;input type="text">
-    Age: &lt;input type="text">
-    &lt;button>Add&lt;/button>
-  &lt;/div>
-  &lt;div id="result1">
-    &lt;h3>Students:&lt;/h3>
-    &lt;ul style="list-style-position: inside">&lt;/ul>
-  &lt;/div>
-&lt;/div>
-					</code></pre>
-				</p>
-			</section>
-			<section style="text-align: left;">
-				<h3>Exercise 3 Solution(2)</h3>
-				<p>
-				<pre><code class="js" data-trim contenteditable>
-let students = [];
-function Student(first, last, age){
-  this.firstName = first;
-  this.lastName = last;
-  this.age = age;
-}
-
-function showStudents(studentsArr, element){
-  element.innerHTML = "";
-  for (let student of studentsArr) {
-    element.innerHTML += `<li><b>Name:</b> ${student.firstName} ${student.lastName},
-    <b>Age:</b> ${student.age}</li>`;
-  }
-}
-					</code></pre>
-				</p>
-			</section>
-			<section style="text-align: left;">
-				<h3>Exercise 3 Solution(3)</h3>
-				<p>
-				<pre><code class="js" data-trim contenteditable>
-let studentForm = document.getElementById("studentForm");
-let result = document.getElementById("result1");
-
-studentForm.getElementsByTagName("button")[0].addEventListener("click", function(){
-  let first = studentForm.children[0].value;
-  let last = studentForm.children[1].value;
-  let age = studentForm.children[2].value;
-  let newStudent = new Student(first, last, age);
-  students.push(newStudent);
-  showStudents(students, result.getElementsByTagName("ul")[0]);
-  studentForm.children[0].value = "";
-  studentForm.children[1].value = "";
-  studentForm.children[2].value = "";
-});
-					</code></pre>
 				</p>
 			</section>
 			<section style="text-align: center;" data-transition="slide" data-background="#007ac9"
