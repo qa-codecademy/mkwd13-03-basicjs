@@ -43,12 +43,52 @@ let prevSibling = nextSibling.previousElementSibling;
 // parent element
 
 let parent = prevSibling.parentElement;
-console.log(parent);
+// console.log(parent);
 
 // getiong the children of element
 let children = parent.children;
-console.log(children);
+// console.log(children);
 let firstChild = parent.firstElementChild;
-console.log(firstChild);
+// console.log(firstChild);
 let lastChild = parent.lastElementChild;
-console.log(lastChild);
+// console.log(lastChild);
+
+
+// Get text content
+let mainDiv = document.getElementById('main');
+let divTextContent = mainDiv.textContent;
+// console.log(divTextContent);
+let divInnerText = mainDiv.innerText;
+// console.log(divInnerText);
+
+// changing text
+let mainHeader = document.getElementById('myTitle');
+mainHeader.innerText = "Hooray we added text with javascript";
+mainHeader.innerText = "New text";
+
+mainHeader.innerText = mainHeader.innerText + " Ultra new text";
+mainHeader.innerText += " Short variant";
+
+// adding html
+// wrong way innerText is only used for changing text 
+mainHeader.innerText = "<p> Test </p>";
+
+let divMain = document.getElementById('main');
+console.log(divMain.innerHTML);
+
+// divMain.innerHTML += '<p id="firstParagraph">First html element added with javascript</p>';
+
+// divMain.innerHTML = '';
+
+// let body = document.querySelector('body');
+// body.innerHTML = '';
+
+// changing style
+let divMainDiv = document.getElementById('main');
+
+divMainDiv.style.color = 'red';
+// divMainDiv.style.backgroundColor = 'blue';
+// divMainDiv.style.display = 'none';
+
+divMainDiv.classList.add('bg-color');
+divMainDiv.classList.add('bg-color', 'test', 'test2');
