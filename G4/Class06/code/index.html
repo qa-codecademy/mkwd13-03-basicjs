@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class06</title>
+
+    <style>
+      .row {
+        display: flex;
+        gap: 12px;
+        margin: 4px;
+      }
+
+      .row > label {
+        width: 100px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .section {
+        border: 2px dotted royalblue;
+        margin: 8px;
+        padding: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="section">
+        <h3>1. HTML Event handler</h3>
+        <button
+          id="html-event-handling"
+          onclick="htmlClickEventHandling(); htmlClickEventHandlingAgain()"
+          onmouseover="htmlMouseoverEventHandling()"
+        >
+          Click me (html event handler)
+        </button>
+      </div>
+
+      <div class="section">
+        <h3>2. Traditional DOM Event handler</h3>
+        <button id="traditional-dom-event-handling">
+          Click me (traditional DOM event handler)
+        </button>
+      </div>
+
+      <div class="section">
+        <h3>3. Event Listeners</h3>
+        <button id="event-listener-button">Click me (Event listener)</button>
+        <input id="event-listener-input" />
+      </div>
+
+      <div class="section">
+        <h3>4. Exercise</h3>
+        <button id="greeting-button">Greet someone</button>
+      </div>
+
+      <div class="section">
+        <h3>5. Add/Remove event listeners</h3>
+        <button id="action-button">Click me</button>
+        <button id="bind-button">Bind event listener</button>
+        <button id="unbind-button">Unbind event listener</button>
+      </div>
+
+      <div class="section">
+        <h3>6. Function with parameters</h3>
+        <button id="function-with-parameters">Click me</button>
+      </div>
+
+      <div class="section">
+        <h3>7. Read value from input programatically</h3>
+        <div class="my-form">
+          <div class="form-control">
+            <input id="username" type="text" />
+          </div>
+
+          <button id="sign-up" style="margin-top: 12px">Sign up</button>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>8. Exercise</h3>
+
+        <p id="paragraph">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem
+          nulla accusantium libero illum aspernatur non ad, porro quam adipisci
+          qui corrupti beatae repellendus, recusandae magni maiores facere
+          officia consequuntur officiis explicabo!
+        </p>
+        <button id="textChanger">Change the paragraph</button>
+        <button id="textUnChanger">Remove the changes</button>
+      </div>
+
+      <div class="section">
+        <h3>9. Exercise</h3>
+        <fieldset>
+          <div class="row">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" />
+          </div>
+          <div class="row">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" />
+          </div>
+          <div class="row">
+            <label for="email">Email</label>
+            <input type="email" id="email" />
+          </div>
+          <div class="row">
+            <label for="password">Password</label>
+            <input type="password" id="password" />
+          </div>
+          <div class="row">
+            <button id="btn">Submit</button>
+          </div>
+        </fieldset>
+        <p id="sign-up-paragraph"></p>
+      </div>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

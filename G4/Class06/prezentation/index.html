@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>JavaScript</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="assets/css/bootstrap.css">
+		<link rel="stylesheet" href="assets/css/reveal.css">
+		<link rel="stylesheet" href="assets/css/style.css">
+		<link rel="stylesheet" href="assets/css/theme/white.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="assets/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			let link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'assets/text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'assets/css/print/pdf.css' : 'assets/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<!-- Slide 1 -->
+				<section style="text-align: center;">
+					<h1>JavaScript</h1>
+					<div>
+						<div style="background-color: #3F4A5C; display: inline-flex; justify-content: center; padding: 10px; width: 300px;">
+							<img src="./assets/img/lg.png" alt="logo" style="border:none; box-shadow:none; padding: 0; margin: 0; display: inline; background-color: transparent;" />
+						</div>
+						<br />
+						<br />
+						<small>Lecture by <a href="#" target="_blank"> Kliment Sidorov </a> & <a href="#"
+																							  target="_blank">Zhanko Mitreski</a> </small>
+						<br />
+					</div>
+					<p style="font-size: 15px;">© 2024 Qinshift Academy</p>
+				</section>
+
+				<!-- Slide 2 -->
+				<section style="text-align: left;">
+					<h2>Lesson Overview</h2>
+					<ul>
+						<li>Events</li>
+					</ul>
+				</section>
+
+				<section style="text-align: left;" data-transition="slide" data-background="#007ac9" data-background-transition="slide">
+					<h1>Events</h1>
+				</section>
+
+				<section style="text-align: left;">
+					<h2>Introductuon</h2>
+					<ul>
+						<li> Browser: "Hey, this just happened." </li>
+						<li> Interactions create events </li>
+						<li> Events trigger code </li>
+						<li> Code responds to users</li>
+					</ul>
+				</section>
+
+
+				<section style="text-align: left;">
+					<h2>Terminology</h2>
+					<ul>
+						<li> Events <strong>fire</strong> or are <strong>raised</strong> </li>
+						<li> Events <strong>trigger</strong> code </li>
+						<li> Code do <strong>event handling</strong> </li>
+					</ul>
+				</section>
+
+				<section>
+					<div class="sl-block" data-block-type="image" style="width: 100%; height: 100%;" data-block-id="">
+					    <div class="sl-block-content"><img src="assets/img/events.png"></div>
+					</div>
+				</section>
+
+				<section>
+					<div class="sl-block" data-block-type="image" style="width: 100%; height: 100%;" data-block-id="">
+					    <div class="sl-block-content"><img src="assets/img/events_1.png"></div>
+					</div>
+				</section>
+
+				<section>
+					<div class="sl-block" data-block-type="image" style="width: 100%; height: 100%;" data-block-id="">
+					    <div class="sl-block-content"><img src="assets/img/event_handeling.png"></div>
+					</div>
+				</section>
+
+				<section style="text-align: left;">
+					<h2>THREE WAYS TO BIND AN EVENT TO AN ELEMENT</h2>
+					<ul>
+						<li> HTML event handlers </li>
+						<li> Traditional DOM event handlers </li>
+						<li> DOM level 2 event listeners </li>
+					</ul>
+				</section>
+
+				<section style="text-align: left;">
+					<h2>HTML event handlers</h2>
+					<ul>
+						<li> Bad practice </li>
+						<li> A set of attributes that could respond to events on the element they were added to. </li>
+						<li> The attribute names matched the event names. Their values called the function that was to run when that event occurred. </li>
+					</ul>
+					<p><pre><code class="hljs" data-trim contenteditable>
+&lt;a onclick="hide()"&gt; &lt;/a&gt;
+
+					</code></pre></p>
+				</section>
+				<section style="text-align: left;">
+					<h2>HTML event handlers</h2>
+					<p><pre><code class="hljs" data-trim contenteditable>
+function countRabbits() {
+	for(let i=1; i<=3; i++) {
+		alert("Rabbit number " + i);
+	}
+}
+&lt;input type="button" onclick="countRabbits()" value="Count rabbits!"&gt;
+
+					</code></pre></p>
+				</section>
+				<section style="text-align: left;">
+					<h2>Traditional DOM event handlers</h2>
+					<ul>
+						<li> Separate the JavaScript from the HTML </li>
+						<li> The main drawback is that you can only attach a single function to any event </li>
+					</ul>
+					<img src="assets/img/event_handlers.png" style="border:none; box-shadow:none;" />
+				</section>
+
+				<section>
+					<div class="sl-block" data-block-type="image" style="width: 100%; height: 100%;" data-block-id="">
+					    <div class="sl-block-content"><img src="assets/img/event_handlers_1.png"></div>
+					</div>
+				</section>
+				<section style="text-align: left;">
+					<h2>DOM event handlers</h2>
+					<p><pre><code class="hljs" data-trim contenteditable>
+let elem = document.getElementByid("btnHello");
+elem.onclick = function() {
+	 	alert("Hello World");
+	};
+
+&lt;input type="button" id="btnHello"  value="Say Hello"&gt;
+
+					</code></pre></p>
+				</section>
+				<section style="text-align: left;">
+					<h2>DOM event handlers</h2>
+					<p><pre><code class="hljs" data-trim contenteditable>
+let elem = document.getElementByid("btnHello");
+//right
+elem.onclick = sayHello;
+//wrong
+elem.onclick = sayHello();
+function sayHello() {
+	 	alert("Hello World");
+	};
+
+&lt;input type="button" id="btnHello"  value="Say Hello"&gt;
+
+					</code></pre></p>
+				</section>
+				<section style="text-align: left;">
+					<h2>DOM event handlers</h2>
+					<p><pre><code class="hljs" data-trim contenteditable>
+let elem = document.getElementByid("btnHello");
+//right
+elem.onclick = sayHello;
+function sayHello() {
+	 	alert("Hello World");
+	};
+elem.onclick = iWon;
+function iWon() {
+	 	alert("I'm the WINNER");
+	};
+&lt;input type="button" id="btnHello"  value="Say Hello"&gt;
+
+					</code></pre></p>
+				</section>
+				<section style="text-align: left;">
+					<h2>Event listeners </h2>
+					<ul>
+						<li> Allow one event to trigger multiple functions </li>
+						<li> Just a function that sits there and waits for an event to happen </li>
+					</ul>
+					<img src="assets/img/event_listeners.png" style="border:none; box-shadow:none;" />
+				</section>
+
+
+				<section>
+					<div class="sl-block" data-block-type="image" style="width: 100%; height: 100%;" data-block-id="">
+					    <div class="sl-block-content"><img src="assets/img/event_listeners_1.png"></div>
+					</div>
+				</section>
+				<section style="text-align: left;">
+					<h2>Event listeners</h2>
+					<p><pre><code class="hljs" data-trim contenteditable>
+let elem = document.getElementById("username");
+elem.addEventListener("blur", function(){
+    let greeting = `Hello ${elem.value}`;
+    alert(greeting);
+});
+
+function greetingFunc(){
+    let greeting = `Hello ${elem.value}`;
+    alert(greeting);
+}
+elem.addEventListener("blur", greetingFunc);
+&lt;input type="text" id="username"  value="Say Hello"&gt;
+
+					</code></pre></p>
+				</section>
+				<section style="text-align: left;">
+					<h2>Event listeners</h2>
+					<p><pre><code class="hljs" data-trim contenteditable>
+let elem = document.getElementById("username");
+
+elem.addEventListener("blur", function(event){
+    let greeting = `Hello ${event.target.value}`;
+    alert(greeting);
+});
+&lt;input type="text" id="username"  value="Say Hello"&gt;
+
+					</code></pre></p>
+				</section>
+
+				<section style="text-align: left;">
+					<h2 style="color:#e8643b;">Student Exercise - #1</h2>
+					<ul>
+						<li><b>Decription: </b>On a button click, greet yourself in alert</li>
+						<li><b>Action:</b> Create a button. When clicked it shoud write: "Hello NAME"</li>
+						<li>Put your own name next to the Hello</li>
+						<li><strong>Time to accomplish:</strong> 10 minutes.</li>
+					</ul>
+				</section>
+				<section style="text-align: left;">
+						<h2>Exercise 1 Solution</h2>
+						<p><pre><code class="hljs" data-trim contenteditable>
+&lt;button id="myBtn">Greet&lt;/button>
+
+let myButton = document.getElementById("myBtn");
+function greet(){
+    alert(`Hello Bob`);
+}
+myButton.onclick = greet;
+						</code></pre></p>
+					</section>
+
+				<section style="text-align: left;">
+					<h2>Remove Event listeners</h2>
+					<p><pre><code class="hljs" data-trim contenteditable>
+let elem = document.getElementById("redDiv");
+function setColorToDiv(event){
+    event.target.style.backgroundColor = "red";
+}
+elem.addEventListener("mousemove",setColorToDiv);
+elem.removeEventListener("mousemove", setColorToDiv);
+&lt;div id="redDiv" style="width:300px;height:300px" &gt;&lt;/div&gt;
+
+					</code></pre></p>
+				</section>
+				<section>
+					<section style="text-align: left;">
+						<h2>How events are processed</h2>
+						<ul>
+							<li> An event can be handled as soon as the execution stack is empty </li>
+
+						</ul>
+
+					</section>
+
+					<section>
+						<div class="sl-block" data-block-type="image" style="width: 100%; height: 100%;" data-block-id="">
+							<div class="sl-block-content"><img src="assets/img/execution-stack.png"></div>
+						</div>
+					</section>
+
+					<section>
+						<div class="sl-block" data-block-type="image" style="width: 100%; height: 100%;" data-block-id="">
+							<div class="sl-block-content"><img src="assets/img/execution-stack-1.png"></div>
+						</div>
+					</section>
+
+					<section>
+						<div class="sl-block" data-block-type="image" style="width: 100%; height: 100%;" data-block-id="">
+							<div class="sl-block-content"><img src="assets/img/execution-stack-2.png"></div>
+						</div>
+					</section>
+
+					<section>
+						<div class="sl-block" data-block-type="image" style="width: 100%; height: 100%;" data-block-id="">
+							<div class="sl-block-content"><img src="assets/img/execution-stack-3.png"></div>
+						</div>
+					</section>
+
+					<section>
+						<div class="sl-block" data-block-type="image" style="width: 100%; height: 100%;" data-block-id="">
+							<div class="sl-block-content"><img src="assets/img/execution-stack-4.png"></div>
+						</div>
+					</section>
+				</section>
+
+				<section style="text-align: left;">
+					<h2>USING PARAMETERS WITH EVENT HANDLERS &amp; LISTENERS</h2>
+					<ul>
+						<li> If you need to pass arguments to a function that is called by an event handler or listener, you wrap the function call in an <strong>anonymous function</strong></li>
+					</ul>
+				</section>
+
+				<section>
+					<div class="sl-block" data-block-type="image" style="width: 100%; height: 100%;" data-block-id="">
+					    <div class="sl-block-content"><img src="assets/img/passing_args.png"></div>
+					</div>
+				</section>
+
+				<section style="text-align: left;">
+					<p><pre><code class="hljs" data-trim contenteditable>
+//Get username input
+let elUsername = document.getElementByid('username');
+// Get feedback element
+let elMsg = document.getElementByid('feedback');
+
+function checkUsername(minlength) {// Declare function
+	//If username too short
+	if(elUsername.value.length &lt; minlength){
+		// Set the error message
+		elMsg.textContent = `Username must be ${minlength} characters or more`;
+	}else{ // Otherwise
+		// Clear msg
+		elMsg.innerHTML = "";
+	}
+}
+//When it loses focus
+elUsername.addEventListener('blur',function(){
+// Pass arguments here
+	checkUsername(5);
+}, false); </code></pre></p>
+				</section>
+
+				<section style="text-align: left;">
+					<h2>Event Flow</h2>
+					<ul>
+						<li>HTML elements nest inside other elements. By clicking on a link, you are clicking on its parent element as well</li>
+					</ul>
+				</section>
+
+				<section>
+					<div class="sl-block" data-block-type="image" style="width: 100%; height: 100%;" data-block-id="">
+					    <div class="sl-block-content"><img src="assets/img/event_bubble.png"></div>
+					</div>
+				</section>
+
+				<section style="text-align: left;">
+					<h2>Getting values from inputs</h2>
+					<ul>
+						<li>Values from inputs can be obtained or changed</li>
+						<li>The value property of the input element represents whatever is written in a </li>
+						<p><pre><code class="html" data-trim contenteditable>
+<input id="name" placeholder="Enter a name">
+<button id="btn">Click</button>
+						</code></pre></p>
+						<p><pre><code class="js" data-trim contenteditable>
+let input = document.getElementById("name");
+let btn = document.getElementById("btn");
+btn.addEventListener("click", function(){
+ // gets the value
+ console.log(`Somebody entered the name: ${input.value}`);
+ // changes the value to empty string
+ input.value = "";
+})
+						</code></pre></p>
+					</ul>
+				</section>
+
+<section style="text-align: left;">
+					<h2 style="color:#e8643b;">Student Exercise - #2</h2>
+					<h3>Change element style</h3>
+					<ul>
+						<li>On a button click, change a paragraph's text color, background color and font size.</li>
+
+					</ul>
+					<p>Time to accomplish: 15 minutes</p>
+				</section>
+				<section style="text-align: left;">
+					<h2 style="color:#e8643b;">Student Exercise - #2 Solution</h2>
+						<p><pre><code class="html" data-trim contenteditable>
+<p id="myParagraph"></p>
+<button id="myBtn">Click</button>
+						</code></pre></p>
+						<p><pre><code class="js" data-trim contenteditable>
+let paragraph = document.getElementById("myParagraph");
+let btn = document.getElementById("myBtn");
+
+function changeElement(element){
+    element.style.color = "red";
+    element.style.backgroundColor = "blue";
+    element.style.fontSize = "34px";
+}
+
+btn.addEventListener("click", function(){
+    changeElement(paragraph);
+});
+						</code></pre></p>
+					</ul>
+				</section>
+
+				<section style="text-align: left;">
+					<h2 style="color:#e8643b;">Student Exercise - #3</h2>
+					<h3>Register User</h3>
+					<ul>
+						<li>Create an HTML page, with 4 inputs for FirstName, LastName ,Email and Password and a button</li>
+						<li>On click of the button call a function that will get all the inputs' values and use the values as parameters for a new function which will add them to string</li>
+						<li>Finaly print the string in a new p element on the screen</li>
+					</ul>
+					<p>Time to accomplish: 15 minutes</p>
+				</section>
+				<section style="text-align: left;">
+					<h2 style="color:#e8643b;">Student Exercise - #3 Solution</h2>
+						<p><pre><code class="html" data-trim contenteditable>
+<div id="userInputs">
+	<input type="text" placeholder="First Name">
+	<input type="text" placeholder="Last Name">
+	<input type="email" placeholder="Email">
+	<input type="password" placeholder="Password">
+</div>
+<button id="submit">Submit</button>
+<p id="result"></p>
+						</code></pre></p>
+						<p><pre><code class="js" data-trim contenteditable>
+let inputs = document.getElementById("userInputs").children;
+let result = document.getElementById("result");
+let submitBtn = document.getElementById("submit");
+
+function getUserInfo(inputElements){
+    let result = "User: ";
+    for (let input of inputElements) {
+        result += input.value + " ";
+    }
+    result += "is registered!"
+    return result;
+}
+submitBtn.addEventListener("click", function(){
+    result.innerText = getUserInfo(inputs);
+})
+						</code></pre></p>
+					</ul>
+				</section>
+
+				<section style="text-align: left;" data-transition="slide" data-background="#007ac9" data-background-transition="slide">
+					<h1>Homework</h1>
+					<h3>Create a dynamic table</h3>
+						<p>Write a Javascript function that will dynamiclly create a table<br>
+User should input the number of Colums and Rows<br>
+In every table cell print which row and column it is  (ex. Row-3 Column-1)<br>
+      Don't forget to use google! :)
+					</p>
+				</section>
+
+				<!-- Slide 19 -->
+				<section style="text-align: left;">
+					<h1>Thank you!</h1>
+					<p>
+						<a href="#">Questions?</a> <br>
+					</p>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="assets/lib/js/head.min.js"></script>
+		<script src="assets/js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+				 // Transition speed
+    			transitionSpeed: 'default', // default/fast/slow
+
+				 // Enable slide navigation via mouse wheel
+    			mouseWheel: true,
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'assets/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'assets/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'assets/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'assets/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'assets/plugin/zoom-js/zoom.js', async: true },
+					{ src: 'assets/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

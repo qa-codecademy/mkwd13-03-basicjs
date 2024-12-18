@@ -30,12 +30,16 @@
 			<section style="text-align: center;">
 				<h1>JavaScript</h1>
 				<img src="assets/img/js.png" alt="js" style="border:none; box-shadow:none; width:300px; height:300px;">
-				<p>
-					<img src="assets/img/lg.png" alt="logo" style="border:none; box-shadow:none;" /><br />
-					<small>Lecture by <a href="#" target="_blank"> Aneta Stankovska - anetastankovskaane@gmail.com</a> & <a href="#"
-							target="_blank">Ivan Apostolovski - ivan.apostolovski@gmail.com</a> </small></br>
-
-				</p>
+				<div>
+					<div style="background-color: #3F4A5C; display: inline-flex; justify-content: center; padding: 10px; width: 300px;">
+						<img src="./assets/img/lg.png" alt="logo" style="border:none; box-shadow:none; padding: 0; margin: 0; display: inline; background-color: transparent;" />
+					</div>
+					<br />
+					<br />
+					<small>Lecture by <a href="#" target="_blank"> Aneta Stankovska </a> & <a href="#"
+							target="_blank">Ivan Apostolovski</a> </small>
+					<br />
+				</div>
 				<p style="font-size: 15px;">© 2024 Qinshift Academy</p>
 			</section>
 
@@ -68,7 +72,7 @@
 					<li>JavaScript is <b> NOT </b> JAVA</li>
 				</ul>
 			</section>
-			
+
 			<section style="text-align:center;">
 				<h2>What is JavaScript?</h2>
 				<ul>
@@ -78,7 +82,7 @@
 
 			<section style="text-align: left;">
 				<h2>All together!</h2>
-				<img src="assets/img/rsz_1example.jpg" alt="">
+				<img height="550" src="assets/img/rsz_1example.png" alt="">
 			</section>
 
 			<section style="text-align: left">
@@ -178,9 +182,9 @@
 				</ul>
 				<pre>
 					<code class="hljs js" data-trim contenteditable>
-	var number; // Declaration <br>
+	let number; // Declaration <br>
 	number = 5; // Initialization <br>
-	var number = 5; // Declaration and Initialization
+	let number = 5; // Declaration and Initialization
 					</code>
 				</pre>
 			</section>
@@ -225,18 +229,18 @@
 				<p style="font-size:26px">In JavaScript, <b>UNDEFINED</b> means a variable has been declared but has not
 					yet been assigned a value, such as:</p>
 				<code class="hljs js" data-trim contenteditable style="font-size:26px">
-					var TestVar;<br>
-					alert(TestVar); //shows undefined <br>
-					alert(typeof TestVar); //shows undefined
+					let testVariable<br>
+					alert(testVariable); //shows undefined <br>
+					alert(typeof testVariable); //shows undefined
 					</code>
 
 				<p style="font-size:26px"><b>null</b> is an assignment value. It can be assigned to a variable as a
 					representation of no value:</p>
 
 				<code class="hljs js" data-trim contenteditable style="font-size:26px">
-					var TestVar = null; <br>
-					alert(TestVar); //shows null <br>
-					alert(typeof TestVar); //shows object
+					let testVariable = null; <br>
+					alert(testVariable); //shows null <br>
+					alert(typeof testVariable); //shows object
 				   </code>
 
 				<p style="font-size:26px">
@@ -266,7 +270,7 @@
 				</ul>
 			</section>
 			<!-- Slide 10 -->
-			
+
 			<!-- Slide 12 -->
 			<section>
 				<h2>Comments</h2>
