@@ -69,7 +69,8 @@ function getStudents() {
 function renderStudents(students, container) {
     // => best way is to build the string of the html and then just assign it to the container.innerHTML 
     let htmlContent = "<ul>";
-    // container.innerHTML += "<ul>" // => if we use it like this, the browser will generate a self-closing tag automatically, which will break our html structure
+    // debugger
+    // container.innerHTML = "<ul>" // => if we use it like this, the browser will generate a self-closing tag automatically, which will break our html structure
     for (const student of students) {
         htmlContent += `<li>${student}</li>`
     }
@@ -97,7 +98,6 @@ console.log(students);
 
 let studentsContainer = document.getElementById("students-container");
 
-
 renderStudents(students, studentsContainer)
 // renderStudentsUsingCreateElement(students, studentsContainer)
 
@@ -111,4 +111,11 @@ console.log(studentsTitle.style);
 studentsTitle.style.color = "green";
 studentsContainer.style.border = "2px solid green";
 
-// To be continued ...
+console.log(studentsContainer.hasAttribute("class"));
+studentsContainer.setAttribute("class", "students-list");
+console.log(studentsContainer.hasAttribute("class"));
+let classAtributeValue = studentsContainer.getAttribute("id")
+console.log(classAtributeValue);
+studentsContainer.removeAttribute("class");
+
+studentsContainer.setAttribute("customAttribute", true);
