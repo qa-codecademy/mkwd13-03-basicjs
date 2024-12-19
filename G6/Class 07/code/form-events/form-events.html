@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 07 - Events</title>
+</head>
+
+<body>
+    <header>
+        <h1>Form Events</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Get Value from Input</h2>
+            <label for="random-text-input">Enter Random Text</label>
+            <input type="text" id="random-text-input">
+            <button id="show-value-btn">Show Value</button>
+            <p class="display-text">
+
+            </p>
+        </section>
+
+        <section>
+            <h2>Create User</h2>
+            <form id="users-form" action="/create-user" method="post">
+                <input type="text" id="user-first-name" placeholder="Enter First Name">
+                <input type="text" id="user-last-name" placeholder="Enter Last Name">
+                <button>Create User</button>
+            </form>
+            <ul id="users-list">
+
+            </ul>
+        </section>
+    </main>
+
+    <script src="form-events.js"></script>
+</body>
+
+</html>
