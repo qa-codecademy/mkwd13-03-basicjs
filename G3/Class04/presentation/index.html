@@ -46,12 +46,16 @@
             <!-- Slide 1 -->
             <section style="text-align: center;">
                 <h1>JavaScript</h1>
-                <img src="assets/img/js.png" alt="js" style="border:none; box-shadow:none; width:300px; height:300px;">
-                <p>
-                    <img src="assets/img/lg.png" alt="logo" style="border:none; box-shadow:none;" /><br/>
-                    <small>Lecture by <a href="#" target="_blank"> Aneta Stankovska</a> & <a href="#" target="_blank">Ivan Apostolovski</a> </small></br>
-
-                </p>
+                <div>
+                    <div style="background-color: #3F4A5C; display: inline-flex; justify-content: center; padding: 10px; width: 300px;">
+                        <img src="./assets/img/lg.png" alt="logo" style="border:none; box-shadow:none; padding: 0; margin: 0; display: inline; background-color: transparent;" />
+                    </div>
+                    <br />
+                    <br />
+                    <small>Lecture by <a href="#" target="_blank"> Aneta Stankovska </a> & <a href="#"
+                                                                                          target="_blank">Ivan Apostolovski</a> </small>
+                    <br />
+                </div>
                 <p style="font-size: 15px;">© 2024 Qinshift Academy</p>
             </section>
 
@@ -120,11 +124,11 @@ let days = ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat', 'Sun'];
 
 let iAmEmptyArray = []; //an empty array
 let iAmMixedArray = [1, 2, 'I am string', false]; //mixed array
-let authors = [ 'Ernest Hemingway',                
-	'Charlotte Bronte',                
-	'Dante Alighieri',  //A single statement 
-	'Emily Dickinson'   //although in multiple lines           
-]; 
+let authors = [ 'Ernest Hemingway',
+	'Charlotte Bronte',
+	'Dante Alighieri',  //A single statement
+	'Emily Dickinson'   //although in multiple lines
+];
 
 					</code></pre></p>
             </section>
@@ -226,8 +230,8 @@ days.push('No more days in the week', 'Stop adding days, these is no more');
 
 //command unshift() allows you to add item to the beginning of the array
 
-let properties = ['red', '14px', 'Arial']; 
-properties.unshift('bold'); 
+let properties = ['red', '14px', 'Arial'];
+properties.unshift('bold');
 
 //result ['bold', 'red', '14px', 'Arial']
 
@@ -236,7 +240,7 @@ properties.unshift('bold');
                 <p><pre><code class="hljs" data-trim contenteditable>
 
 
-let properties = ['red', '14px', 'Arial']; 
+let properties = ['red', '14px', 'Arial'];
 
 //you can use unshift() to insert multiple items
 properties.unshift('bold', 'italic', 'underlined');
@@ -262,8 +266,8 @@ properties.unshift('bold', 'italic', 'underlined');
 //command pop() allows you to remove an item from the end of an array
 //pop() returns the removed item
 
-let p = [0,1,2,3]; 
-let removedItem = p.pop(); 
+let p = [0,1,2,3];
+let removedItem = p.pop();
 
 //result p = [0,1,2]; removedItem = 3;
 
@@ -274,8 +278,8 @@ let removedItem = p.pop();
 //command shift() allows you to remove an item from the beginning of an array
 //shift() returns the removed item
 
-let p = [0,1,2,3]; 
-let removedItem = p.shift(); 
+let p = [0,1,2,3];
+let removedItem = p.shift();
 
 //result  p = [1,2,3]; removedItem = 0;
 
@@ -284,7 +288,7 @@ let removedItem = p.shift();
 
             </section>
 
-            
+
 
             <section style="text-align: left;" data-transition="slide" data-background="#007ac9" data-background-transition="slide">
                 <h1>Looping structures</h1>
@@ -326,11 +330,11 @@ while(condition) {
                 </ul>
                 <p><pre><code class="hljs" data-trim contenteditable>
 let days = ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat', 'Sun'];
-let counter = 0; 
-while (counter < days.length) {  
-	document.write(days[counter] + ', ');  
-	counter++; 
-} 
+let counter = 0;
+while (counter < days.length) {
+	document.write(days[counter] + ', ');
+	counter++;
+}
 
 					</code></pre></p>
             </section>
@@ -392,9 +396,9 @@ console.log(sumPow(101, 150)); // 797925
                     <li> As a result, the JavaScript code within the curly braces always run at <em>least once</em>, even if the condition isn’t ever true </li>
                 </ul>
                 <p><pre><code class="hljs" data-trim contenteditable>
-do { 
-	// javascript to repeat 
-} while (condition) ; 
+do {
+	// javascript to repeat
+} while (condition) ;
 
 					</code></pre></p>
             </section>
@@ -406,9 +410,9 @@ do {
                     <li>A <em>while loop</em>, with fewer lines of code</li>
                 </ul>
                 <p><pre><code class="hljs" data-trim contenteditable>
-for (initialisation; condition; increment/decrement ) { 
+for (initialisation; condition; increment/decrement ) {
 	//perform JavaScript
-} 
+}
 
 					</code></pre></p>
             </section>
@@ -416,17 +420,17 @@ for (initialisation; condition; increment/decrement ) {
 
             <section style="text-align: left;">
                 <p><pre><code class="hljs" data-trim contenteditable>
-let num = 1; 
-while (num <= 100) { 
-	document.write('Number ' + num + '<br>'); 
-	num += 1; 
-} 
+let num = 1;
+while (num <= 100) {
+	document.write('Number ' + num + '<br>');
+	num += 1;
+}
 
 					</code></pre></p>
                 <p><pre><code class="hljs" data-trim contenteditable>
-for (let num=1; num<=100; num++) { 
-	document.write('Number ' + num + '<br>'); 
-} 
+for (let num=1; num<=100; num++) {
+	document.write('Number ' + num + '<br>');
+}
 
 					</code></pre></p>
             </section>
@@ -442,17 +446,17 @@ for (let num=1; num<=100; num++) {
                 <p><pre><code class="hljs" data-trim contenteditable>
 
 let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-	for (let i=0; i < days.length; i++) {    
-	document.write(days[i] + ', '); 
+	for (let i=0; i < days.length; i++) {
+	document.write(days[i] + ', ');
 	}
 
 
 					</code></pre></p>
                 <p><pre><code class="hljs" data-trim contenteditable>
-let example = ['first','second','third','last']; 
-for (let j = example.length ; j > 0; j--) {    
-	document.write(example[j-1] + '<br>'); 
-} 
+let example = ['first','second','third','last'];
+for (let j = example.length ; j > 0; j--) {
+	document.write(example[j-1] + '<br>');
+}
 					</code></pre></p>
             </section>
 
@@ -464,10 +468,10 @@ for (let j = example.length ; j > 0; j--) {
                     <li>It is designed to loop every item in an array</li>
                 </ul>
                 <p><pre><code class="js" data-trim contenteditable>
-let arr = [2,3,6];						
-for(let num of arr){ 
+let arr = [2,3,6];
+for(let num of arr){
 console.log(num);
-} 
+}
                 </code></pre></p>
             </section>
             <section style="text-align: left;">
@@ -481,23 +485,23 @@ console.log(num);
                 <section style="text-align: left;">
                         <h2>Break and Continue</h2>
                         <p><pre><code class="js" data-trim contenteditable>
-    
+
 let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-for (let i=0; i < days.length; i++) {    
+for (let i=0; i < days.length; i++) {
 if(days[i] === "Thursday"){
 break;
-} 
+}
 console.log(days[i]);
 }
-// Will print "Monday", "Tuesday", "Wednesday"			
-    
+// Will print "Monday", "Tuesday", "Wednesday"
+
                         </code></pre></p>
                         <p><pre><code class="js" data-trim contenteditable>
 let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-for (let i=0; i < days.length; i++) {    
+for (let i=0; i < days.length; i++) {
 if(days[i] === "Thursday"){
 continue;
-} 
+}
 console.log(days[i]);
 }
 // Will print "Monday", "Tuesday", "Wednesday", "Friday", "Saturday", "Sunday"
@@ -636,14 +640,14 @@ console.log(days[i]);
                if(num % 2 === 0){
                    result.push(num);
                }
-           } 
+           }
            return result;
         } else if(type === "odd"){
             for (let num of array) {
                 if(num % 2 !== 0){
                     result.push(num);
                 }
-            } 
+            }
             return result;
         } else {
             console.log("The type was not correct. Please enter odd or even");
@@ -676,7 +680,7 @@ console.log(days[i]);
 					<li>It will create one big string and return it</li>
 					<li><b>Ex:</b>["Hello", "there", "students", "of", "SEDC", "!"]</li>
 					<li><b>Result:</b> "Hello there students of SEDC!"</li>
-				</ul>	
+				</ul>
 			</section>
 
             <section style="text-align: left;" data-transition="slide" data-background="#007ac9" data-background-transition="slide">
@@ -708,7 +712,7 @@ console.log(days[i]);
 
                     <p>E-mail: <br></p>
                     <p>traniner@mail.com</p>
-                    <p>assistant@mail.com</p> 
+                    <p>assistant@mail.com</p>
 
             </section>
 

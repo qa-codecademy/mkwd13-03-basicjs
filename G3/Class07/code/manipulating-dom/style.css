@@ -1,0 +1,14 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.highlight {
+  color: red;
+  font-weight: bold;
+}
+
+#books-container {
+  margin-top: 20px;
+  border: 2px solid blue;
+  padding: 10px;
+}
