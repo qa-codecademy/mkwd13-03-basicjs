@@ -8,7 +8,7 @@
 
 4. Bob's salary is 1000 eur per month. He has expenses that has to cover during the month.
    He has to pay rent for his apartment 375 eur. He should pay 250 eur for his bills in total.
-   Print on screen what is the amount left that Bob has for the rest of the month, and what is the total amount of his expenses.,
+   Print on screen what is the amount left that Bob has for the rest of the month, and what is the total amount of his expenses.
 
 5. One student has 5 exams in the first semester. Student name is Bob Bobsky.
    His/Her grades for all of the exams are Math = 10, English = 6, Science = 8, Sport = 9, Chemistry = 6 respectively.
@@ -17,9 +17,9 @@
    Alert on screen if the student pass or not! Print on the screen all of the subjects and the student name aswell.,
 
 6. Write a JavaScript program to check whether a given positive number is a multiple of 3 or 7.
-   If the number is divisible by 3, then write 'Fizz' in the console, if the number is divisible by 7, then write 'Buzz' in the console, and if the number is divisible by 3 and 7, write 'FizzBuzz' in the console.,
+   If the number is divisible by 3, then write 'Fizz' in the console, if the number is divisible by 7, then write 'Buzz' in the console, and if the number is divisible by 3 and 7, write 'FizzBuzz' in the console.
 
-7. Write a simple JavaScript program to join all elements of the an array into a string. The array should have at least 5 elements,
+7. Write a simple JavaScript program to join all elements of the an array into a string. The array should have at least 5 elements.
 
 8. Make an array of ten elements. Make sure four of them to be: Null, undefined, NaN, “” and false (JavaScript falsy values).
    Create a function that will work for every array in the world :) and it will remove all the falsy values from the array.,
