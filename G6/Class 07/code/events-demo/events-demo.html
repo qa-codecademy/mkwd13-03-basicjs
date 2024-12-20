@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 07 - Events</title>
+</head>
+
+<body>
+    <header>
+        <h1>Events</h1>
+    </header>
+
+    <main>
+        <article>
+            <h2>Ways to bind event to an element</h2>
+
+            <!-- 1. HTML event handlers -->
+            <section>
+                <h3>HTML event handlers</h3>
+                <!-- <button onclick="alert('You clicked me!')">Click Me</button> -->
+                <button onclick="alertUser('You clicked me!')">Click Me</button>
+            </section>
+
+            <!-- 2. DOM event handlers -->
+            <section>
+                <h3>DOM event handlers</h3>
+                <button id="dbl-click-btn">Double Click Me</button>
+            </section>
+
+            <!-- 3. Event Listeners -->
+            <section>
+                <h3>Event Listeners</h3>
+                <button id="click-btn">Click Me :)</button>
+                <button id="click-btn2">Click Me (2)</button>
+                <p id="hover-paragraph">
+                    Hover over me Hover over me Hover over me Hover over me Hover over me Hover over me Hover over me
+                    Hover over me Hover over me Hover over me Hover over me Hover over me Hover over me Hover over me
+                    Hover over me Hover over me Hover over me Hover over me Hover over me Hover over me Hover over me
+                </p>
+            </section>
+
+            <section>
+                <h3>Explore the EVENT object</h3>
+                <button id="event-btn">Explore Event Object</button>
+            </section>
+        </article>
+    </main>
+
+
+
+    <script src="events-demo.js"></script>
+</body>
+
+</html>
