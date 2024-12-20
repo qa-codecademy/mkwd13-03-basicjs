@@ -52,7 +52,11 @@ clickMeBtn.addEventListener("click", greet)
 
 const clickMeBtn2 = document.getElementById("click-btn2");
 
+// What if the function has parameters ?
+
 // clickMeBtn2.addEventListener("click", alertUser("The Click Me (2) button is clicked"))
+
+// ===> When we have parameters, then we use anonymous function in the event listener
 clickMeBtn2.addEventListener("click", function () {
     console.log("Some JS code...");
     alertUser("The Click Me (2) button is clicked");
@@ -73,6 +77,7 @@ hoverParagraph.addEventListener("mouseleave", function () {
 
 console.log("");
 console.log("======== Remove Event Listener ========");
+// NOTE: Event listeners that use anonymous function cannot be removed
 
 // clickMeBtn2.removeEventListener("click", function () {
 //     console.log("Some JS code...");
@@ -91,11 +96,11 @@ const eventBtn = document.getElementById("event-btn");
 
 eventBtn.addEventListener("click", function (event) {
     console.log("Hello from Explore Event Obj button");
-    console.log(event);
-    console.log(event.type);
-    console.log(event.target);
-    console.log(event.target.id);
-    console.log(`Coordinates: X: ${event.clientX}. Y: ${event.clientY}`);
+    console.log(event); // Logs the entire event object
+    console.log(event.type); // Logs the event type (ex. click, mouseover etc..)
+    console.log(event.target); // Logs the clicked HTML element
+    console.log(event.target.id); // Logs the id of the clicked HTML element
+    console.log("Coordinates:", `X: ${event.clientX}, Y: ${event.clientY}`);
 })
 
 
@@ -106,13 +111,5 @@ document.addEventListener("keydown", function (e) {
     console.log(e);
     console.log("Key pressed: ", e.key);
     console.log("Code: ", e.code);
-    console.log("Is shift key pressed ", e.shiftKey);
+    console.log("Is shift key pressed ", e.shiftKey); // true if Shift is pressed
 })
-
-
-
-
-
-
-
-
