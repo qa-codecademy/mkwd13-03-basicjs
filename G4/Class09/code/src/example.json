@@ -1,0 +1,13 @@
+{
+    "trainer": "Trainer Name",
+    "assistant": "Assistant Name",
+    "students": [
+      "Bob",
+      "Samantha",
+      "Chris",
+      "Jill",
+      "Greg"
+    ],
+    "Academy": 35345345,
+    "boolProperty" : true
+  }
