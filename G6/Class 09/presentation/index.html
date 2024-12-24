@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>JavaScript</title>
+
+	<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+	<meta name="author" content="Hakim El Hattab">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<link rel="stylesheet" href="assets/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/css/reveal.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/theme/white.css" id="theme">
+
+	<!-- Code syntax highlighting -->
+	<link rel="stylesheet" href="assets/lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'assets/text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'assets/css/print/pdf.css' : 'assets/css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+
+	<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+</head>
+
+<body>
+
+	<div class="reveal">
+
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+
+			<!-- Slide 1 -->
+			<section style="text-align: center;">
+				<h1>JavaScript</h1>
+				<div>
+					<div style="background-color: #3F4A5C; display: inline-flex; justify-content: center; padding: 10px; width: 300px;">
+						<img src="./assets/img/lg.png" alt="logo" style="border:none; box-shadow:none; padding: 0; margin: 0; display: inline; background-color: transparent;" />
+					</div>
+					<br />
+					<br />
+					<small>Lecture by <a href="#" target="_blank"> Tijana Stojanovska </a> & <a href="#"
+						target="_blank">Murat Koca</a> </small>
+<br />
+				</div>
+				<p style="font-size: 15px;">© 2024 Qinshift Academy</p>
+			</section>
+
+			<!-- Slide 2 -->
+			<section style="text-align: left;">
+				<h2>Lesson Overview</h2>
+				<ul>
+					<li>Javascript Libraries</li>
+					<li>JQuery</li>
+					<li>Using JQuery</li>
+					<li>Differences with Vanilla JS</li>
+				</ul>
+			</section>
+			<section style="text-align: left;" data-transition="slide" data-background="#007ac9"
+				data-background-transition="slide">
+				<h1>Looking Back...</h1>
+				<ul>
+					<li>Object is a container with some logical structure</li>
+					<li>We use objects to represent real life things</li>
+					<li>Objects consist of properties and methods</li>
+					<li>Objets can be initialized with {} and new Object()</li>
+					<li>We create template functions to create multiple similar objects from one template</li>
+				</ul>
+			</section>
+
+			<!-- Slide 3 -->
+			<section style="text-align: left;" data-transition="slide" data-background="#007ac9"
+				data-background-transition="slide">
+				<h1>JavaScript Libraries</h1>
+			</section>
+			<section style="text-align: left;">
+				<h2>Introduction</h2>
+				<ul>
+					<li><b>Libraries</b> are bundles of pre-written JavaScript code</li>
+					<li>We can use a library when we need some already made and ready implementation</li>
+					<li>We can use a library to make our development process easier</li>
+					<li>We can use a library to test and to monitor our code</li>
+				</ul>
+			</section>
+			<section style="text-align: left;">
+				<h2>How do I know I need a library?</h2>
+				<ul>
+					<li>You have a large feature to implement ( calendar, charts, table generating etc. )</li>
+					<li>You are sure that someone already did it really, really good</li>
+					<li>You search the internet and find a library</li>
+					<li>You read the documentation on how to implement it</li>
+					<li>You implement it and live happily ever after</li>
+				</ul>
+			</section>
+			<section style="text-align: left;">
+				<h2>Why not use libraries all the time?</h2>
+				<ul>
+					<li>Libraries are not always well documented</li>
+					<li>Libraries can carry a lot of things you don't need</li>
+					<li>Libraries can be large and too much libraries can really slow your application down</li>
+					<li>Only use libraries when you know the pros outweigh the cons</li>
+				</ul>
+			</section>
+			<section style="text-align: left;">
+				<h2>How to include a library</h2>
+				<ul>
+					<li>Consult with the documentation</li>
+					<li>Download the library</li>
+					<li>Include the external script / css to your project</li>
+					<li>Use the library</li>
+					<li>ALTERNATIVELY: Use a CDN(Content Delivery Network) Link</li>
+				</ul>
+			</section>
+			<section style="text-align: left;">
+				<h3>Including a library in project</h3>
+				<p>
+					<pre><code class="hljs" data-trim contenteditable>
+&lt;html>
+  &lt;head>
+    &lt;title> My Page &lt;/title>
+  &lt;/head>
+  &lt;body>
+	&lt;h1> My awesome page &lt;/head>
+	// When we download the library localy
+	&lt;script src="/lib/libraryJS/libraryJS.js">&lt;/script>
+	// When we get use it from a CDN
+	<script
+	src="https://code.jquery.com/jquery-3.7.1.min.js"
+	integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+	crossorigin="anonymous"></script>
+  &lt;/body>
+&lt;/html>
+					</code></pre>
+				</p>
+			</section>
+			<section style="text-align: left;" data-transition="slide" data-background="#007ac9"
+				data-background-transition="slide">
+				<h1>JQuery</h1>
+			</section>
+			<section style="text-align: left;">
+				<h2>JQuery - A library for developers</h2>
+				<ul>
+					<li>One of the most widely used libraries for JavaScript</li>
+					<li>Used for making developers lives easier</li>
+					<li>Has a lot of built in functions that developers use often</li>
+					<li>Used for making code simple, clear and more organised</li>
+					<li>You can identify JQuery by the dollar sign</li>
+				</ul>
+			</section>
+			<section style="text-align: left;">
+				<h2>Some of JQuery benefits</h2>
+				<ul>
+					<li>Easier DOM manipulation and event handling</li>
+					<li>Easier toggling classes and styles</li>
+					<li>Simpler ways of doing complicated JavaScript functionalities such as AJAX calls</li>
+					<li>Required and used by other libraries such as bootstrap</li>
+					<li>Huge usage in some frameworks and systems (Ex: ASP.NET, Wordpress )</li>
+				</ul>
+			</section>
+			<section style="text-align: left;">
+				<h2>How to include JQuery</h2>
+				<ul>
+					<li>Open https://jquery.com/download/</li>
+					<li>Click on the uncompresed JQuery devlopment version</li>
+					<li>Click anywhere and then save as</li>
+					<li>Include it in your file</li>
+					<li>ALTERNATIVELY: Include it with a CDN link</li>
+				</ul>
+			</section>
+			<section style="text-align: left;">
+				<h3>Including a library in project</h3>
+				<p>
+					<pre><code class="hljs" data-trim contenteditable>
+&lt;html>
+  &lt;head>
+    &lt;title> My JQuery Page &lt;/title>
+  &lt;/head>
+  &lt;body>
+	&lt;h1> My JQuery page &lt;/head>
+	// Localy
+	&lt;script src="/lib/jquery-3.7.1.js">&lt;/script>
+	// From a CDN
+	<script
+			src="https://code.jquery.com/jquery-3.7.1.min.js"
+			integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+			crossorigin="anonymous"></script>
+  &lt;/body>
+&lt;/html>
+					</code></pre>
+				</p>
+			</section>
+
+			<section style="text-align: left;" data-transition="slide" data-background="#007ac9"
+				data-background-transition="slide">
+				<h1>What's in it?</h1>
+			</section>
+
+			<section style="text-align: left;">
+				<h2>Selectors</h2>
+				<ul>
+					<li>They are a easier, shorter and simpler to write</li>
+					<li>They can do multiple things at once</li>
+					<li>They return JQuery array like wrapper object</li>
+					<li>We can go through the object with JQuery methods</li>
+					<li>Alternatively we can extract the DOM objects from it and work with them instead</li>
+				</ul>
+			</section>
+			<section style="text-align: left;">
+				<h3>An HTML page</h3>
+				<p>
+					<pre><code class="hljs" data-trim contenteditable>
+&lt;div class="wrapper">
+  &lt;h1 id="mainTitle">Hey this is my page&lt;/h1>
+  &lt;div class="innerWrapper">
+    &lt;h3 id="firstTitle">This is some subheader&lt;/h3>
+	&lt;p>Hello!&lt;/p>
+	&lt;p>Yes it is a sub header!&lt;/p>
+  &lt;/div>
+  &lt;div class="innerWrapper">
+    &lt;h3 id="SecondTitle">This is some other subheader&lt;/h3>
+	&lt;p>Hello again!&lt;/p>
+	&lt;p>Yes it is another sub header!&lt;/p>
+  &lt;/div>
+  &lt;button>It does nothing :(&lt;/button>
+  &lt;input type="text" value="Cool">
+&lt;/div>
+					</code></pre>
+				</p>
+			</section>
+			<section style="text-align: left;">
+				<h3>Commonly used selectors</h3>
+				<p>
+					<pre><code class="js" data-trim contenteditable>
+let allElements = $("*"); // gets all elements
+let byIdElement = $("#mainTitle"); // gets element by id
+let byClassElements = $(".innerWrapper"); // gets elements by class name
+let byTagNameElements = $("p"); // gets elements by tag name
+let wrapperAndInnerWrapper = $(".wrapper,.innerWrapper"); // gets elements from multiple classes
+let firstParagraph = $("p:first"); // gets the first p element
+let lastParagraph = $("p:last"); // gets the last p element
+let firstChildHeaders = $("h3:first-child"); // gets all the first h3 elements in their parents
+let lastChildParagraphs = $("p:last-child"); // gets all the last p elements in their parents
+let secondChildParagraphs = $("p:nth-child(2)"); // gets all the second place p elements in their parents
+					</code></pre>
+				</p>
+			</section>
+			<section style="text-align: left;">
+				<h3>Difference between vanilla JS and JQuery</h3>
+				<p>
+					<pre><code class="js" data-trim contenteditable>
+let byIdElement = document.getElementById("mainTitle");
+let byIdElement = $("#mainTitle");
+
+let byClassElements = document.getElementsByClassName("innerWrapper");
+let byClassElements = $(".innerWrapper");
+
+let byTagNameElements = document.getElementsByTagName("p");
+let byTagNameElements = $("p");
+					</code></pre>
+				</p>
+			</section>
+			<section style="text-align: left;">
+				<h2>JQuery objects and DOM objects</h2>
+				<ul>
+					<li>They will not give you the same methods to call</li>
+					<li>JQuery objects use their methods for doing things</li>
+					<li>DOM objects use normal JavaScript methods for doing things</li>
+					<li>We can extract DOM objects from JQuery objects any time</li>
+				</ul>
+			</section>
+			<section style="text-align: left;">
+				<h3>JQuery and DOM selecting</h3>
+				<p>
+					<pre><code class="js" data-trim contenteditable>
+// Get first and last element from JQuery array
+allElements.first();
+allElements.last();
+// Find elements in JQuery array
+allElements.find(".wrapper").find("p").last();
+// Get DOM element from JQuery array
+allElements[0];
+allElements.get(0);
+// Get all DOM elements from a JQuery array
+byClassElements.get();
+// Get next or previous element
+firstParagraph.next();
+firstParagraph.prev();
+					</code></pre>
+				</p>
+			</section>
+			<section style="text-align: left;">
+				<h1>Exercise 1</h1>
+				<p>
+					Create an html with:
+					<ul>
+						<li>Two wrapper divs with id identifiers</li>
+						<li>An h1 header, h3 header and a paragraph in both of them</li>
+						<li>The paragraphs inside the divs should have a class identifier (same)</li>
+						<li>Two paragraphs outside of the div wrappers</li>
+						<li>A button after the two last paragraphs</li>
+					</ul><br><br>
+					<b>Select one div, one paragraph, one h1, one h3 and a button</b>
+				</p>
+			</section>
+			<section style="text-align: left;">
+				<h3>Exercise 1 Solution</h3>
+				<p>
+					<pre><code class="hl" data-trim contenteditable>
+<div id="firstWrapper">
+  <h1>Exercise 1</h1>
+  <h3>It's easy</h3>
+  <p class="paragraphInDiv">or maybe it's not?</p>
+</div>
+<div id="secondWrapper">
+  <h1>A cool exercise</h1>
+  <h3>Easy because it's JQuery</h3>
+  <p class="paragraphInDiv">Who knows?</p>
+</div>
+<p>last two paragraphs</p>
+<p>Yup these are the last!</p>
+<button>Click me</button>
+					</code></pre>
+				</p>
+			</section>
+			<section style="text-align: left;">
+				<h3>Exercise 1 Solution</h3>
+				<p>
+					<pre><code class="hljs" data-trim contenteditable>
+$(document).ready(function(){
+  let div = $("#firstWrapper");
+  let paragraph = $("p").first();
+  let h3 = $("h3").first();
+  let h1 = $("h1").last();
+  let button = $("button");
+});
+					</code></pre>
+				</p>
+			</section>
+			<section style="text-align: left;">
+				<h2>JQuery DOM manipulation</h2>
+				<ul>
+					<li>We can do basically everything with JQuery as in JavaScript</li>
+					<li>That includes getting value, hiding and showing an element</li>
+					<li>In JQuery this is done more intuitively with methods</li>
+				</ul>
+			</section>
+			<section style="text-align: left;">
+				<h3>Commonly used methods for manipulation</h3>
+				<p>
+					<pre><code class="js" data-trim contenteditable>
+$("input").first().val();// get value from input
+secondChildParagraphs.hide();// hide elements
+secondChildParagraphs.show();// show elements
+byClassElements.first().html();// get innerHTML
+byClassElements.first().html(`<h1> This is a new h1! </h1>`);// set innerHTML
+byTagNameElements.last().text();// get text
+byTagNameElements.last().text("This is a new text");// set text
+byTagNameElements.last().css("color");// getting CSS
+byTagNameElements.last().css("color", "red");// Changing CSS
+$("h1").first().after("<p>new p tag after the h1</p>");
+$("h1").first().before("<p>new p tag before the h1</p>");
+					</code></pre>
+				</p>
+			</section>
+			<section style="text-align: left;">
+				<h3>Difference between vanilla JS and JQuery</h3>
+				<p>
+					<pre><code class="js" data-trim contenteditable>
+document.getElementsByTagName("input")[0].value;
+$("input").first().val();
+
+document.getElementsByClassName("header")[0].innerHTML;
+$(".header").first().html();// get innerHTML
+
+document.getElementsByClassName("header")[0].innerText = "hey";
+$(".header").first().text("hey");
+
+document.getElementsByClassName("header")[0].style.color = "red";
+$(".header").first().css("color", "red");
+					</code></pre>
+				</p>
+			</section>
+			<section style="text-align: left;">
+				<h1>Exercise 2</h1>
+				<p>
+					Change the html from the previous document
+					<ul>
+						<li>Change the first h1 header text to "JQuery is awesome"</li>
+						<li>Add a new paragraph after the first header with some text</li>
+						<li>Change the button background to red</li>
+					</ul><br><br>
+					<b>Use JQuery to complete this exercise</b>
+				</p>
+			</section>
+			<section style="text-align: left;">
+				<h3>Exercise 2 Solution</h3>
+				<p>
+					<pre><code class="hljs" data-trim contenteditable>
+$("h1").first().text("JQuery is awesome");
+$("h1").first().after("<p>A new paragraph</p>");
+$("button").css("background-color", "red");
+					</code></pre>
+				</p>
+			</section>
+			<section style="text-align: left;">
+				<h2>JQuery event listeners</h2>
+				<ul>
+					<li>Event handlers in jquery are simpler</li>
+					<li>They work the same as JavaScript</li>
+					<li>There are two types of event handlers that you can use</li>
+					<li>Captured events are also JQuery objects</li>
+				</ul>
+			</section>
+			<section style="text-align: left;">
+				<h3>JQuery Event Handlers</h3>
+				<p>
+					<pre><code class="js" data-trim contenteditable>
+let button = $("button").first();
+// simple on event click
+button.on("click", function(){
+  console.log("Hello");
+})
+// Even simpler click event
+button.click(function(e){
+  console.log("HELLO AGAIN");
+})
+// Catching an event
+button.click(function(e){
+  console.log(e);
+})
+					</code></pre>
+				</p>
+			</section>
+			<section style="text-align: left;">
+				<h3>Difference between vanilla JS and JQuery</h3>
+				<p>
+					<pre><code class="js" data-trim contenteditable>
+button.addEventListener("click", function(){
+  console.log("hey");
+})
+button.click(function(){
+  console.log("hey");
+})
+					</code></pre>
+				</p>
+			</section>
+			<section style="text-align: left;">
+				<h1>Exercise 3</h1>
+				<p>
+					Add event listener to the previous exercise button<br>
+					When clicked the button should:
+					<ul>
+						<li>Hide the second div wrapper</li>
+						<li>Change the color of all paragraphs to green</li>
+						<li>Change the button text to "Don't click me"</li>
+					</ul><br><br>
+					<b>Use JQuery to complete this exercise</b>
+				</p>
+			</section>
+			<section style="text-align: left;">
+				<h3>Exercise 3 Solution</h3>
+				<p>
+					<pre><code class="hljs" data-trim contenteditable>
+$("button").first().click(function(){
+	$("#secondWrapper").hide();
+	$("p").css("color", "green");
+	$("button").first().text("Don't click me");
+});
+					</code></pre>
+				</p>
+			</section>
+
+			<section style="text-align: left;">
+				<h1>Exercise 4</h1>
+				<p>
+				<ul>
+					<li>Create three inputs for numbers</li>
+					<li>Print the average of the three numbers in an h1 element</li>
+					<li>If the average is larger or the same as 10 the result should be in green</li>
+					<li>If the average is smaller than 10 the result should be red</li>
+				</ul><br><br>
+					<b>Do this with JQuery</b>
+				</p>
+			</section>
+			<section style="text-align: left;">
+				<h3>Exercise 4 Solution(1)</h3>
+				<p>
+					<pre><code class="hl" data-trim contenteditable>
+<div>
+  <input class="input-form" type="number" placeholder="Enter number">
+  <input class="input-form" type="number" placeholder="Enter number">
+  <input class="input-form" type="number" placeholder="Enter number">
+  <button>Calculate average</button>
+</div>
+<h1 id="result"></h1>
+					</code></pre>
+				</p>
+			</section>
+						<section style="text-align: left;">
+				<h3>Exercise 4 Solution(2)</h3>
+				<p>
+					<pre><code class="js" data-trim contenteditable>
+let input = $(".input-form");
+let result = $("#result")
+
+function calculateAverage(num1, num2, num3) {
+  let sum = num1 + num2 + num3;
+  return Math.floor(sum / 3);
+}
+
+$("button").click(function () {
+
+  let numOne = parseInt(input[0].value);
+  let numTwo = parseInt(input[1].value);
+  let numThree = parseInt(input[2].value);
+
+  let average = calculateAverage(numOne, numTwo, numThree);
+
+  if (average > 10) {
+    result.text(average).css("color", "yellow");
+  } else {
+    result.text(average).css("color", "red");
+  }
+})
+					</code></pre>
+				</p>
+			</section>
+
+			<section style="text-align: center;" data-transition="slide" data-background="#007ac9"
+				data-background-transition="slide">
+				<h2>HOMEWORK Part 1</h2>
+				<p>
+					<h4>Create a greeting app with JQuery</h4>
+					<ul>
+						<li>Create an input</li>
+						<li>Create a button</li>
+						<li>When clicked the button should print a greet message in an h1 header</li>
+					</ul>
+					<p>Ex: input: Petko output message: Hello there Petko!</p>
+					<strong>You must use JQuery to complete the task</strong>
+			</section>
+			<section style="text-align: center;" data-transition="slide" data-background="#007ac9"
+				data-background-transition="slide">
+				<h2>HOMEWORK Part 2</h2>
+				<p>Create a header generator</p>
+				<ul>
+					<li>Create two inputs, one for text and one for color</li>
+					<li>Create a button that says: generate h1</li>
+					<li>When the button is clicked create a new header below the inputs and button</li>
+					<li>The new header should have the text and color from the inputs</li>
+					<li>Additionally create an h3 element for messages</li>
+					<li>If the person enters an invalid color or an empty text show an error message in the h3 element</li>
+				</ul>
+				<strong>You must use JQuery to complete the task</strong>
+			</section>
+			<!-- Slide 19 -->
+			<section style="text-align: left;">
+				<h1>Thank you!</h1>
+				<p>E-mail: <br></p>
+				<p>stojanovska_tijana@outlook.com</p>
+				<p>muratkoca137@gmail.com</p>
+			</section>
+		</div>
+
+	</div>
+
+	<script src="assets/lib/js/head.min.js"></script>
+	<script src="assets/js/reveal.js"></script>
+
+	<script>
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			history: true,
+			center: true,
+
+			transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+			// Transition speed
+			transitionSpeed: 'default', // default/fast/slow
+
+			// Enable slide navigation via mouse wheel
+			mouseWheel: true,
+
+			// Optional reveal.js plugins
+			dependencies: [{
+				src: 'assets/lib/js/classList.js',
+				condition: function () {
+					return !document.body.classList;
+				}
+			},
+			{
+				src: 'assets/plugin/markdown/marked.js',
+				condition: function () {
+					return !!document.querySelector('[data-markdown]');
+				}
+			},
+			{
+				src: 'assets/plugin/markdown/markdown.js',
+				condition: function () {
+					return !!document.querySelector('[data-markdown]');
+				}
+			},
+			{
+				src: 'assets/plugin/highlight/highlight.js',
+				async: true,
+				condition: function () {
+					return !!document.querySelector('pre code');
+				},
+				callback: function () {
+					hljs.initHighlightingOnLoad();
+				}
+			},
+			{
+				src: 'assets/plugin/zoom-js/zoom.js',
+				async: true
+			},
+			{
+				src: 'assets/plugin/notes/notes.js',
+				async: true
+			}
+			]
+		});
+	</script>
+
+</body>
+
+</html>
