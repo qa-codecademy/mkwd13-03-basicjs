@@ -47,11 +47,34 @@ const displayEl = document.querySelector(".display");
 
 console.log(inputEl, nameBtn, errorMsgEl, displayEl);
 
+errorMsgEl.style.color = "red";
+
+//background-color // backgroundColor
+
 //FUNCTIONS
 function printFullName() {
   console.log("User's full name:", inputEl.value);
-  displayEl.textContent = `User's fullname: ${inputEl.value}`;
+
+  if (!inputEl.value) {
+    displayEl.textContent = "";
+    return;
+  }
+
+  displayEl.textContent = `User's full name: ${inputEl.value}`;
+}
+
+function validateNameLength(minLength) {
+  if (minLength > inputEl.value.length) {
+    errorMsgEl.textContent = `Minimum characters is ${minLength}`;
+  } else {
+    errorMsgEl.textContent = "";
+  }
 }
 
 //LISTENERS
 nameBtn.addEventListener("click", printFullName);
+
+inputEl.addEventListener("blur", function () {
+  console.log("blur fired, not focused on input anymore");
+  validateNameLength(10);
+});
