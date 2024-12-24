@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn">Click me</button>
+
+    <input type="text" id="mainInput" placeholder="Enter value here" />
+
+    <button id="btn2">Remove event listener</button>
+    <hr>
+
+    <div id="content"></div>
+    <input type="text" id="textInput">
+
+    <!-- <script src="script.js"></script> -->
+
+    <hr>
+    <h3>Propagation</h3>
+
+    <div id="mainmaindiv">
+        <div id="mainDiv" style="width: 500px; height: 500px; background-color: aqua;">
+            <button id="btn1">Click me</button>
+            <button id="btn3">Click me twice</button>
+        </div>
+    </div>
+
+    <div id="black" style="width: 500px; height: 500px; background-color: black;">
+        <div id="red" style="width: 450px; height: 450px; background-color: red;">
+            <div id="yellow" style="width: 400px; height: 400px; background-color: yellow;">
+                <div id="blue" style="width: 350px; height: 350px; background-color: blue;">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Event propagation -->
+    <script src="propagation.js"></script>
+</body>
+
+</html>
