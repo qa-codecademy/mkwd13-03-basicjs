@@ -16,5 +16,6 @@ document.getElementById('register')
 
 document.getElementById('register-btn')
     .addEventListener('click', function() {
-
+        
+        console.log(registerForm.getElementsByTagName('input'));
     });
