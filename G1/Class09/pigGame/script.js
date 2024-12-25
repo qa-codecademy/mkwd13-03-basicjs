@@ -1,9 +1,11 @@
 // GLOBAL VARIABLES
 
-const gameWinningScore = 100;
+const gameWinningScore = 30;
 let playerOneScore = 0; // total score
 let playerTwoScore = 0; // total score
 let roundScore = 0; // round score
+
+let isGameActive = false;
 
 let activePlayer = 0; // 0 is playerOne 1 is playerTwo
 
@@ -24,13 +26,22 @@ function newGame() {
     roundScore = 0;
     activePlayer = 0;
 
+    // isGameActive = true;
+
     playerOneCurrentScoreElement.innerText = 0;
     playerTwoCurrentScoreElement.innerText = 0;
     playerOneTotalScoreElement.innerText = 0;
     playerTwoTotalScoreElement.innerText = 0;
+
+    rollButton.addEventListener('click', rollDice);
+    holdButton.addEventListener('click', holdScore);
 }
 
 function rollDice() {
+    // if (!isGameActive) {
+    //     return;
+    // }
+
     let diceOne = Math.floor(Math.random() * 6 + 1);
     let diceTwo = Math.floor(Math.random() * 6 + 1);
 
@@ -48,6 +59,23 @@ function rollDice() {
     } else {
         nextPlayer();
     }
+}
+
+function holdScore() {
+    // if (!isGameActive) {
+    //     return;
+    // }
+
+    if (activePlayer === 0) {
+        playerOneScore += roundScore;
+        playerOneTotalScoreElement.innerText = playerOneScore;
+        nextPlayer();
+    } else {
+        playerTwoScore += roundScore;
+        playerTwoTotalScoreElement.innerText = playerTwoScore;
+        nextPlayer();
+    }
+    checkForWinner();
 }
 
 function nextPlayer() {
@@ -77,11 +105,19 @@ function nextPlayer() {
     
 }
 
-// for(let i = 0; i < 20; i++) {
-//     rollDice();
-// }
+function checkForWinner() {
+    if (playerOneScore >= gameWinningScore) {
+        //isGameActive = false;
+        rollButton.removeEventListener('click', rollDice);
+        holdButton.removeEventListener('click', holdScore);
+        alert('Player one is the Winner');
+    } else if (playerTwoScore >= gameWinningScore) {
+        //isGameActive = false;
+        rollButton.removeEventListener('click', rollDice);
+        holdButton.removeEventListener('click', holdScore);
+        alert('Player two is the Winner');
+    }
+}
 
 newGameButton.addEventListener('click', newGame);
-
-// rollButton.addEventListener('click', rollDice);
 
