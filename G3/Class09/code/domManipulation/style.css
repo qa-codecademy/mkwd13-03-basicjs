@@ -1,0 +1,28 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  color: violet;
+}
+p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+}
+
+button:hover {
+  background-color: bisque;
+}
+
+.highlight {
+  background-color: yellow;
+}
+
+.focus {
+  background-color: cadetblue;
+}
