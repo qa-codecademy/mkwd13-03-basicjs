@@ -1,0 +1,12 @@
+{
+    "products": [
+        {
+            "title": "Good trainers",
+            "id": 1
+        },
+        {
+            "title": "T-Shirt",
+            "id": 2
+        }
+    ]
+}
