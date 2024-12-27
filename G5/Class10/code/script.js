@@ -66,6 +66,10 @@ getTodosAJAX()
  * 4. ADD EACH TODO (li) IN THE UNORDERED LIST => DONE
  */
 
+function addClass(element, className){
+    element.classList.add(className)
+};
+
 function displayTodos(listOfTodos){
     const todoList = document.getElementById("todo-list");
 
@@ -74,16 +78,60 @@ function displayTodos(listOfTodos){
         let todo = listOfTodos[i]
         console.log(todo)
         let listItem = document.createElement('li');
-        
-        // APPROACH #1
+        // listItem.classList.add('todo-item');
+        addClass(listItem, 'todo-item')
         let todoText = document.createElement('span');
+
+        // if(todo.completed === true){
+        //     listItem.classList.add('completed')
+        // }
+
+        // SAME AS ABOVE BUT SHORTER
+        if(todo.completed){
+            // listItem.classList.add('completed')
+            // todoText.classList.add('completed')
+
+            addClass(listItem, 'completed')
+
+        }
+
+        let completeButton = document.createElement('button');
+        completeButton.textContent = 'Complete';
+        // completeButton.classList.add('complete-btn');
+        addClass(completeButton, 'complete-btn')
+
+        completeButton.onclick = function(){
+            // todo.completed === false
+            if(!todo.completed){
+                todo.completed = true;
+                // listItem.classList.add('completed')
+                addClass(listItem, 'completed')
+            }else {
+                // CHALLENGE
+                // IT WILL WORK ON THE FIRST RENDER OF THE 
+                // LIST ITEMS (TODOS)
+
+                // BONUS: Find out how to fix this bug
+                // This should work as a TOGGLE
+                completeButton.textContent = 'Undo'
+                todo.completeButton = false
+                listItem.classList.remove('completed')
+            }
+            
+        }
+
+
+        // APPROACH #1
+        // let todoText = document.createElement('span');
         todoText.textContent = todo.title;
         listItem.appendChild(todoText)
 
+        listItem.appendChild(completeButton)
 
         // APPROACH #2
         // APPEND TEXT INTO LIST-ITEM
         // listItem.innerText = todo.title
+
 
 
         // APPEND LIST-ITEM INTO UNORDERED LIST
