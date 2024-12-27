@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>JavaScript</title>
+
+	<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+	<meta name="author" content="Hakim El Hattab">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<link rel="stylesheet" href="assets/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/css/reveal.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/theme/white.css" id="theme">
+
+	<!-- Code syntax highlighting -->
+	<link rel="stylesheet" href="assets/lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'assets/text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'assets/css/print/pdf.css' : 'assets/css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+
+	<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+</head>
+
+<body>
+
+	<div class="reveal">
+
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+
+			<!-- Slide 1 -->
+			<section style="text-align: center;">
+				<h1>JavaScript</h1>
+				<div>
+					<div style="background-color: #3F4A5C; display: inline-flex; justify-content: center; padding: 10px; width: 300px;">
+						<img src="./assets/img/lg.png" alt="logo" style="border:none; box-shadow:none; padding: 0; margin: 0; display: inline; background-color: transparent;" />
+					</div>
+					<br />
+					<br />
+					<small>Lecture by <a href="#" target="_blank"> Martin Panovski </a> & <a href="#"
+																						  target="_blank">Frosina Stamenkovska</a> </small>
+					<br />
+				</div>
+				<p style="font-size: 15px;">© 2024 Qinshift Academy</p>
+			</section>
+
+			<!-- Slide 2 -->
+			<section style="text-align: left;">
+				<h2>Lesson Overview</h2>
+				<ul>
+					<li>AJAX and JSON</li>
+					<li>Fetch</li>
+				</ul>
+			</section>
+
+			<section style="text-align: left;" data-transition="slide" data-background="#007ac9"
+				data-background-transition="slide">
+				<h1>AJAX and JSON</h1>
+			</section>
+			<section style="text-align: left;">
+				<h2>Requesting things from the internet</h2>
+				<ul>
+					<li>We request things from the internet using HTTP calls</li>
+					<li>To do that dynamically we use AJAX (Asynchronous JavaScript And XML)</li>
+					<li>With this technology we request things from the internet</li>
+					<li>If we are allowed, we get a response in a package ( the things we requested )</li>
+					<li>The package that we requested is in a format called JSON</li>
+				</ul>
+			</section>
+			<section>
+				<h2>HTTP calls and XML</h2>
+				<ul>
+					<li>Communication between client computers and web servers is done by sending HTTP Requests and
+						receiving HTTP Responses</li>
+					<li>XML stands for eXtensible Markup Language</li>
+					<li>XML was designed to store and transport data </li>
+					<li>XML was designed to be both human- and machine-readable.</li>
+				</ul>
+			</section>
+			<section style="text-align: left;">
+				<h3>XML file example</h3>
+				<p>
+					<pre><code class="html" data-trim contenteditable>
+<note>
+  <to>Jill</to>
+  <from>Bob</from>
+  <heading>Reminder</heading>
+  <body>Don't forget me this weekend!</body>
+</note>
+						</code></pre>
+				</p>
+			</section>
+			<section style="text-align: left;">
+				<h2>JSON (JavaScript Object Notation)</h2>
+				<ul>
+					<li>JSON is a text file that contains structured information</li>
+					<li>They are similar to javascript objects</li>
+					<li>We can convert JSON files into javascript objects</li>
+					<li>We can also convert javascript objects into JSON if we want to send something somewhere</li>
+				</ul>
+			</section>
+			<section style="text-align: left;">
+				<h3>A json file</h3>
+				<p>
+					<pre><code class="js" data-trim contenteditable>
+{
+  "trainer": "Trainer Name",
+  "assistant": "Assistant Name",
+  "students": [
+    "Bob",
+    "Samantha",
+    "Chris",
+    "Jill",
+    "Greg"
+  ],
+  "Academy": "Code"
+}
+					</code></pre>
+				</p>
+			</section>
+			<section style="text-align: left;">
+				<h3>Convert a json file to object and back</h3>
+				<p>
+					<pre><code class="js" data-trim contenteditable>
+// Parse the json text file into JS object
+let jsObject = JSON.parse(json);
+// We can use it like object now
+console.log(jsObject.trainer);
+// We can create objects into json strings as well
+let newJson = JSON.stringify(jsObject);
+					</code></pre>
+				</p>
+			</section>
+			<section style="text-align: left;">
+				<h2>Making the AJAX Call</h2>
+				<ul>
+					<li>We must have an address to whom we can make the call to (URL)</li>
+					<li>After we have the address we add it to our AJAX function</li>
+					<li>Then we handle the response with a success function</li>
+					<li>A parameter is passed called result in which the result will be stored</li>
+					<li>Inside the success function we can use the result in any way we want</li>
+				</ul>
+			</section>
+			<section style="text-align: left;">
+				<h3>Making an AJAX call with JQuery</h3>
+				<p>
+					<pre><code class="js" data-trim contenteditable>
+// When a button is clicked we want to make a call to some place on the internet
+button.click(function(){
+  $.ajax({url: "https://jsonplaceholder.typicode.com/users",
+    success: function(result){
+      console.log(result);
+    }});
+  });
+					</code></pre>
+				</p>
+			</section>
+			<section style="text-align: left;">
+				<h2>API pages</h2>
+				<ul>
+					<li>API pages are pages that give information about stuff</li>
+					<li>They give information by responding to requests</li>
+					<li>We can use AJAX to make requests to these pages</li>
+					<li>Some require a key that is granted to you when you sign in or pay</li>
+					<li>There are some that don't require any key or payment</li>
+				</ul>
+			</section>
+			<section style="text-align: left;">
+				<h2>Interesting free APIs</h2>
+				<ul>
+					<li>https://www.pokeapi.co/</li>
+					<li>https://restcountries.com/</li>
+					<li>https://jsonplaceholder.typicode.com/</li>
+				</ul>
+			</section>
+
+			<section style="text-align: left;">
+				<h1>Exercise 1</h1>
+				<p>
+					<ul>
+						<li>Call the StarWars api for the first person</li>
+						<li>Link: https://swapi.py4e.com/api/people/1</li>
+						<li>Print the name, hight and mass on the screen</li>
+					</ul><br><br>
+					Ex: Name: Luke Skywalker, Height: 172, Mass: 77
+				</p>
+				<p>Use JQuery to solve this exercise</p>
+			</section>
+			<section style="text-align: left;">
+				<h3>Exercise 1 Solution(1)</h3>
+				<p>
+					<pre><code class="hl" data-trim contenteditable>
+<h1 id="title">Call Luke Skywalker</h1>
+<button id="btn">Click me</button>
+					</code></pre>
+				</p>
+			</section>
+			<section style="text-align: left;">
+				<h3>Exercise 1 Solution(2)</h3>
+				<p>
+					<pre><code class="js" data-trim contenteditable>
+$(document).ready(function () {
+  function callStarWarsCharacter(number) {
+    let result = $("#title");
+    $.ajax({
+      method: "GET",
+      url: "https://swapi.dev/api/people/" + number,
+      success: function (data) {
+        showInfo(data, result);
+      }
+    })
+  }
+  function showInfo(data, resultElement) {
+    resultElement.after(`<p>I'm an actor. I weight ${data.mass}kg and my height is ${data.height} cm.</p>`);
+    resultElement.after(`<h3>My name is ${data.name}</h3>`);
+  }
+  $("#btn").on("click", function () {
+    callStarWarsCharacter(1);
+  })
+})
+					</code></pre>
+				</p>
+			</section>
+			<section style="text-align: left;" data-transition="slide" data-background="#007ac9"
+				data-background-transition="slide">
+				<h1>FETCH</h1>
+			</section>
+			<section>
+				<h2>Fetch API</h2>
+				<ul>
+					<li>The Fetch API is used to make Ajax requests, such as calling an API or fetching a remote resource or HTML file from a server</li>
+					<li>fetch() must have at least one parameter that will be the URL, or the endpoint of the request</li>
+					<li>It can also accept second parameter to provide additional options</li>
+					<li>fetch() returns a promise</li>
+					<li>A promise is an object returned by a module, library, function, that will be resolved or rejected some time in the future</li>
+				</ul>
+			</section>
+			<section style="text-align: left;">
+				<h3>Fetch example</h3>
+				<p>
+					<pre><code class="js" data-trim contenteditable>
+fetch('http://some-endpoint.url/here')
+	.then(response => {
+	// handle response data
+	})
+	.catch(err => {
+	// handle errors
+	});
+					</code></pre>
+				</p>
+			</section>
+			<!-- Slide 19 -->
+			<section style="text-align: left;">
+				<h1>Thank you!</h1>
+
+			</section>
+		</div>
+
+	</div>
+
+	<script src="assets/lib/js/head.min.js"></script>
+	<script src="assets/js/reveal.js"></script>
+
+	<script>
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			history: true,
+			center: true,
+
+			transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+			// Transition speed
+			transitionSpeed: 'default', // default/fast/slow
+
+			// Enable slide navigation via mouse wheel
+			mouseWheel: true,
+
+			// Optional reveal.js plugins
+			dependencies: [{
+				src: 'assets/lib/js/classList.js',
+				condition: function () {
+					return !document.body.classList;
+				}
+			},
+			{
+				src: 'assets/plugin/markdown/marked.js',
+				condition: function () {
+					return !!document.querySelector('[data-markdown]');
+				}
+			},
+			{
+				src: 'assets/plugin/markdown/markdown.js',
+				condition: function () {
+					return !!document.querySelector('[data-markdown]');
+				}
+			},
+			{
+				src: 'assets/plugin/highlight/highlight.js',
+				async: true,
+				condition: function () {
+					return !!document.querySelector('pre code');
+				},
+				callback: function () {
+					hljs.initHighlightingOnLoad();
+				}
+			},
+			{
+				src: 'assets/plugin/zoom-js/zoom.js',
+				async: true
+			},
+			{
+				src: 'assets/plugin/notes/notes.js',
+				async: true
+			}
+			]
+		});
+	</script>
+
+</body>
+
+</html>

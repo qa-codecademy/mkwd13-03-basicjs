@@ -1,0 +1,7 @@
+{
+   "model" : "Astra",
+   "brand": "Opel",
+   "year": 2023,
+   "hasSunRoof": false,
+   "drivers": ["Jana", "Ana", "Pero"]
+}
