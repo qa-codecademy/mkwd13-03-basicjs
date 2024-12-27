@@ -29,4 +29,21 @@ $(document).ready(function() {
     // selecting element using attributes
     let btn = $('button[name="test"]');
     // console.log(btn);
+
+    let allPara = $('p');
+    let first = allPara.first();
+    // console.log(first);
+
+    let pClass = $('*').find('.innerWrapper').find('.pClass');
+    let pClass1 = $('*').find('.pClass');
+    // console.log(pClass);
+    // console.log(pClass1)
+
+    let allEle = $('*');
+    let fifthElement = allEle.get(6);
+    // console.log(allEle);
+    // console.log(fifthElement);
+    let nextELement = $('#SecondTitle').next();
+    // console.log(nextELement);
+
 });
