@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
     let el = document.getElementById('mainTitle') // vanila js
     let elJquery = $('#mainTitle');
@@ -45,5 +45,56 @@ $(document).ready(function() {
     // console.log(fifthElement);
     let nextELement = $('#SecondTitle').next();
     // console.log(nextELement);
+
+    // DOM Manipulation
+
+    // let value = $('input[value="Cool"]').val(); // not a good way
+    let value = $('input').first().val();
+    // console.log(value);
+
+    // $('#mainTitle').hide();
+    // $('#mainTitle').show();
+    document.getElementById('mainTitle').style.display = 'none' // Hide
+    document.getElementById('mainTitle').style.display = 'block' // show
+
+    // let divHtml = $('.innerWrapper').first().html();
+    // console.log(divHtml);
+    // $('.innerWrapper').first().html('<p>We changed the html</p>');
+
+    let h1Text = $('#mainTitle').first().text();
+    // console.log(h1Text);
+    $('#mainTitle').first().text('We changed the text of this h1');
+    // document.getElementById('mainTitle').innerText = 'We changed the text of this h1';
+
+    let color = $('#mainTitle').css('color');
+    // console.log(color);
+    $('#mainTitle').css('color', 'rgb(15, 127, 78)');
+
+    $('.innerWrapper').find('p:first').after('<h2>Added header</h2>');
+    $('.innerWrapper').find('p.pClass').before('<h2>Added header</h2>');
+
+    let ourBtn = $('button').first();
+    
+    ourBtn.on('click', function() {
+        console.log('Hello from the first click handler!');
+    });
+
+    let input = $('input').first();
+
+    // input.on('keypress', function() {
+    //     console.log('on key press');
+    // });
+
+    let secondButton = $('button').last();
+
+    secondButton.click(function() {
+        console.log('Second button click');
+    });
+
+    input.change(function(e) {
+        console.log(e.currentTarget);
+
+        console.log(e.target.value);
+    })
 
 });
