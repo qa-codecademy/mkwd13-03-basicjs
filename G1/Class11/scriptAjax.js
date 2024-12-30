@@ -5,13 +5,15 @@ $(document).ready(function() {
 
         // -------- AJAX ----------
         $.ajax({
-            url: 'https://jsonplaceholder.typie.com/users',
+            url: 'https://jsonplaceholder.typicode.com/users',
             method: 'GET', // default is GET
             success: function(result) {
-
+                console.log('We are in success');
+                console.log(result);
             },
             error: function(error) {
-
+                console.log('We are in error');
+                console.log(error);
             }
         });
 
