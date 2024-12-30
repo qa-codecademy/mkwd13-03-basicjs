@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recap</title>
+    <link rel="stylesheet" href="app.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Recap</h1>
+    </header>
+    <main>
+      <section>
+        <div class="heading">
+          <h2>Students App</h2>
+          <button class="button" id="getStudentsBtn">Show Students</button>
+        </div>
+        <form class="student-form">
+          <input id="firstName" placeholder="First Name" type="text" />
+          <input id="lastName" placeholder="Last Name" type="text" />
+          <input id="age" placeholder="Age" type="number" />
+          <input id="country" placeholder="Country" type="text" />
+          <div class="form-controls">
+            <button id="addStudentBtn" class="button" type="button">Add</button>
+          </div>
+        </form>
+        <div class="item-list student-list"></div>
+      </section>
+      <section>
+        <div class="heading">
+          <h2>Posts List</h2>
+          <button class="button" id="getPostsBtn">Get Posts</button>
+        </div>
+        <div class="item-list posts-list"></div>
+      </section>
+    </main>
+  </body>
+</html>
