@@ -1,0 +1,28 @@
+1. Read the requirement
+2. Break it into smaller pieces
+3. Implement them separately
+
+================================
+1. HTML
+	=> create form with input and button
+	=> create empty <ul> where todos will be displayed
+2. Select HTML elements and create empty Todo array
+3. Create Constructor function Todo, with properties Name and IsCompleted
+4. Handle Add button click
+	=> get value from input and save it to a variable
+	=> validate input
+	=> create Todo object (using the constructor function)
+	=> add the Todo object in the array 
+	=> display todos logic...
+5. Display Todos
+	=> fill the <ul> list with the added Todos
+	=> use innerHTML or document.createElement approach (include checkbox to the li element)
+	=> check if a todo is completed
+		=> if yes, add appropriate style (line-through)
+		=> if no, display just the value
+6. Handle checkbox event
+	=> which event to use (change event)
+	=> update objects status (IsCompleted property)
+	=> re-render todos
+	
+	
