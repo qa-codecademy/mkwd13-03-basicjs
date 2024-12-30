@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>JavaScript</title>
+
+	<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+	<meta name="author" content="Hakim El Hattab">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<link rel="stylesheet" href="assets/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/css/reveal.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/theme/white.css" id="theme">
+
+	<!-- Code syntax highlighting -->
+	<link rel="stylesheet" href="assets/lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'assets/text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'assets/css/print/pdf.css' : 'assets/css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+
+	<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+</head>
+
+<body>
+
+	<div class="reveal">
+
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+
+			<!-- Slide 1 -->
+			<section style="text-align: center;">
+				<h1>JavaScript</h1>
+				<div>
+					<div style="background-color: #3F4A5C; display: inline-flex; justify-content: center; padding: 10px; width: 300px;">
+						<img src="./assets/img/lg.png" alt="logo" style="border:none; box-shadow:none; padding: 0; margin: 0; display: inline; background-color: transparent;" />
+					</div>
+					<br />
+					<br />
+					<small>Lecture by <a href="#" target="_blank"> Tijana Stojanovska </a> & <a href="#"
+																						  target="_blank">Murat Koca</a> </small>
+																						  <br>
+																						  <small>
+																							<p>E-mail: <br></p>
+																							<p>stojanovska_tijana@outlook.com</p>
+																							<p>muratkoca137@gmail.com</p>
+																						</small>
+					<br />
+				</div>
+				<p style="font-size: 15px;">© 2024 Qinshift Academy</p>
+			</section>
+
+			<!-- Slide 2 -->
+			<section style="text-align: center;">
+				<h2>Exercise 1</h2>
+				<p>
+					Write a function that takes an array as input and cleans  it from the falsy values. Example: if the array is 
+					[NaN, 3, 2, 0, undefined, "sedc", true, false] it should return [3, 2, "sedc", true]. <b>Note: </b> You shouldn't change
+					the existing array.
+				</p>
+				<p>Test input:</p>
+				<ul>
+				<li>[2, 5, ['a', 'b', 'c'], "sedc"]</li>
+				<li>[2, NaN , 7, ['a', 'b', 'c'], null, "sedc", 0]</li>
+				</ul>
+			</section>
+			<section style="text-align: center;">
+				<h2>Exercise 2</h2>
+				<p>Write a function that takes a number as input. Write the following checks for the number:</p>
+				<ul>
+				<li>Is it positive?</li>
+				<li>Number of digits</li>
+				<li>Is it even/odd</li>
+				</ul>
+				<p>Don't forget validation! Negative scenarios first!</p>
+			</section>
+			<section style="text-align: center;">
+				<h2>Exercise 3</h2>
+				<p>Write a function that takes an array of numbers as input. It should divide the even and odd numbers in two arrays.
+				Then print the arrays.
+				</p>
+				<p>Bonus: Instead of instantly printing them, try to think how would you return them.</p>
+			</section>
+			<section style="text-align: center;">
+				<h2>Exercise 4</h2>
+				<p>Write a function that takes an array of strings as an argument. It should return the first string larger than 10 characters. </p>
+				<p>Think about the other scenarios.</p>
+			</section>
+			<section style="text-align: center;">
+				<h2>Exercise 5</h2>
+				<p>Write an html that has one input field, one button and one select element. The input and button have id-s, and the
+				select only has class attribute. A user should enter input, click on the button, and on click an option should be added to the select with the entered value.</p>
+			<p>On blur of the input, validate if there is value entered. If not, print a message. Remember to check this scenario on the click also!</p>
+			</section>
+
+			<section style="text-align: center;">
+				<h2>Exercise 6</h2>
+				<p>Write an html that has two input fields, one button and one paragraph. In the input fields enter the sides of a rectangle.</p>
+				<p>On click on the button, calculate the area and print it in the paragraph.</p>
+				<p>On mouse over on the paragraph, print the perimeter and change the color and font size of the paragraph.</p>
+			</section>
+
+			<section style="text-align: center;">
+				<h2>Exercise 7</h2>
+				<p>Create an html that contains one input field for entering circle raduis. Add one button for creating and printing the circle as object.
+				The circle should have two methods: getArea() -> r^2*PI and getPerimeter() -> 2*r*PI. Add two more buttons for getting the area
+				and the perimeter.</p>
+			</section>
+			<section style="text-align: center;">
+				<h2>Exercise 8</h2>
+				<p>Create a function that takes an array of objects as input. Each object reprsents a person with the following properties: fullName
+				, job, and salary. The function should return the sum of the salaries of the people.</p>
+				<p>Hint: the array can be fixed and given in the code.</p>
+			</section>
+			
+			<section style="text-align: center;">
+				<h2>Exercise 9</h2>
+				<p>Create a constructor function for creating pets. Each pet should have the following properties:
+				<ul>
+<li><code>name</code> - that is the name of the pet</li>
+<li><code>type</code> - which is the type of animal the pet is</li>
+<li><code>age</code> - the age of the pet</li>
+<li><code>isHealthy</code> - whether the pet is healthy or sick</li>
+<li><code>owner</code> - the person who owns the pet</li>
+<li><code>isAdopted</code> - a method that returns true or false depending of whether the pet has a owner</li>
+</ul>
+				</p>
+				
+			</section>
+			<section style="text-align: center;">
+				<p>Create a constructor function for person (pet owner). It should have the following properties:
+				<ul>
+<li><code>firstName</code> - The first name of the person</li>
+<li><code>lastName</code> - The last name of the person</li>
+<li><code>age</code> - The age of the person</li>
+<li>One print method that prints the person details.</li>
+</p>
+
+			</section>
+			<section style="text-align: center;">
+				
+<p>Create an array of pets (some of them should have the same owner). Create an array of people.</p>
+<p>
+In the html, add an input field in which you can enter a person's first name. Add a button. On click of that button, find the person in the array
+and find all the pets whose owner he/she is. 
+</p>
+			</section>
+		</div>
+
+	</div>
+
+	<script src="assets/lib/js/head.min.js"></script>
+	<script src="assets/js/reveal.js"></script>
+
+	<script>
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			history: true,
+			center: true,
+
+			transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+			// Transition speed
+			transitionSpeed: 'default', // default/fast/slow
+
+			// Enable slide navigation via mouse wheel
+			mouseWheel: true,
+
+			// Optional reveal.js plugins
+			dependencies: [{
+				src: 'assets/lib/js/classList.js',
+				condition: function () {
+					return !document.body.classList;
+				}
+			},
+			{
+				src: 'assets/plugin/markdown/marked.js',
+				condition: function () {
+					return !!document.querySelector('[data-markdown]');
+				}
+			},
+			{
+				src: 'assets/plugin/markdown/markdown.js',
+				condition: function () {
+					return !!document.querySelector('[data-markdown]');
+				}
+			},
+			{
+				src: 'assets/plugin/highlight/highlight.js',
+				async: true,
+				condition: function () {
+					return !!document.querySelector('pre code');
+				},
+				callback: function () {
+					hljs.initHighlightingOnLoad();
+				}
+			},
+			{
+				src: 'assets/plugin/zoom-js/zoom.js',
+				async: true
+			},
+			{
+				src: 'assets/plugin/notes/notes.js',
+				async: true
+			}
+			]
+		});
+	</script>
+
+</body>
+
+</html>
