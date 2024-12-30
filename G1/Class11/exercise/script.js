@@ -153,6 +153,21 @@ function mapBands(data) {
     return bands;
 }
 
+function showBandsInfo(bands) {
+    let resultDiv = document.getElementById('result');
+    let resultHtml = '<ul>';
+    for (let band of bands) {
+        let active = band.isActive ? 'Active' : 'Not Active';
+        let result = `<li>The band ${band.name} has ${band.albums.length} albums
+            is currently an ${active} band. \n
+            The active members of the band are ${band.showActiveMembers()} \n
+            Former mebers are ${band.showFormerMembers()} </li>`;
+        resultHtml += result; 
+    }
+    resultHtml += '</ul>';
+    resultDiv.innerHTML = resultHtml;
+}
+
 
 document.getElementById('btn')
     .addEventListener('click', function() {
@@ -164,8 +179,13 @@ document.getElementById('btn')
             console.log(result);
             let bands = mapBands(result);
             console.log(bands);
+            showBandsInfo(bands);
         })
         .catch(function(error) {
+            let errorP = document.getElementById('error');
+            errorP.style.color = 'red';
+            errorP.style.fontWeight = '600';
+            errorP.innerText = 'Something went wrong! Please try again later';
             console.log(error);
         })
     });
