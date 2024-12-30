@@ -1,0 +1,67 @@
+body {
+  font-family: sans-serif;
+}
+
+.item-list ul {
+  list-style: none;
+  padding: 5px;
+  margin: 0;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.button {
+  background-color: lightgoldenrodyellow;
+  border: 1px solid goldenrod;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.student-item {
+  background-color: lightblue;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr 0.7fr 2fr;
+}
+
+.post-item {
+  background-color: lightgreen;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+.post-item div:nth-of-type(1) {
+  font-size: 18px;
+  border-bottom: 1px solid darkgreen;
+  padding-bottom: 3px;
+}
+
+.post-item div:nth-of-type(2) {
+  padding-top: 3px;
+}
+
+.student-form {
+  background-color: aliceblue;
+  width: 350px;
+  padding: 5px;
+  border: 1px solid rgb(144, 165, 183);
+  border-radius: 4px;
+}
+
+.student-form input {
+  margin: 5px 2px;
+}
+
+.form-controls {
+  padding: 10px 0;
+  display: grid;
+  place-items: center;
+}
