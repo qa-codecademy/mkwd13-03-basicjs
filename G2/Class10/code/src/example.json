@@ -1,0 +1,14 @@
+{
+    "trainer": "Martin Panovski",
+    "assistant": "Frosina Stamenkovska",
+    "students": [
+        "Angel",
+        "Sandra",
+        "Ana",
+        "Simona"
+    ],
+    "academy": "Qinshift Academy",
+    "group": "G2",
+    "numberOfStudents": 20,
+    "onSite": true
+}

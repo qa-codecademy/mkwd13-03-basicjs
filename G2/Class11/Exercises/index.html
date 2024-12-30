@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>JavaScript</title>
+
+	<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+	<meta name="author" content="Hakim El Hattab">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<link rel="stylesheet" href="assets/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/css/reveal.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/theme/white.css" id="theme">
+
+	<!-- Code syntax highlighting -->
+	<link rel="stylesheet" href="assets/lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'assets/text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'assets/css/print/pdf.css' : 'assets/css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+
+</head>
+
+<body>
+
+	<div class="reveal">
+
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+			<section style="text-align: center;">
+				<h1>JavaScript</h1>
+				<div>
+					<div
+						style="background-color: #3F4A5C; display: inline-flex; justify-content: center; padding: 10px; width: 300px;">
+						<img src="./assets/img/lg.png" alt="logo"
+							style="border:none; box-shadow:none; padding: 0; margin: 0; display: inline; background-color: transparent;" />
+					</div>
+					<br />
+					<br />
+					<small>Lecture by <a href="#"> Ilija Mitev </a> & <a href="#">Frosina Stamenkovska</a> </small>
+					<br />
+				</div>
+				<p style="font-size: 15px;">© 2024 Qinshift Academy</p>
+			</section>
+			<section style="text-align: center;">
+				<h2>Exercise 1</h2>
+				<p>
+					Make a TODO app for yourself. You should have only one input and “Add” button.
+					<br>After clicking on the Add button, display the newly added task in an unordered list. Each new
+					todo should be saved into an array.
+				</p>
+				<p>
+					<b>Bonus:</b> Add checkbox to each of the tasks in the unordered list, and after checking a
+					task, it should cross the text with line!
+					<br>Try making the ToDo an object that has two properties: Name and IsCompleted.
+				</p>
+			</section>
+			<section style="text-align: center;">
+				<h2>Exercise 2</h2>
+				<p>
+					Create an <b>Expense Tracker</b> app to manage daily expenses. Each expense should include the
+					following
+					fields:
+				</p>
+				<ul>
+					<li>
+						<b>Description</b>: A text input for the name/details.
+					</li>
+					<li>
+						<b>Amount</b>: A numeric input for the amount spent.
+					</li>
+					<li>
+						<b>Category</b>: A dropdown to choose the category (e.g., Food, Travel, Shopping, Bills).
+					</li>
+				</ul>
+				<p>
+					Create “Add Expense” button for adding new expense to a list.
+					Once added, each expense should be displayed in a table bellow the form.
+					<br>Use constructor function for the objects creation.
+				</p>
+			</section>
+			<section style="text-align: center;">
+				<h2>Exercise 2</h2>
+				<p>
+					Extend the previous implementation with these features:
+				</p>
+				<ul>
+					<li>
+						Display total expenses summary (sum of all expenses) at the bottom of the table.
+					</li>
+					<li>
+						Add column to the table called Action. It should contain Delete option (text/icon/button) for
+						every
+						record (row).
+						<br> When 'Delete' is clicked, the record should be marked as deleted and removed from the
+						table.
+						<br> HINT: Introduce new property to the Expense object. Also don't forget to update the sum of
+						the expenses :)
+					</li>
+				</ul>
+			</section>
+			<section style="text-align: center;">
+				<h2>Exercise 3</h2>
+				<p>
+					Write a JavaScript program called Phone Book.
+					<br>You should have three input fields in the html, one for First name, Last name and Phone number.
+					<br>After entering the values into each of them, by clicking on a “Save” button, you should save the
+					newly added contact as an object and add it to an array.
+					<br>Display the contacts from the array in a table below the inputs.
+					<br>Make sure the user is entering appropriate values in the form!
+				</p>
+				<p>
+					<b>Bonus:</b> Add column with delete and edit button so that you can edit or delete a contact!
+				</p>
+			</section>
+			<section style="text-align: center;">
+				<h2>If you left something on class, then you have a homework :) !</h2>
+			</section>
+		</div>
+
+	</div>
+
+	<script src="assets/lib/js/head.min.js"></script>
+	<script src="assets/js/reveal.js"></script>
+
+	<script>
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			history: true,
+			center: true,
+
+			transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+			// Transition speed
+			transitionSpeed: 'default', // default/fast/slow
+
+			// Enable slide navigation via mouse wheel
+			mouseWheel: true,
+
+			// Optional reveal.js plugins
+			dependencies: [{
+				src: 'assets/lib/js/classList.js',
+				condition: function () {
+					return !document.body.classList;
+				}
+			},
+			{
+				src: 'assets/plugin/markdown/marked.js',
+				condition: function () {
+					return !!document.querySelector('[data-markdown]');
+				}
+			},
+			{
+				src: 'assets/plugin/markdown/markdown.js',
+				condition: function () {
+					return !!document.querySelector('[data-markdown]');
+				}
+			},
+			{
+				src: 'assets/plugin/highlight/highlight.js',
+				async: true,
+				condition: function () {
+					return !!document.querySelector('pre code');
+				},
+				callback: function () {
+					hljs.initHighlightingOnLoad();
+				}
+			},
+			{
+				src: 'assets/plugin/zoom-js/zoom.js',
+				async: true
+			},
+			{
+				src: 'assets/plugin/notes/notes.js',
+				async: true
+			}
+			]
+		});
+	</script>
+
+</body>
+
+</html>

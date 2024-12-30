@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 3</title>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Phonebook</legend>
+      <input
+        type="text"
+        name="firstName"
+        id="firstName"
+        placeholder="First Name"
+      /><br />
+      <input
+        type="text"
+        name="lastName"
+        id="lastName"
+        placeholder="Last Name"
+      /><br />
+      <input
+        type="text"
+        name="phoneNumber"
+        id="phoneNumber"
+        placeholder="Phone Number"
+      /><br />
+    </fieldset>
+    <button id="save">Save</button>
+    <table id="phoneBook" border="2" style="padding: 2px">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Phone Number</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <script src="../lib/jquery-3.7.1.min.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
