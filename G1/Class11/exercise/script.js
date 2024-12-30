@@ -108,16 +108,64 @@ let json = {
     ]
 }
 
+// GLOBAL
+let bandsUrl = 'https://raw.githubusercontent.com/trajanstevkovski/sedc6-frontend-exam/master/band-data.json';
+
 function Band(name, active, tags, members, albums) {
     this.name = name;
     this.isActive = active;
     this.tags = tags;
     this.members = members;
     this.albums = albums;
+
+    this.showActiveMembers = function() {
+        let memebersString = '';
+        for (let i = 0; i < this.members.length; i++) {
+            let member = this.members[i];
+            if (!member.former) {
+                memebersString += member.name + ' , ';
+            }
+        }
+        return memebersString;
+    };
+
+    this.showFormerMembers = function() {
+        let formerMemersString = '';
+        let index = 0;
+        while (index < this.members.length) {
+            let member = this.members[index];
+            if (member['former']) {
+                formerMemersString += `${member['name']} , `;
+            }
+            index += 1;
+        }
+        return formerMemersString;
+    }
+}
+
+function mapBands(data) {
+    let bands = [];
+    for (let band of data) {
+        let bandObj = new Band(band.name, band.active, band.tags, 
+            band.members, band.albums);
+        bands.push(bandObj);
+    }
+    return bands;
 }
 
 
 document.getElementById('btn')
     .addEventListener('click', function() {
-        fetch('https://raw.githubusercontent.com/trajanstevkovski/sedc6-frontend-exam/master/band-data.json')
+        fetch(bandsUrl)
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(result) {
+            console.log(result);
+            let bands = mapBands(result);
+            console.log(bands);
+        })
+        .catch(function(error) {
+            console.log(error);
+        })
     });
