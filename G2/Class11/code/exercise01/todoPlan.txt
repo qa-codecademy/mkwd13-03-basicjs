@@ -1,8 +1,9 @@
-1. Read the requirement
-2. Break it into smaller pieces
-3. Implement them separately
+============= 3-step rule =============
+== 1. Read the requirement           ==
+== 2. Break it into smaller pieces   ==
+== 3. Implement them separately      ==
+=======================================
 
-================================
 1. HTML
 	=> create form with input and button
 	=> create empty <ul> where todos will be displayed
